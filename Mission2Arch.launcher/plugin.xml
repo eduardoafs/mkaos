@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="Mission2Arch.launcher.transform"
+            nameFilter="*.mkaos"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="Mission2Arch.launcher.files.Mkaos2sosadl"
+               enablesFor="*"
+               icon="icons/atl_logo.gif"
+               id="Mission2Arch.launcher.action1"
+               label="Generate SosADL Architecture">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

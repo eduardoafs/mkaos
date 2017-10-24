@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Kaos/src" modelPluginID="Kaos" modelName="Mkaos"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>mkaos.ecore</foreignModel>
+  <genPackages prefix="MKAOS" disposableProviderFactory="true" ecorePackage="mkaos.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mkaos.ecore#//MissionRefinementKind">
+      <genEnumLiterals ecoreEnumLiteral="mkaos.ecore#//MissionRefinementKind/all"/>
+      <genEnumLiterals ecoreEnumLiteral="mkaos.ecore#//MissionRefinementKind/atLeastOne"/>
+      <genEnumLiterals ecoreEnumLiteral="mkaos.ecore#//MissionRefinementKind/alternative"/>
+      <genEnumLiterals ecoreEnumLiteral="mkaos.ecore#//MissionRefinementKind/custom"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mkaos.ecore#//RuleQuantifier">
+      <genEnumLiterals ecoreEnumLiteral="mkaos.ecore#//RuleQuantifier/EXISTS"/>
+      <genEnumLiterals ecoreEnumLiteral="mkaos.ecore#//RuleQuantifier/FORALL"/>
+      <genEnumLiterals ecoreEnumLiteral="mkaos.ecore#//RuleQuantifier/COUNT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mkaos.ecore#//RuleTempBinOp">
+      <genEnumLiterals ecoreEnumLiteral="mkaos.ecore#//RuleTempBinOp/UNTIL"/>
+      <genEnumLiterals ecoreEnumLiteral="mkaos.ecore#//RuleTempBinOp/WEAK"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mkaos.ecore#//RuleTempUnOp">
+      <genEnumLiterals ecoreEnumLiteral="mkaos.ecore#//RuleTempUnOp/GLOBALLY"/>
+      <genEnumLiterals ecoreEnumLiteral="mkaos.ecore#//RuleTempUnOp/FATALLY"/>
+      <genEnumLiterals ecoreEnumLiteral="mkaos.ecore#//RuleTempUnOp/NEXT"/>
+    </genEnums>
+    <genClasses ecoreClass="mkaos.ecore#//Operation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Operation/produces"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Operation/output"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Operation/operationalize"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Operation/input"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//KAOS">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//KAOS/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//KAOS/linkedBy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//KAOS/consistsOf"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="mkaos.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//Link/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="mkaos.ecore#//Nodes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//Nodes/name"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//OperationNode"/>
+    <genClasses ecoreClass="mkaos.ecore#//Event"/>
+    <genClasses ecoreClass="mkaos.ecore#//Entity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Entity/composition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="mkaos.ecore#//Object"/>
+    <genClasses ecoreClass="mkaos.ecore#//Associations"/>
+    <genClasses image="false" ecoreClass="mkaos.ecore#//Agent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Agent/performs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Agent/composition"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//SoftwareAgent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//SoftwareAgent/responsibleFor"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//EnvironmentAgent"/>
+    <genClasses image="false" ecoreClass="mkaos.ecore#//RefinableNode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//RefinableNode/refinedBy"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//Obstacle">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Obstacle/obstruct"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//Goal">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Goal/resolve"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Goal/conflicts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Goal/concerns"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//AssignmentLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//AssignmentLink/assignsGoalTo"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//ConflictLink"/>
+    <genClasses ecoreClass="mkaos.ecore#//ObstructionLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//ObstructionLink/relateKGoalTo"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//OutputLink"/>
+    <genClasses ecoreClass="mkaos.ecore#//Expectation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Expectation/assignedTo"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//InputLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//InputLink/objectInputOn"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//Refinement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Refinement/refines"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//AndRefinement"/>
+    <genClasses ecoreClass="mkaos.ecore#//OrRefinement"/>
+    <genClasses ecoreClass="mkaos.ecore#//DomainProperty">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//DomainProperty/usedIn"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//Requirement"/>
+    <genClasses ecoreClass="mkaos.ecore#//OperacionalizationLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//OperacionalizationLink/relateOperationTo"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//DomainHypothesis"/>
+    <genClasses ecoreClass="mkaos.ecore#//DomainInvariant"/>
+    <genClasses ecoreClass="mkaos.ecore#//ResolutionLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//ResolutionLink/assignObstacleTo"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//ResponsabilityLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//ResponsabilityLink/assignAgentTo"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//mKAOS"/>
+    <genClasses ecoreClass="mkaos.ecore#//Mission">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//Mission/priority"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Mission/assignedTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//Mission/links"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//Mission/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference mkaos.ecore#//Mission/trigger"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//Mission/refinement"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//EmergentBehavior">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//EmergentBehavior/relatedTo"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//ConstituentSystem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//ConstituentSystem/capableOf"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//Mediator">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Mediator/capableOf"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//OperationalCapability">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//OperationalCapability/desc"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//CommunicationalCapability">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//CommunicationalCapability/desc"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//EmergeLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//EmergeLink/behavior"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//EmergeLink/capability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//EmergeLink/cardinality"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="mkaos.ecore#//CommunicationLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//CommunicationLink/capability"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//CommunicationLink/entity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//CommunicationLink/cardinality"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//CommunicationInputLink"/>
+    <genClasses ecoreClass="mkaos.ecore#//CommunicationOutputLink"/>
+    <genClasses ecoreClass="mkaos.ecore#//MissionLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//MissionLink/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//MissionLink/target"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//DisruptLink"/>
+    <genClasses ecoreClass="mkaos.ecore#//SuportLink"/>
+    <genClasses ecoreClass="mkaos.ecore#//BlockLink"/>
+    <genClasses ecoreClass="mkaos.ecore#//DependencyLink"/>
+    <genClasses ecoreClass="mkaos.ecore#//InfluenceLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//InfluenceLink/expectation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//InfluenceLink/influenced"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//GeneralizationLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//GeneralizationLink/entity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//GeneralizationLink/generalizes"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//CompositionLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//CompositionLink/entity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//CompositionLink/composedBy"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="mkaos.ecore#//FormalElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//FormalElement/rule"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//MissionRefinement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//MissionRefinement/kind"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//MissionRefinement/custom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//MissionRefinement/submissions"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//DynBLTL">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//DynBLTL/q"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//DynBLTL/val"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//DynBLTL/c"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//DynBLTL/t"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleTemporal">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleTemporal/val1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleTemporal/b"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleTemporal/e"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//RuleTemporal/o"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//RuleTemporal/o1"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleBound">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//RuleBound/floatlit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//RuleBound/integerlit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleBound/e"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleImplication">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleImplication/r"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleImplication/l"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleDisjunction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleDisjunction/l"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleDisjunction/r"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleConjunction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleConjunction/l"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleConjunction/r"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleEquality">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//RuleEquality/neg"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleEquality/l"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleEquality/r"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleRelExp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleRelExp/l"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleRelExp/r"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleNumExp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleNumExp/l"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleNumExp/r"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleTerm">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleTerm/r"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleTerm/l"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleFactor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleFactor/vallit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleFactor/valvar"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleFactor/valfun"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleFactor/curl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleFactor/par"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleVar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//RuleVar/val"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleVar/i"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleFunction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleFunction/l"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleParams">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleParams/l"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="mkaos.ecore#//RuleLiteral"/>
+    <genClasses ecoreClass="mkaos.ecore#//RuleIntegerLit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//RuleIntegerLit/val"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleFloatLit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//RuleFloatLit/val"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleTupleLit">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleTupleLit/vals"/>
+    </genClasses>
+    <genClasses ecoreClass="mkaos.ecore#//RuleSeqLit">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//RuleSeqLit/vals"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

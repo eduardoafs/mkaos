@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="mKAOS_Plugin"
+      label="mKAOS Studio"
+      version="1.1.2">
+
+   <description url="http://consiste.dimap.ufrn.br/projects/mkaos">
+      mKAOS Studio.
+   </description>
+
+   <copyright url="http://consiste.dimap.ufrn.br/projects/mkaos">
+      Copyright
+   </copyright>
+
+   <license url="http://consiste.dimap.ufrn.br/projects/mkaos">
+      License
+   </license>
+
+   <url>
+      <discovery label="mKAOS Update Site" url="http://consiste.dimap.ufrn.br/projects/mkaos/update"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.eclipse.core.resources" version="3.9.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="org.eclipse.emf.edit.ui"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.sirius"/>
+      <import plugin="org.eclipse.sirius.common.acceleo.mtl"/>
+   </requires>
+
+   <plugin
+         id="Kaos"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="Kaos.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="Kaos.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="Kaos.Viewpoints"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

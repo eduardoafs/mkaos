@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated mkaos -->
+      <package
+            uri="dsl.mKAOS"
+            class="mKAOS.MKAOSPackage"
+            genModel="model/mkaos.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated kaos -->
+      <package
+            uri="dsl.kaos"
+            class="KAOSModel.KAOSModelPackage"
+            genModel="model/kaos.genmodel"/>
+   </extension>
+
+</plugin>

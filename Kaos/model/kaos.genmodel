@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Kaos/src" modelPluginID="Kaos" modelName="Kaos"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" language="" operationReflection="true"
+    importOrganizing="true">
+  <foreignModel>kaos.ecore</foreignModel>
+  <genPackages prefix="KAOSModel" disposableProviderFactory="true" fileExtensions="mkaos"
+      ecorePackage="kaos.ecore#/">
+    <genClasses ecoreClass="kaos.ecore#//Operation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Operation/produces"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Operation/output"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Operation/operationalize"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Operation/input"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//KAOS">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kaos.ecore#//KAOS/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kaos.ecore#//KAOS/linkedBy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kaos.ecore#//KAOS/consistsOf"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="kaos.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kaos.ecore#//Link/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="kaos.ecore#//Nodes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kaos.ecore#//Nodes/name"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//OperationNode"/>
+    <genClasses ecoreClass="kaos.ecore#//Event"/>
+    <genClasses ecoreClass="kaos.ecore#//Entity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Entity/composition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="kaos.ecore#//Object"/>
+    <genClasses ecoreClass="kaos.ecore#//Associations"/>
+    <genClasses image="false" ecoreClass="kaos.ecore#//Agent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Agent/performs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Agent/composition"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//SoftwareAgent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//SoftwareAgent/responsibleFor"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//EnvironmentAgent"/>
+    <genClasses image="false" ecoreClass="kaos.ecore#//RefinableNode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//RefinableNode/refinedBy"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//Obstacle">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Obstacle/obstruct"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//Goal">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Goal/resolve"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Goal/conflicts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Goal/concerns"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//AssignmentLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//AssignmentLink/assignsGoalTo"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//ConflictLink"/>
+    <genClasses ecoreClass="kaos.ecore#//ObstructionLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//ObstructionLink/relateKGoalTo"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//OutputLink"/>
+    <genClasses ecoreClass="kaos.ecore#//Expectation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Expectation/assignedTo"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//InputLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//InputLink/objectInputOn"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//Refinement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Refinement/refines"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//AndRefinement"/>
+    <genClasses ecoreClass="kaos.ecore#//OrRefinement"/>
+    <genClasses ecoreClass="kaos.ecore#//DomainProperty">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//DomainProperty/usedIn"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//Requirement"/>
+    <genClasses ecoreClass="kaos.ecore#//OperacionalizationLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//OperacionalizationLink/relateOperationTo"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//DomainHypothesis"/>
+    <genClasses ecoreClass="kaos.ecore#//DomainInvariant"/>
+    <genClasses ecoreClass="kaos.ecore#//ResolutionLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//ResolutionLink/assignObstacleTo"/>
+    </genClasses>
+    <genClasses ecoreClass="kaos.ecore#//ResponsabilityLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//ResponsabilityLink/assignAgentTo"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

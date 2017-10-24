@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="KAOS" version="8.1.0">
+  <ownedViewpoints name="KAOS" modelFileExtension="kaos">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="mKAOS.main" label="KAOS Diagram" initialisation="true" showOnStartup="true" domainClass="KAOS">
+      <defaultLayer name="KAOS" label="KAOS"/>
+      <additionalLayers name="KAOS.Goal" label="Goal Model" activeByDefault="true">
+        <nodeMappings name="KAOS.Goal" label="Goal" semanticCandidatesExpression="feature:consistsOf" domainClass="Goal">
+          <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="KAOS.Expectation" label="Expectation" semanticCandidatesExpression="feature:consistsOf" domainClass="Expectation">
+          <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="KAOS.Requirement" label="Requirement" semanticCandidatesExpression="feature:consistsOf" domainClass="KAOSModel.Requirement">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="KAOS.Obstacle" label="Obstacle" semanticCandidatesExpression="feature:consistsOf" domainClass="Obstacle">
+          <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="KAOS.Refinement" label="Refinement" semanticCandidatesExpression="feature:linkedBy" domainClass="Refinement">
+          <style xsi:type="style:EllipseNodeDescription" showIcon="false" labelExpression="" labelPosition="node" hideLabelByDefault="true" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="KAOS.DomainProperty.Invariant" label="Invariant" semanticCandidatesExpression="feature:consistsOf" domainClass="DomainInvariant">
+          <style xsi:type="style:SquareDescription" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="KAOS.DomainProerty.Hypothesis" label="Hypothesis" semanticCandidatesExpression="feature:consistsOf" domainClass="DomainHypothesis">
+          <style xsi:type="style:SquareDescription" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="KAOS.Link.Refinement.Refines" label="Refines" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Refinement']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Expectation'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Obstacle'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Requirement'] //@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.Mission']" targetFinderExpression="feature:refines">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="KAOS.Links.Refinements.RefinedBy" label="RefinedBy" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Expectation'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Obstacle'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Requirement'] //@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Refinement']" targetFinderExpression="feature:refinedBy">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="KAOS.Obstruction" label="Obstruction" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Obstacle']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Requirement'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Expectation']" targetFinderExpression="feature:obstruct">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <centerLabelStyleDescription iconPath="platform:\resource\Kaos.design\images\obstruction.gif">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="KAOS.Links.Conflict" label="Conflict" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Expectation'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Obstacle']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Obstacle'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Expectation']" targetFinderExpression="feature:conflicts">
+          <style lineStyle="dash" targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="KAOS.Links.Concern" label="Concern Link" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Requirement']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.EnvironmentAgent'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.SoftwareAgent'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@nodeMappings[name='KAOS.Object.Entity']" targetFinderExpression="feature:concerns">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="KAOS.Resolution" label="Resolution Link" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Goal']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Obstacle']" targetFinderExpression="feature:resolve">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="KAOS.Goal.Links.ExpectationAssign" label="Expectation Assign" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Expectation']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.EnvironmentAgent']" targetFinderExpression="feature:assignedTo">
+          <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="1">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="KAOS.Goal.Tools" label="Goals">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="KAOS.Tools.Goal" label="Goal" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Goal']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="Goal" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="KAOS.Tools.Obstacle" label="Obstacle" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Obstacle']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="Obstacle" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="KAOS.Tools.Requirement" label="Requirement" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Requirement']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="KAOSModel.Requirement" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="KAOS.Tools.Expectation" label="Expectation" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Expectation']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="Expectation" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="KAOS.Tools.Refinement" label="Refinement" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Refinement']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="Refinement" referenceName="linkedBy"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="KAOS.Goal.Tools.Links" label="Goal Links">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="KAOS.Tools.Refines" label="Refines" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Link.Refinement.Refines']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="refines" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="KAOS.Tools.RefinedBy" label="Refined By" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Links.Refinements.RefinedBy']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="refinedBy" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="KAOS.Tools.Obstruction" label="Obstruction Link" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Obstruction']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="obstruct" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="KAOS.Tools.Resolution" label="Resolution" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Resolution']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="resolve" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="KAOS.Tools.Concern" label="Concern Link" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Links.Concern']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="concerns" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="KAOS.Tools.Conflict" label="Conflict Link" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Links.Conflict']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="conflicts" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="KAOS.Goal.Tools.ExpectationAssign" label="Expectation Assignment" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Goal.Links.ExpectationAssign']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="assignedTo" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="KAOS.Object" label="Object Model" activeByDefault="true">
+        <nodeMappings name="KAOS.Object.Entity" label="Entity" semanticCandidatesExpression="feature:consistsOf" domainClass="KAOSModel.Entity">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="KAOS.Object.Links.Association" label="Association Link" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.EnvironmentAgent'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.SoftwareAgent'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@nodeMappings[name='KAOS.Object.Entity'] //@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Responsability']/@nodeMappings[name='mKAOS.Responsability.ConstituentSystem'] //@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Responsability']/@nodeMappings[name='mKAOS.Responsability.Mediator']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.EnvironmentAgent'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.SoftwareAgent'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@nodeMappings[name='KAOS.Object.Entity'] //@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Responsability']/@nodeMappings[name='mKAOS.Responsability.ConstituentSystem'] //@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Responsability']/@nodeMappings[name='mKAOS.Responsability.Mediator']" targetFinderExpression="feature:composition">
+          <style sourceArrow="FillDiamond" targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="KAOS.Object.Tools" label="Objets">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="KAOS.Object.Tools.Entity" label="Entity" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@nodeMappings[name='KAOS.Object.Entity']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="KAOSModel.Entity" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="KAOS.Object.Tools.Links" label="Object Links">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="KAOS.Object.Tools.Links.Association" label="Association Link" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@edgeMappings[name='KAOS.Object.Links.Association']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="composition" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="KAOS.Operation" label="Operation Model" activeByDefault="true">
+        <nodeMappings name="KAOS.Object.Operation" label="Operation" semanticCandidatesExpression="feature:consistsOf" domainClass="KAOSModel.Operation">
+          <style xsi:type="style:SquareDescription" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="KAOS.Object.Event" label="Event" semanticCandidatesExpression="feature:consistsOf" domainClass="KAOSModel.Event">
+          <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="KAOS.Operation.Links.Input" label="InputLink" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@nodeMappings[name='KAOS.Object.Entity']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@nodeMappings[name='KAOS.Object.Operation'] //@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Communication']/@nodeMappings[name='mKAOS.Capabilities.Communicational'] //@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Capability']/@nodeMappings[name='mKAOS.Capabilities.Operational']" targetFinderExpression="feature:inputs">
+          <style sizeComputationExpression="1">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="KAOS.Operation.Links.Output" label="OutputLink" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@nodeMappings[name='KAOS.Object.Operation'] //@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Communication']/@nodeMappings[name='mKAOS.Capabilities.Communicational'] //@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Capability']/@nodeMappings[name='mKAOS.Capabilities.Operational']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@nodeMappings[name='KAOS.Object.Entity']" targetFinderExpression="feature:output">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="KAOS.Operation.Links.Performance" label="Performance Link" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.SoftwareAgent'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.EnvironmentAgent'] //@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Responsability']/@nodeMappings[name='mKAOS.Responsability.ConstituentSystem'] //@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Responsability']/@nodeMappings[name='mKAOS.Responsability.Mediator']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@nodeMappings[name='KAOS.Object.Operation']" targetFinderExpression="feature:performs">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="KAOS.Operation.Links.Operationalize" label="Operationalize Link" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@nodeMappings[name='KAOS.Object.Operation']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Requirement']" targetFinderExpression="feature:operationalize">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="KAOS.Operation.Links.Production" label="Event Production Link" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@nodeMappings[name='KAOS.Object.Operation'] //@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Communication']/@nodeMappings[name='mKAOS.Capabilities.Communicational'] //@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Capability']/@nodeMappings[name='mKAOS.Capabilities.Operational']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@nodeMappings[name='KAOS.Object.Event']" targetFinderExpression="feature:produces">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="KAOS.Operation.Tools" label="Operations">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="KAOS.Object.Tools.Operation" label="Operation" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@nodeMappings[name='KAOS.Object.Operation']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="KAOSModel.Operation" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="KAOS.Object.Tools.Event" label="Event" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@nodeMappings[name='KAOS.Object.Event']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="KAOSModel.Event" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="KAOS.Operation.Tools.Links" label="Operation Links">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="KAOS.Object.Tools.Input" label="Input Link" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@edgeMappings[name='KAOS.Operation.Links.Input']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="inputs" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="KAOS.Object.Tools.Output" label="Output Link" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@edgeMappings[name='KAOS.Operation.Links.Output']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="output" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="KAOS.Object.Tools.Performance" label="Performance Link" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@edgeMappings[name='KAOS.Operation.Links.Performance']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="performs" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="KAOS.Object.Tools.Operationalize" label="Operationalize Link" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@edgeMappings[name='KAOS.Operation.Links.Operationalize']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="operationalize" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="KAOS.Operation.Tools.EProduction" label="Event Production Link" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@edgeMappings[name='KAOS.Operation.Links.Production']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="produces" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="KAOS.Responsability" label="Responsability Model" reusedMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.EnvironmentAgent'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.SoftwareAgent'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Requirement']" activeByDefault="true">
+        <nodeMappings name="KAOS.Object.SoftwareAgent" label="SoftwareAgent" semanticCandidatesExpression="feature:consistsOf" domainClass="SoftwareAgent">
+          <style xsi:type="style:LozengeNodeDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="KAOS.Object.EnvironmentAgent" label="Environment Agent" semanticCandidatesExpression="feature:consistsOf" domainClass="EnvironmentAgent">
+          <style xsi:type="style:LozengeNodeDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="KAOS.Links.Responsability" label="Responsability Link" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.SoftwareAgent']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Requirement']" targetFinderExpression="feature:responsibleFor">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="KAOS.Responsability.Tools" label="Responsability">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="KAOS.Responsability.Tools.RLink" label="Responsability Link" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@edgeMappings[name='KAOS.Links.Responsability']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="responsibleFor" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="KAOS.Object.Tools.EnvironmentAgent" label="Environment Agent" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.EnvironmentAgent']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="EnvironmentAgent" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="KAOS.Object.Tools.SoftwareAgent" label="Software Agent" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.SoftwareAgent']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="SoftwareAgent" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="mKAOS" label="mKAOS" modelFileExtension="mkaos">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="mKAOS.Behavior" label="mKAOS Diagram" initialisation="true" domainClass="mKAOS.mKAOS">
+      <metamodel href="dsl.mKAOS#/"/>
+      <defaultLayer name="mKAOS"/>
+      <additionalLayers name="mKAOS.Mission" label="Mission Model" reusedMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Refinement'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Link.Refinement.Refines'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Links.Refinements.RefinedBy'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Expectation'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Goal.Links.ExpectationAssign']" activeByDefault="true">
+        <nodeMappings name="mKAOS.Mission" label="Mission" semanticCandidatesExpression="feature:consistsOf" domainClass="mKAOS.Mission">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="[self.priority+1/]" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="mKAOS.DisruptLink" semanticCandidatesExpression="feature:linkedBy" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.Mission']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="mKAOS.DisruptLink" useDomainElement="true">
+          <style lineStyle="dash" targetArrow="InputClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <centerLabelStyleDescription labelFormat="italic" showIcon="false" labelExpression="['Disrupts'/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="mKAOS.BlockLink" semanticCandidatesExpression="feature:linkedBy" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.Mission']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="mKAOS.BlockLink" useDomainElement="true">
+          <style lineStyle="dash" targetArrow="InputClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+            <centerLabelStyleDescription labelFormat="italic" showIcon="false" labelExpression="['Blocks'/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="mKAOS.DependencyLink" semanticCandidatesExpression="feature:linkedBy" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.Mission']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="MissionLink" useDomainElement="true">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <centerLabelStyleDescription labelFormat="italic" showIcon="false" labelExpression="['Depends on'/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="mKAOS.SuportLink" semanticCandidatesExpression="feature:linkedBy" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.Mission']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="mKAOS.SuportLink" useDomainElement="true">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <centerLabelStyleDescription labelFormat="italic" showIcon="false" labelExpression="['Suports'/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="mKAOS.Tools" label="Mission Tools" reusedTools="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@toolSections.0/@ownedTools[name='KAOS.Tools.Refinement'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@toolSections.1/@ownedTools[name='KAOS.Tools.Refines'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@toolSections.1/@ownedTools[name='KAOS.Tools.RefinedBy'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@toolSections.0/@ownedTools[name='KAOS.Tools.Obstacle']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="mKAOS.Mission" label="Mission" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.Mission']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="Mission" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="mKAOS.Expectation" label="Expectation" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Expectation']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="Expectation" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="mKAOS.Disrupt" label="Disrupt Link" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@edgeMappings[name='mKAOS.DisruptLink']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mKAOS.DisruptLink" referenceName="linkedBy">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="mKAOS.Block" label="Block Link" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@edgeMappings[name='mKAOS.BlockLink']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mKAOS.BlockLink" referenceName="linkedBy">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="mKAOS.Dependency" label="Dependency Link" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@edgeMappings[name='mKAOS.DependencyLink']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mKAOS.DependencyLink" referenceName="linkedBy">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="mKAOS.Suport" label="Suport Link" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@edgeMappings[name='mKAOS.SuportLink']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mKAOS.SuportLink" referenceName="linkedBy">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="mKAOS.Object" label="Object Model" reusedMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@nodeMappings[name='KAOS.Object.Entity'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@edgeMappings[name='KAOS.Object.Links.Association'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@nodeMappings[name='KAOS.Object.Event']" reusedTools="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@toolSections.1/@ownedTools[name='KAOS.Object.Tools.Links.Association'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@toolSections.0/@ownedTools[name='KAOS.Object.Tools.Entity']" activeByDefault="true">
+        <toolSections name="mKAOS.Object.Tools" label="Object Tools" reusedTools="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@toolSections.1/@ownedTools[name='KAOS.Object.Tools.Links.Association'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@toolSections.0/@ownedTools[name='KAOS.Object.Tools.Entity'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@toolSections.0/@ownedTools[name='KAOS.Object.Tools.Event']"/>
+      </additionalLayers>
+      <additionalLayers name="mKAOS.Capability" label="Operational Capability Model" reusedMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@edgeMappings[name='KAOS.Operation.Links.Production'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@edgeMappings[name='KAOS.Operation.Links.Input'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@edgeMappings[name='KAOS.Operation.Links.Output']" activeByDefault="true">
+        <nodeMappings name="mKAOS.Capabilities.Operational" label="Operational Capability" semanticCandidatesExpression="feature:consistsOf" domainClass="mKAOS.OperationalCapability">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="4" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="mKAOS.Capabilities.CapableOf.Op" label="CapableOf Operational" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Responsability']/@nodeMappings[name='mKAOS.Responsability.ConstituentSystem']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Capability']/@nodeMappings[name='mKAOS.Capabilities.Operational']" targetFinderExpression="feature:capableOf">
+          <style sizeComputationExpression="1">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="mKAOS.Capabilities.Tools" label="Capabilities Tools" reusedTools="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@toolSections.1/@ownedTools[name='KAOS.Object.Tools.Input'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@toolSections.1/@ownedTools[name='KAOS.Object.Tools.Output'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@toolSections.1/@ownedTools[name='KAOS.Operation.Tools.EProduction']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="mKAOS.Capability.Tools.Op" label="Operational Capability" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Capability']/@nodeMappings[name='mKAOS.Capabilities.Operational']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="OperationalCapability" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="mKAOS.Capabilities.Tools.CapableOf" label="Capable Of" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Capability']/@edgeMappings[name='mKAOS.Capabilities.CapableOf.Op']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="capableOf" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="mKAOS.Responsability" label="Responsability Model" reusedMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@nodeMappings[name='KAOS.Object.EnvironmentAgent'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Goal.Links.ExpectationAssign'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@edgeMappings[name='KAOS.Object.Links.Association']" activeByDefault="true">
+        <nodeMappings name="mKAOS.Responsability.ConstituentSystem" label="Constituent System" semanticCandidatesExpression="feature:consistsOf" domainClass="mKAOS.ConstituentSystem">
+          <style xsi:type="style:LozengeNodeDescription" showIcon="false" labelPosition="node" resizeKind="NSEW" widthComputationExpression="12" heightComputationExpression="4">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="mKAOS.Responsability.Mediator" label="Mediator" semanticCandidatesExpression="feature:consistsOf" domainClass="mKAOS.Mediator">
+          <style xsi:type="style:LozengeNodeDescription" showIcon="false" labelPosition="node" resizeKind="NSEW" widthComputationExpression="12" heightComputationExpression="4">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="mKAOS.Responsability.Responsible" label="Mission Responsability Link" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Responsability']/@nodeMappings[name='mKAOS.Responsability.ConstituentSystem']" targetFinderExpression="feature:assignedTo">
+          <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="1">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="mKAOS.Tools.Responsability" label="Responsability Tools" reusedTools="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@toolSections.0/@ownedTools[name='KAOS.Responsability.Tools.RLink'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Responsability']/@toolSections.0/@ownedTools[name='KAOS.Object.Tools.EnvironmentAgent'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@toolSections.1/@ownedTools[name='KAOS.Goal.Tools.ExpectationAssign'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@toolSections.1/@ownedTools[name='KAOS.Object.Tools.Links.Association']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="mKAOS.Responsability.Tools.Const" label="Constituent System" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Responsability']/@nodeMappings[name='mKAOS.Responsability.ConstituentSystem']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="ConstituentSystem" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="mKAOS.Responsability.MissionAssigned" label="Assign Mission To" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Responsability']/@edgeMappings[name='mKAOS.Responsability.Responsible']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="assignedTo" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="mKAOS.EmergentBehavior" label="Emergent Behavior Model" reusedMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Communication']/@nodeMappings[name='mKAOS.Capabilities.Communicational']" activeByDefault="true">
+        <nodeMappings name="mKAOS.EmergentBehavior" label="Emergent Behavior" semanticCandidatesExpression="feature:consistsOf" domainClass="EmergentBehavior">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="4" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="mKAOS.Behavior.RelatedTo" label="Behavior Related To" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.EmergentBehavior']/@nodeMappings[name='mKAOS.EmergentBehavior']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.Mission']" targetFinderExpression="feature:relatedTo">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="mKAOS.Behavior.Emerges" label="Emerges Link" semanticCandidatesExpression="feature:linkedBy" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.EmergentBehavior']/@nodeMappings[name='mKAOS.EmergentBehavior']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Communication']/@nodeMappings[name='mKAOS.Capabilities.Communicational']" targetFinderExpression="feature:capability" sourceFinderExpression="feature:behavior" domainClass="mKAOS.EmergeLink" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="feature:cardinality">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="mKAOS.Behavior.Tools" label="Emergent Behavior Tools">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="mKAOS.Behavior.Tools.Create" label="Emergent Behavior" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.EmergentBehavior']/@nodeMappings[name='mKAOS.EmergentBehavior']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="EmergentBehavior" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="mKAOS.Behavior.Tools.Related" label="Behavior Related To" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.EmergentBehavior']/@edgeMappings[name='mKAOS.Behavior.RelatedTo']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="relatedTo" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="mKAOS.Behavior.Emerges" label="Emerges From" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.EmergentBehavior']/@edgeMappings[name='mKAOS.Behavior.Emerges']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="feature:eContainer">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mKAOS.EmergeLink" referenceName="linkedBy" variableName="link">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:link">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="behavior" valueExpression="var:source"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="capability" valueExpression="var:target"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="mKAOS.Communication" label="Communicational Capabilities Model" reusedMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@nodeMappings[name='KAOS.Object.Entity'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Operation']/@nodeMappings[name='KAOS.Object.Event']" activeByDefault="true">
+        <nodeMappings name="mKAOS.Capabilities.Communicational" label="Communicational Capability" semanticCandidatesExpression="feature:consistsOf" domainClass="mKAOS.CommunicationalCapability">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="4" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="mKAOS.Comm.Input" label="Communicational Input" semanticCandidatesExpression="feature:linkedBy" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@nodeMappings[name='KAOS.Object.Entity']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Communication']/@nodeMappings[name='mKAOS.Capabilities.Communicational']" targetFinderExpression="feature:capability" sourceFinderExpression="feature:entity" domainClass="mKAOS.CommunicationInputLink" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="feature:name">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+            <endLabelStyleDescription showIcon="false" labelExpression="feature:cardinality">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="mKAOS.Comm.Output" label="Communicational Output" semanticCandidatesExpression="feature:linkedBy" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Communication']/@nodeMappings[name='mKAOS.Capabilities.Communicational']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@nodeMappings[name='KAOS.Object.Entity']" targetFinderExpression="feature:entity" sourceFinderExpression="feature:capability" domainClass="mKAOS.CommunicationOutputLink" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <beginLabelStyleDescription showIcon="false" labelExpression="feature:cardinality">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <centerLabelStyleDescription showIcon="false" labelExpression="feature:name">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="mKAOS.Comm.Tools" label="Communicational Capabilities Tools">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="mKAOS.Capability.Tools.Comm" label="Communicational Capability" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Communication']/@nodeMappings[name='mKAOS.Capabilities.Communicational']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="CommunicationalCapability" referenceName="consistsOf"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="mKAOS.Capabilities.Comm.Input" label="Communication Capability Input" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Communication']/@edgeMappings[name='mKAOS.Comm.Input']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="feature:eContainer">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mKAOS.CommunicationInputLink" referenceName="linkedBy">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:source"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="capability" valueExpression="var:target"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="mKAOS.Capabilities.Comm.Output" label="Communication Capability Output" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Communication']/@edgeMappings[name='mKAOS.Comm.Output']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="feature:eContainer">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mKAOS.CommunicationOutputLink" referenceName="linkedBy">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:target"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="capability" valueExpression="var:source"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

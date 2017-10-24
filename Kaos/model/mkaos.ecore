@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mKAOS" nsURI="dsl.mKAOS" nsPrefix="dsl.mKAOS">
+  <eClassifiers xsi:type="ecore:EClass" name="mKAOS" eSuperTypes="kaos.ecore#//KAOS"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Mission" eSuperTypes="kaos.ecore#//Goal #//FormalElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignedTo" eType="#//ConstituentSystem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
+        eType="#//MissionLink" containment="true" eOpposite="#//MissionLink/source"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trigger" lowerBound="1"
+        eType="#//DynBLTL" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refinement" eType="#//MissionRefinement"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EmergentBehavior" eSuperTypes="kaos.ecore#//Nodes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedTo" lowerBound="1"
+        upperBound="-1" eType="#//Mission"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstituentSystem" eSuperTypes="kaos.ecore#//SoftwareAgent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capableOf" lowerBound="1"
+        upperBound="-1" eType="#//OperationalCapability"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mediator" eSuperTypes="kaos.ecore#//SoftwareAgent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capableOf" lowerBound="1"
+        upperBound="-1" eType="#//CommunicationalCapability"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationalCapability" eSuperTypes="kaos.ecore#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="desc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommunicationalCapability" eSuperTypes="kaos.ecore#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="desc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EmergeLink" eSuperTypes="kaos.ecore#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behavior" lowerBound="1"
+        eType="#//EmergentBehavior"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
+        eType="#//CommunicationalCapability"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="[1..*]"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommunicationLink" abstract="true" eSuperTypes="kaos.ecore#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
+        eType="#//CommunicationalCapability"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
+        eType="ecore:EClass kaos.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="[1..1]"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommunicationInputLink" eSuperTypes="#//CommunicationLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CommunicationOutputLink" eSuperTypes="#//CommunicationLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MissionLink" abstract="true" eSuperTypes="kaos.ecore#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Mission" eOpposite="#//Mission/links"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Mission"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DisruptLink" eSuperTypes="#//MissionLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SuportLink" eSuperTypes="#//MissionLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BlockLink" eSuperTypes="#//MissionLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DependencyLink" eSuperTypes="#//MissionLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InfluenceLink" eSuperTypes="kaos.ecore#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expectation" eType="ecore:EClass kaos.ecore#//Expectation"
+        eKeys="kaos.ecore#//Nodes/name"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="influenced" eType="ecore:EClass kaos.ecore#//Entity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeneralizationLink" eSuperTypes="kaos.ecore#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" eType="ecore:EClass kaos.ecore#//Entity"
+        eKeys="kaos.ecore#//Nodes/name"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generalizes" eType="ecore:EClass kaos.ecore#//Entity"
+        eKeys="kaos.ecore#//Nodes/name"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositionLink" eSuperTypes="kaos.ecore#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" eType="ecore:EClass kaos.ecore#//Entity"
+        eKeys="kaos.ecore#//Nodes/name"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composedBy" eType="ecore:EClass kaos.ecore#//Entity"
+        eKeys="kaos.ecore#//Nodes/name"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FormalElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rule" eType="#//DynBLTL"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MissionRefinement" eSuperTypes="kaos.ecore#//Refinement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" lowerBound="1" eType="#//MissionRefinementKind"
+        defaultValueLiteral="custom"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="custom" eType="#//DynBLTL"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="submissions" upperBound="-1"
+        eType="#//Mission" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MissionRefinementKind">
+    <eLiterals name="all"/>
+    <eLiterals name="atLeastOne" value="1"/>
+    <eLiterals name="alternative" value="2"/>
+    <eLiterals name="custom" value="-1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DynBLTL">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="q" eType="#//RuleQuantifier"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="c" eType="#//RuleFunction"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t" eType="#//RuleTemporal"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RuleQuantifier">
+    <eLiterals name="EXISTS"/>
+    <eLiterals name="FORALL" value="1"/>
+    <eLiterals name="COUNT" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RuleTempBinOp">
+    <eLiterals name="UNTIL"/>
+    <eLiterals name="WEAK" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RuleTempUnOp">
+    <eLiterals name="GLOBALLY"/>
+    <eLiterals name="FATALLY"/>
+    <eLiterals name="NEXT"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleTemporal" eSuperTypes="#//DynBLTL">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="val1" eType="#//RuleImplication"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="b" eType="#//RuleBound"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//DynBLTL" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="o" eType="#//RuleTempBinOp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="o1" eType="#//RuleTempUnOp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleBound">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="floatlit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="integerlit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//DynBLTL" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleImplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="r" upperBound="-1" eType="#//RuleDisjunction"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//RuleDisjunction"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleDisjunction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//RuleConjunction"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="r" upperBound="-1" eType="#//RuleConjunction"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleConjunction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//RuleEquality"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="r" upperBound="-1" eType="#//RuleEquality"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleEquality">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="neg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//RuleRelExp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="r" eType="#//RuleRelExp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleRelExp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//RuleNumExp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="r" eType="#//RuleNumExp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleNumExp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//RuleTerm"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="r" upperBound="-1" eType="#//RuleTerm"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleTerm">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="r" upperBound="-1" eType="#//RuleFactor"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//RuleFactor"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleFactor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vallit" eType="#//RuleLiteral"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valvar" eType="#//RuleVar"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valfun" eType="#//RuleFunction"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="curl" eType="#//DynBLTL"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="par" eType="#//DynBLTL"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleVar">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="i" upperBound="-1" eType="#//RuleNumExp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleFunction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//RuleParams"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleParams">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" upperBound="-1" eType="#//RuleVar"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleLiteral" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleIntegerLit" eSuperTypes="#//RuleLiteral">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleFloatLit" eSuperTypes="#//RuleLiteral">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleTupleLit" eSuperTypes="#//RuleLiteral">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vals" upperBound="-1" eType="#//RuleLiteral"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RuleSeqLit" eSuperTypes="#//RuleLiteral">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vals" upperBound="-1" eType="#//RuleLiteral"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

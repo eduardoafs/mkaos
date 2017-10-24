@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated kaos -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="KAOSModel.presentation.KAOSModelModelWizardID"
+            name="%_UI_KAOSModelModelWizard_label"
+            class="KAOSModel.presentation.KAOSModelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/KAOSModelModelFile.gif">
+         <description>%_UI_KAOSModelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated kaos -->
+      <editor
+            id="KAOSModel.presentation.KAOSModelEditorID"
+            name="%_UI_KAOSModelEditor_label"
+            icon="icons/full/obj16/KAOSModelModelFile.gif"
+            extensions="mkaos"
+            class="KAOSModel.presentation.KAOSModelEditor"
+            contributorClass="KAOSModel.presentation.KAOSModelActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mkaos -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="mKAOS.presentation.MKAOSModelWizardID"
+            name="%_UI_MKAOSModelWizard_label"
+            class="mKAOS.presentation.MKAOSModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MKAOSModelFile.gif">
+         <description>%_UI_MKAOSModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mkaos -->
+      <editor
+            id="mKAOS.presentation.MKAOSEditorID"
+            name="%_UI_MKAOSEditor_label"
+            icon="icons/full/obj16/MKAOSModelFile.gif"
+            extensions="mkaos"
+            class="mKAOS.presentation.MKAOSEditor"
+            contributorClass="mKAOS.presentation.MKAOSActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

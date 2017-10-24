@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="KAOSModel" nsURI="dsl.kaos" nsPrefix="dsl.kaos">
+  <eClassifiers xsi:type="ecore:EClass" name="Operation" eSuperTypes="#//OperationNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="produces" lowerBound="1"
+        upperBound="-1" eType="#//Event"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"
+        upperBound="-1" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationalize" lowerBound="1"
+        upperBound="-1" eType="#//Requirement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input" lowerBound="1" upperBound="-1"
+        eType="#//Entity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KAOS">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkedBy" lowerBound="1"
+        upperBound="-1" eType="#//Link" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="consistsOf" lowerBound="1"
+        upperBound="-1" eType="#//Nodes" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Link" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Nodes" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationNode" eSuperTypes="#//Nodes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//OperationNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//Object">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composition" upperBound="-1"
+        eType="#//Entity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object" abstract="true" eSuperTypes="#//Nodes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Associations" eSuperTypes="#//Object"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Agent" abstract="true" eSuperTypes="#//Object">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="performs" lowerBound="1"
+        upperBound="-1" eType="#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composition" upperBound="-1"
+        eType="#//Agent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SoftwareAgent" eSuperTypes="#//Agent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responsibleFor" lowerBound="1"
+        upperBound="-1" eType="#//Requirement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnvironmentAgent" eSuperTypes="#//Agent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RefinableNode" abstract="true" eSuperTypes="#//Nodes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refinedBy" lowerBound="1"
+        upperBound="-1" eType="#//Refinement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Obstacle" eSuperTypes="#//RefinableNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="obstruct" lowerBound="1"
+        upperBound="-1" eType="#//Goal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Goal" eSuperTypes="#//RefinableNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resolve" lowerBound="1"
+        upperBound="-1" eType="#//Obstacle"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conflicts" lowerBound="1"
+        upperBound="-1" eType="#//Goal"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="concerns" lowerBound="1"
+        upperBound="-1" eType="#//Object"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssignmentLink" eSuperTypes="#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignsGoalTo" lowerBound="1"
+        upperBound="-1" eType="#//Agent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConflictLink" eSuperTypes="#//Link"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ObstructionLink" eSuperTypes="#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relateKGoalTo" lowerBound="1"
+        upperBound="-1" eType="#//Obstacle"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputLink" eSuperTypes="#//Link"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Expectation" eSuperTypes="#//Goal">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignedTo" lowerBound="1"
+        upperBound="-1" eType="#//EnvironmentAgent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InputLink" eSuperTypes="#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectInputOn" lowerBound="1"
+        upperBound="-1" eType="#//Operation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Refinement" eSuperTypes="#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refines" lowerBound="1"
+        eType="#//RefinableNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AndRefinement" eSuperTypes="#//Refinement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrRefinement" eSuperTypes="#//Refinement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainProperty" eSuperTypes="#//Goal">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usedIn" lowerBound="1"
+        upperBound="-1" eType="#//Refinement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Requirement" eSuperTypes="#//Goal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OperacionalizationLink" eSuperTypes="#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relateOperationTo" lowerBound="1"
+        upperBound="-1" eType="#//Requirement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainHypothesis" eSuperTypes="#//DomainProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainInvariant" eSuperTypes="#//DomainProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResolutionLink" eSuperTypes="#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignObstacleTo" lowerBound="1"
+        upperBound="-1" eType="#//Requirement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponsabilityLink" eSuperTypes="#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignAgentTo" lowerBound="1"
+        upperBound="-1" eType="#//Requirement"/>
+  </eClassifiers>
+</ecore:EPackage>

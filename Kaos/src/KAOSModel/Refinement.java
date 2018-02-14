@@ -31,7 +31,7 @@ public interface Refinement extends Link {
 	 * @return the value of the '<em>Refines</em>' reference.
 	 * @see #setRefines(RefinableNode)
 	 * @see KAOSModel.KAOSModelPackage#getRefinement_Refines()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	RefinableNode getRefines();

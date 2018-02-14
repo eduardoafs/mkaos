@@ -2,6 +2,8 @@
  */
 package mKAOS;
 
+import KAOSModel.Goal;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -25,59 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Mission extends mKAOS.Goal, FormalElement {
-	/**
-	 * Returns the value of the '<em><b>Trigger</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Trigger</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Trigger</em>' containment reference.
-	 * @see #setTrigger(DynBLTL)
-	 * @see mKAOS.MKAOSPackage#getMission_Trigger()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	DynBLTL getTrigger();
-
-	/**
-	 * Sets the value of the '{@link mKAOS.Mission#getTrigger <em>Trigger</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Trigger</em>' containment reference.
-	 * @see #getTrigger()
-	 * @generated
-	 */
-	void setTrigger(DynBLTL value);
-
-	/**
-	 * Returns the value of the '<em><b>Refinement</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Refinement</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Refinement</em>' containment reference.
-	 * @see #setRefinement(MissionRefinement)
-	 * @see mKAOS.MKAOSPackage#getMission_Refinement()
-	 * @model containment="true"
-	 * @generated
-	 */
-	MissionRefinement getRefinement();
-
-	/**
-	 * Sets the value of the '{@link mKAOS.Mission#getRefinement <em>Refinement</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Refinement</em>' containment reference.
-	 * @see #getRefinement()
-	 * @generated
-	 */
-	void setRefinement(MissionRefinement value);
-
+public interface Mission extends Goal, FormalElement {
 	/**
 	 * Returns the value of the '<em><b>Priority</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -173,5 +123,57 @@ public interface Mission extends mKAOS.Goal, FormalElement {
 	 * @generated
 	 */
 	void setDescription(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Trigger</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Trigger</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Trigger</em>' containment reference.
+	 * @see #setTrigger(DynBLTL)
+	 * @see mKAOS.MKAOSPackage#getMission_Trigger()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	DynBLTL getTrigger();
+
+	/**
+	 * Sets the value of the '{@link mKAOS.Mission#getTrigger <em>Trigger</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Trigger</em>' containment reference.
+	 * @see #getTrigger()
+	 * @generated
+	 */
+	void setTrigger(DynBLTL value);
+
+	/**
+	 * Returns the value of the '<em><b>Refinement</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Refinement</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Refinement</em>' containment reference.
+	 * @see #setRefinement(MissionRefinement)
+	 * @see mKAOS.MKAOSPackage#getMission_Refinement()
+	 * @model containment="true"
+	 * @generated
+	 */
+	MissionRefinement getRefinement();
+
+	/**
+	 * Sets the value of the '{@link mKAOS.Mission#getRefinement <em>Refinement</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Refinement</em>' containment reference.
+	 * @see #getRefinement()
+	 * @generated
+	 */
+	void setRefinement(MissionRefinement value);
 
 } // Mission

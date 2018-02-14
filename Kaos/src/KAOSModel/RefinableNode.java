@@ -32,7 +32,7 @@ public interface RefinableNode extends Nodes {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Refined By</em>' reference list.
 	 * @see KAOSModel.KAOSModelPackage#getRefinableNode_RefinedBy()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Refinement> getRefinedBy();

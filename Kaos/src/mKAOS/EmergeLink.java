@@ -2,6 +2,9 @@
  */
 package mKAOS;
 
+import KAOSModel.Link;
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Emerge Link</b></em>'.
@@ -20,32 +23,22 @@ package mKAOS;
  * @model
  * @generated
  */
-public interface EmergeLink extends mKAOS.Link {
+public interface EmergeLink extends Link {
 	/**
-	 * Returns the value of the '<em><b>Behavior</b></em>' reference.
+	 * Returns the value of the '<em><b>Behavior</b></em>' reference list.
+	 * The list contents are of type {@link mKAOS.EmergentBehavior}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Behavior</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Behavior</em>' reference.
-	 * @see #setBehavior(EmergentBehavior)
+	 * @return the value of the '<em>Behavior</em>' reference list.
 	 * @see mKAOS.MKAOSPackage#getEmergeLink_Behavior()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
-	EmergentBehavior getBehavior();
-
-	/**
-	 * Sets the value of the '{@link mKAOS.EmergeLink#getBehavior <em>Behavior</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Behavior</em>' reference.
-	 * @see #getBehavior()
-	 * @generated
-	 */
-	void setBehavior(EmergentBehavior value);
+	EList<EmergentBehavior> getBehavior();
 
 	/**
 	 * Returns the value of the '<em><b>Capability</b></em>' reference.
@@ -58,7 +51,7 @@ public interface EmergeLink extends mKAOS.Link {
 	 * @return the value of the '<em>Capability</em>' reference.
 	 * @see #setCapability(CommunicationalCapability)
 	 * @see mKAOS.MKAOSPackage#getEmergeLink_Capability()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	CommunicationalCapability getCapability();
@@ -85,7 +78,7 @@ public interface EmergeLink extends mKAOS.Link {
 	 * @return the value of the '<em>Cardinality</em>' attribute.
 	 * @see #setCardinality(String)
 	 * @see mKAOS.MKAOSPackage#getEmergeLink_Cardinality()
-	 * @model default="[1..*]" required="true"
+	 * @model default="[1..*]"
 	 * @generated
 	 */
 	String getCardinality();

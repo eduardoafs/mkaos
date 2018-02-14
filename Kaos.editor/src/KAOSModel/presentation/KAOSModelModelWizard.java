@@ -66,8 +66,7 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 
 import KAOSModel.KAOSModelFactory;
 import KAOSModel.KAOSModelPackage;
-import KAOSModel.provider.KaosEditPlugin;
-
+import mKAOS.provider.MkaosEditPlugin;
 
 import org.eclipse.core.runtime.Path;
 
@@ -531,7 +530,7 @@ public class KAOSModelModelWizard extends Wizard implements INewWizard {
 		 */
 		protected String getLabel(String typeName) {
 			try {
-				return KaosEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
+				return MkaosEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
 			}
 			catch(MissingResourceException mre) {
 				KaosEditorPlugin.INSTANCE.log(mre);

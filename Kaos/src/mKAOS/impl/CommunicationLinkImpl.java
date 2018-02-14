@@ -2,6 +2,10 @@
  */
 package mKAOS.impl;
 
+import KAOSModel.Entity;
+
+import KAOSModel.impl.LinkImpl;
+
 import mKAOS.CommunicationLink;
 import mKAOS.CommunicationalCapability;
 import mKAOS.MKAOSPackage;
@@ -28,7 +32,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public abstract class CommunicationLinkImpl extends mKAOS.impl.LinkImpl implements CommunicationLink {
+public abstract class CommunicationLinkImpl extends LinkImpl implements CommunicationLink {
 	/**
 	 * The cached value of the '{@link #getCapability() <em>Capability</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -47,7 +51,7 @@ public abstract class CommunicationLinkImpl extends mKAOS.impl.LinkImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected mKAOS.Entity entity;
+	protected Entity entity;
 
 	/**
 	 * The default value of the '{@link #getCardinality() <em>Cardinality</em>}' attribute.
@@ -131,10 +135,10 @@ public abstract class CommunicationLinkImpl extends mKAOS.impl.LinkImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public mKAOS.Entity getEntity() {
+	public Entity getEntity() {
 		if (entity != null && entity.eIsProxy()) {
 			InternalEObject oldEntity = (InternalEObject)entity;
-			entity = (mKAOS.Entity)eResolveProxy(oldEntity);
+			entity = (Entity)eResolveProxy(oldEntity);
 			if (entity != oldEntity) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MKAOSPackage.COMMUNICATION_LINK__ENTITY, oldEntity, entity));
@@ -148,7 +152,7 @@ public abstract class CommunicationLinkImpl extends mKAOS.impl.LinkImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public mKAOS.Entity basicGetEntity() {
+	public Entity basicGetEntity() {
 		return entity;
 	}
 
@@ -157,8 +161,8 @@ public abstract class CommunicationLinkImpl extends mKAOS.impl.LinkImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEntity(mKAOS.Entity newEntity) {
-		mKAOS.Entity oldEntity = entity;
+	public void setEntity(Entity newEntity) {
+		Entity oldEntity = entity;
 		entity = newEntity;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.COMMUNICATION_LINK__ENTITY, oldEntity, entity));
@@ -217,7 +221,7 @@ public abstract class CommunicationLinkImpl extends mKAOS.impl.LinkImpl implemen
 				setCapability((CommunicationalCapability)newValue);
 				return;
 			case MKAOSPackage.COMMUNICATION_LINK__ENTITY:
-				setEntity((mKAOS.Entity)newValue);
+				setEntity((Entity)newValue);
 				return;
 			case MKAOSPackage.COMMUNICATION_LINK__CARDINALITY:
 				setCardinality((String)newValue);
@@ -238,7 +242,7 @@ public abstract class CommunicationLinkImpl extends mKAOS.impl.LinkImpl implemen
 				setCapability((CommunicationalCapability)null);
 				return;
 			case MKAOSPackage.COMMUNICATION_LINK__ENTITY:
-				setEntity((mKAOS.Entity)null);
+				setEntity((Entity)null);
 				return;
 			case MKAOSPackage.COMMUNICATION_LINK__CARDINALITY:
 				setCardinality(CARDINALITY_EDEFAULT);

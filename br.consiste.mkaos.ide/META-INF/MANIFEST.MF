@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: br.consiste.mkaos.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: br.consiste.mkaos.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: br.consiste.mkaos,
+ Kaos,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: mkaos.ide.contentassist.antlr,
+ mkaos.ide.contentassist.antlr.internal
+

@@ -2,23 +2,28 @@
  */
 package mKAOS.impl;
 
+import KAOSModel.impl.GoalImpl;
+
 import java.util.Collection;
+
 import mKAOS.ConstituentSystem;
 import mKAOS.DynBLTL;
 import mKAOS.FormalElement;
 import mKAOS.MKAOSPackage;
 import mKAOS.Mission;
-
 import mKAOS.MissionLink;
 import mKAOS.MissionRefinement;
-import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -41,7 +46,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class MissionImpl extends mKAOS.impl.GoalImpl implements Mission {
+public class MissionImpl extends GoalImpl implements Mission {
 	/**
 	 * The cached value of the '{@link #getRule() <em>Rule</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -199,6 +204,98 @@ public class MissionImpl extends mKAOS.impl.GoalImpl implements Mission {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getPriority() {
+		return priority;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPriority(int newPriority) {
+		int oldPriority = priority;
+		priority = newPriority;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.MISSION__PRIORITY, oldPriority, priority));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstituentSystem getAssignedTo() {
+		if (assignedTo != null && assignedTo.eIsProxy()) {
+			InternalEObject oldAssignedTo = (InternalEObject)assignedTo;
+			assignedTo = (ConstituentSystem)eResolveProxy(oldAssignedTo);
+			if (assignedTo != oldAssignedTo) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MKAOSPackage.MISSION__ASSIGNED_TO, oldAssignedTo, assignedTo));
+			}
+		}
+		return assignedTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstituentSystem basicGetAssignedTo() {
+		return assignedTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAssignedTo(ConstituentSystem newAssignedTo) {
+		ConstituentSystem oldAssignedTo = assignedTo;
+		assignedTo = newAssignedTo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.MISSION__ASSIGNED_TO, oldAssignedTo, assignedTo));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<MissionLink> getLinks() {
+		if (links == null) {
+			links = new EObjectContainmentWithInverseEList<MissionLink>(MissionLink.class, this, MKAOSPackage.MISSION__LINKS, MKAOSPackage.MISSION_LINK__SOURCE);
+		}
+		return links;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.MISSION__DESCRIPTION, oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public DynBLTL getTrigger() {
 		return trigger;
 	}
@@ -313,98 +410,6 @@ public class MissionImpl extends mKAOS.impl.GoalImpl implements Mission {
 				return basicSetRefinement(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getPriority() {
-		return priority;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPriority(int newPriority) {
-		int oldPriority = priority;
-		priority = newPriority;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.MISSION__PRIORITY, oldPriority, priority));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ConstituentSystem getAssignedTo() {
-		if (assignedTo != null && assignedTo.eIsProxy()) {
-			InternalEObject oldAssignedTo = (InternalEObject)assignedTo;
-			assignedTo = (ConstituentSystem)eResolveProxy(oldAssignedTo);
-			if (assignedTo != oldAssignedTo) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MKAOSPackage.MISSION__ASSIGNED_TO, oldAssignedTo, assignedTo));
-			}
-		}
-		return assignedTo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ConstituentSystem basicGetAssignedTo() {
-		return assignedTo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAssignedTo(ConstituentSystem newAssignedTo) {
-		ConstituentSystem oldAssignedTo = assignedTo;
-		assignedTo = newAssignedTo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.MISSION__ASSIGNED_TO, oldAssignedTo, assignedTo));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<MissionLink> getLinks() {
-		if (links == null) {
-			links = new EObjectContainmentWithInverseEList<MissionLink>(MissionLink.class, this, MKAOSPackage.MISSION__LINKS, MKAOSPackage.MISSION_LINK__SOURCE);
-		}
-		return links;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDescription() {
-		return description;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.MISSION__DESCRIPTION, oldDescription, description));
 	}
 
 	/**

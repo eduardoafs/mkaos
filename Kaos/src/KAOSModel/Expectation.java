@@ -32,7 +32,7 @@ public interface Expectation extends Goal {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Assigned To</em>' reference list.
 	 * @see KAOSModel.KAOSModelPackage#getExpectation_AssignedTo()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<EnvironmentAgent> getAssignedTo();

@@ -2,6 +2,10 @@
  */
 package mKAOS;
 
+import KAOSModel.Entity;
+import KAOSModel.Expectation;
+import KAOSModel.Link;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Influence Link</b></em>'.
@@ -19,7 +23,7 @@ package mKAOS;
  * @model
  * @generated
  */
-public interface InfluenceLink extends mKAOS.Link {
+public interface InfluenceLink extends Link {
 	/**
 	 * Returns the value of the '<em><b>Expectation</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -29,12 +33,12 @@ public interface InfluenceLink extends mKAOS.Link {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expectation</em>' reference.
-	 * @see #setExpectation(mKAOS.Expectation)
+	 * @see #setExpectation(Expectation)
 	 * @see mKAOS.MKAOSPackage#getInfluenceLink_Expectation()
 	 * @model keys="name"
 	 * @generated
 	 */
-	mKAOS.Expectation getExpectation();
+	Expectation getExpectation();
 
 	/**
 	 * Sets the value of the '{@link mKAOS.InfluenceLink#getExpectation <em>Expectation</em>}' reference.
@@ -44,7 +48,7 @@ public interface InfluenceLink extends mKAOS.Link {
 	 * @see #getExpectation()
 	 * @generated
 	 */
-	void setExpectation(mKAOS.Expectation value);
+	void setExpectation(Expectation value);
 
 	/**
 	 * Returns the value of the '<em><b>Influenced</b></em>' reference.
@@ -55,12 +59,12 @@ public interface InfluenceLink extends mKAOS.Link {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Influenced</em>' reference.
-	 * @see #setInfluenced(mKAOS.Entity)
+	 * @see #setInfluenced(Entity)
 	 * @see mKAOS.MKAOSPackage#getInfluenceLink_Influenced()
 	 * @model
 	 * @generated
 	 */
-	mKAOS.Entity getInfluenced();
+	Entity getInfluenced();
 
 	/**
 	 * Sets the value of the '{@link mKAOS.InfluenceLink#getInfluenced <em>Influenced</em>}' reference.
@@ -70,6 +74,6 @@ public interface InfluenceLink extends mKAOS.Link {
 	 * @see #getInfluenced()
 	 * @generated
 	 */
-	void setInfluenced(mKAOS.Entity value);
+	void setInfluenced(Entity value);
 
 } // InfluenceLink

@@ -3,14 +3,19 @@
 package mKAOS.provider;
 
 
+import KAOSModel.provider.OperationItemProvider;
+
 import java.util.Collection;
 import java.util.List;
 
 import mKAOS.CommunicationalCapability;
-
 import mKAOS.MKAOSPackage;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -22,7 +27,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CommunicationalCapabilityItemProvider extends mKAOS.provider.OperationItemProvider {
+public class CommunicationalCapabilityItemProvider extends OperationItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -126,6 +131,17 @@ public class CommunicationalCapabilityItemProvider extends mKAOS.provider.Operat
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return MkaosEditPlugin.INSTANCE;
 	}
 
 }

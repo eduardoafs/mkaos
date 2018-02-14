@@ -2,67 +2,17 @@
  */
 package mKAOS.util;
 
-import mKAOS.AndRefinement;
-import mKAOS.AssignmentLink;
-import mKAOS.Associations;
-import mKAOS.BlockLink;
-import mKAOS.CommunicationInputLink;
-import mKAOS.CommunicationLink;
-import mKAOS.CommunicationOutputLink;
-import mKAOS.CommunicationalCapability;
-import mKAOS.CompositionLink;
-import mKAOS.ConflictLink;
-import mKAOS.ConstituentSystem;
-import mKAOS.DependencyLink;
-import mKAOS.DisruptLink;
-import mKAOS.DomainHypothesis;
-import mKAOS.DomainInvariant;
-import mKAOS.DomainProperty;
-import mKAOS.DynBLTL;
-import mKAOS.EmergeLink;
-import mKAOS.EmergentBehavior;
-import mKAOS.Entity;
-import mKAOS.EnvironmentAgent;
-import mKAOS.Event;
-import mKAOS.Expectation;
-import mKAOS.FormalElement;
-import mKAOS.GeneralizationLink;
-import mKAOS.InfluenceLink;
-import mKAOS.InputLink;
-import mKAOS.MKAOSPackage;
-import mKAOS.Mediator;
-import mKAOS.Mission;
-import mKAOS.MissionLink;
-import mKAOS.MissionRefinement;
-import mKAOS.Obstacle;
-import mKAOS.ObstructionLink;
-import mKAOS.OperacionalizationLink;
-import mKAOS.OperationalCapability;
-import mKAOS.OrRefinement;
-import mKAOS.OutputLink;
-import mKAOS.Requirement;
-import mKAOS.ResolutionLink;
-import mKAOS.ResponsabilityLink;
-import mKAOS.RuleBound;
-import mKAOS.RuleConjunction;
-import mKAOS.RuleDisjunction;
-import mKAOS.RuleEquality;
-import mKAOS.RuleFactor;
-import mKAOS.RuleFloatLit;
-import mKAOS.RuleFunction;
-import mKAOS.RuleImplication;
-import mKAOS.RuleIntegerLit;
-import mKAOS.RuleLiteral;
-import mKAOS.RuleNumExp;
-import mKAOS.RuleParams;
-import mKAOS.RuleRelExp;
-import mKAOS.RuleSeqLit;
-import mKAOS.RuleTemporal;
-import mKAOS.RuleTerm;
-import mKAOS.RuleTupleLit;
-import mKAOS.RuleVar;
-import mKAOS.SuportLink;
-import mKAOS.mKAOS;
+import KAOSModel.Agent;
+import KAOSModel.Goal;
+import KAOSModel.KAOS;
+import KAOSModel.Link;
+import KAOSModel.Nodes;
+import KAOSModel.Operation;
+import KAOSModel.OperationNode;
+import KAOSModel.RefinableNode;
+import KAOSModel.Refinement;
+import KAOSModel.SoftwareAgent;
+
 import mKAOS.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -127,245 +77,6 @@ public class MKAOSSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case MKAOSPackage.OPERATION: {
-				mKAOS.Operation operation = (mKAOS.Operation)theEObject;
-				T result = caseOperation(operation);
-				if (result == null) result = caseOperationNode(operation);
-				if (result == null) result = caseNodes(operation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.KAOS: {
-				mKAOS.KAOS kaos = (mKAOS.KAOS)theEObject;
-				T result = caseKAOS(kaos);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.LINK: {
-				mKAOS.Link link = (mKAOS.Link)theEObject;
-				T result = caseLink(link);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.NODES: {
-				mKAOS.Nodes nodes = (mKAOS.Nodes)theEObject;
-				T result = caseNodes(nodes);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.OPERATION_NODE: {
-				mKAOS.OperationNode operationNode = (mKAOS.OperationNode)theEObject;
-				T result = caseOperationNode(operationNode);
-				if (result == null) result = caseNodes(operationNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.EVENT: {
-				Event event = (Event)theEObject;
-				T result = caseEvent(event);
-				if (result == null) result = caseOperationNode(event);
-				if (result == null) result = caseNodes(event);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.ENTITY: {
-				Entity entity = (Entity)theEObject;
-				T result = caseEntity(entity);
-				if (result == null) result = caseObject(entity);
-				if (result == null) result = caseNodes(entity);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.OBJECT: {
-				mKAOS.Object object = (mKAOS.Object)theEObject;
-				T result = caseObject(object);
-				if (result == null) result = caseNodes(object);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.ASSOCIATIONS: {
-				Associations associations = (Associations)theEObject;
-				T result = caseAssociations(associations);
-				if (result == null) result = caseObject(associations);
-				if (result == null) result = caseNodes(associations);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.AGENT: {
-				mKAOS.Agent agent = (mKAOS.Agent)theEObject;
-				T result = caseAgent(agent);
-				if (result == null) result = caseObject(agent);
-				if (result == null) result = caseNodes(agent);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.SOFTWARE_AGENT: {
-				mKAOS.SoftwareAgent softwareAgent = (mKAOS.SoftwareAgent)theEObject;
-				T result = caseSoftwareAgent(softwareAgent);
-				if (result == null) result = caseAgent(softwareAgent);
-				if (result == null) result = caseObject(softwareAgent);
-				if (result == null) result = caseNodes(softwareAgent);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.ENVIRONMENT_AGENT: {
-				EnvironmentAgent environmentAgent = (EnvironmentAgent)theEObject;
-				T result = caseEnvironmentAgent(environmentAgent);
-				if (result == null) result = caseAgent(environmentAgent);
-				if (result == null) result = caseObject(environmentAgent);
-				if (result == null) result = caseNodes(environmentAgent);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.REFINABLE_NODE: {
-				mKAOS.RefinableNode refinableNode = (mKAOS.RefinableNode)theEObject;
-				T result = caseRefinableNode(refinableNode);
-				if (result == null) result = caseNodes(refinableNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.OBSTACLE: {
-				Obstacle obstacle = (Obstacle)theEObject;
-				T result = caseObstacle(obstacle);
-				if (result == null) result = caseRefinableNode(obstacle);
-				if (result == null) result = caseNodes(obstacle);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.GOAL: {
-				mKAOS.Goal goal = (mKAOS.Goal)theEObject;
-				T result = caseGoal(goal);
-				if (result == null) result = caseRefinableNode(goal);
-				if (result == null) result = caseNodes(goal);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.ASSIGNMENT_LINK: {
-				AssignmentLink assignmentLink = (AssignmentLink)theEObject;
-				T result = caseAssignmentLink(assignmentLink);
-				if (result == null) result = caseLink(assignmentLink);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.CONFLICT_LINK: {
-				ConflictLink conflictLink = (ConflictLink)theEObject;
-				T result = caseConflictLink(conflictLink);
-				if (result == null) result = caseLink(conflictLink);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.OBSTRUCTION_LINK: {
-				ObstructionLink obstructionLink = (ObstructionLink)theEObject;
-				T result = caseObstructionLink(obstructionLink);
-				if (result == null) result = caseLink(obstructionLink);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.OUTPUT_LINK: {
-				OutputLink outputLink = (OutputLink)theEObject;
-				T result = caseOutputLink(outputLink);
-				if (result == null) result = caseLink(outputLink);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.EXPECTATION: {
-				Expectation expectation = (Expectation)theEObject;
-				T result = caseExpectation(expectation);
-				if (result == null) result = caseGoal(expectation);
-				if (result == null) result = caseRefinableNode(expectation);
-				if (result == null) result = caseNodes(expectation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.INPUT_LINK: {
-				InputLink inputLink = (InputLink)theEObject;
-				T result = caseInputLink(inputLink);
-				if (result == null) result = caseLink(inputLink);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.REFINEMENT: {
-				mKAOS.Refinement refinement = (mKAOS.Refinement)theEObject;
-				T result = caseRefinement(refinement);
-				if (result == null) result = caseLink(refinement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.AND_REFINEMENT: {
-				AndRefinement andRefinement = (AndRefinement)theEObject;
-				T result = caseAndRefinement(andRefinement);
-				if (result == null) result = caseRefinement(andRefinement);
-				if (result == null) result = caseLink(andRefinement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.OR_REFINEMENT: {
-				OrRefinement orRefinement = (OrRefinement)theEObject;
-				T result = caseOrRefinement(orRefinement);
-				if (result == null) result = caseRefinement(orRefinement);
-				if (result == null) result = caseLink(orRefinement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.DOMAIN_PROPERTY: {
-				DomainProperty domainProperty = (DomainProperty)theEObject;
-				T result = caseDomainProperty(domainProperty);
-				if (result == null) result = caseGoal(domainProperty);
-				if (result == null) result = caseRefinableNode(domainProperty);
-				if (result == null) result = caseNodes(domainProperty);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.REQUIREMENT: {
-				Requirement requirement = (Requirement)theEObject;
-				T result = caseRequirement(requirement);
-				if (result == null) result = caseGoal(requirement);
-				if (result == null) result = caseRefinableNode(requirement);
-				if (result == null) result = caseNodes(requirement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.OPERACIONALIZATION_LINK: {
-				OperacionalizationLink operacionalizationLink = (OperacionalizationLink)theEObject;
-				T result = caseOperacionalizationLink(operacionalizationLink);
-				if (result == null) result = caseLink(operacionalizationLink);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.DOMAIN_HYPOTHESIS: {
-				DomainHypothesis domainHypothesis = (DomainHypothesis)theEObject;
-				T result = caseDomainHypothesis(domainHypothesis);
-				if (result == null) result = caseDomainProperty(domainHypothesis);
-				if (result == null) result = caseGoal(domainHypothesis);
-				if (result == null) result = caseRefinableNode(domainHypothesis);
-				if (result == null) result = caseNodes(domainHypothesis);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.DOMAIN_INVARIANT: {
-				DomainInvariant domainInvariant = (DomainInvariant)theEObject;
-				T result = caseDomainInvariant(domainInvariant);
-				if (result == null) result = caseDomainProperty(domainInvariant);
-				if (result == null) result = caseGoal(domainInvariant);
-				if (result == null) result = caseRefinableNode(domainInvariant);
-				if (result == null) result = caseNodes(domainInvariant);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.RESOLUTION_LINK: {
-				ResolutionLink resolutionLink = (ResolutionLink)theEObject;
-				T result = caseResolutionLink(resolutionLink);
-				if (result == null) result = caseLink(resolutionLink);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MKAOSPackage.RESPONSABILITY_LINK: {
-				ResponsabilityLink responsabilityLink = (ResponsabilityLink)theEObject;
-				T result = caseResponsabilityLink(responsabilityLink);
-				if (result == null) result = caseLink(responsabilityLink);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case MKAOSPackage.MKAOS: {
 				mKAOS mKAOS = (mKAOS)theEObject;
 				T result = casemKAOS(mKAOS);
@@ -653,471 +364,6 @@ public class MKAOSSwitch<T> extends Switch<T> {
 			}
 			default: return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Operation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Operation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOperation(mKAOS.Operation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>KAOS</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>KAOS</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseKAOS(mKAOS.KAOS object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLink(mKAOS.Link object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Nodes</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Nodes</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNodes(mKAOS.Nodes object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Operation Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Operation Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOperationNode(mKAOS.OperationNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Event</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Event</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEvent(Event object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEntity(Entity object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Object</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Object</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseObject(mKAOS.Object object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Associations</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Associations</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAssociations(Associations object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Agent</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Agent</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAgent(mKAOS.Agent object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Software Agent</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Software Agent</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSoftwareAgent(mKAOS.SoftwareAgent object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Environment Agent</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Environment Agent</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEnvironmentAgent(EnvironmentAgent object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Refinable Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Refinable Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRefinableNode(mKAOS.RefinableNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Obstacle</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Obstacle</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseObstacle(Obstacle object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Goal</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Goal</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGoal(mKAOS.Goal object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Assignment Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Assignment Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAssignmentLink(AssignmentLink object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Conflict Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Conflict Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseConflictLink(ConflictLink object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Obstruction Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Obstruction Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseObstructionLink(ObstructionLink object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Output Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Output Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOutputLink(OutputLink object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Expectation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Expectation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseExpectation(Expectation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInputLink(InputLink object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Refinement</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Refinement</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRefinement(mKAOS.Refinement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>And Refinement</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>And Refinement</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAndRefinement(AndRefinement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Or Refinement</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Or Refinement</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOrRefinement(OrRefinement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Domain Property</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Domain Property</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDomainProperty(DomainProperty object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Requirement</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Requirement</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRequirement(Requirement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Operacionalization Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Operacionalization Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOperacionalizationLink(OperacionalizationLink object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Domain Hypothesis</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Domain Hypothesis</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDomainHypothesis(DomainHypothesis object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Domain Invariant</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Domain Invariant</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDomainInvariant(DomainInvariant object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Resolution Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Resolution Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResolutionLink(ResolutionLink object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Responsability Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Responsability Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResponsabilityLink(ResponsabilityLink object) {
-		return null;
 	}
 
 	/**
@@ -1717,6 +963,171 @@ public class MKAOSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRuleSeqLit(RuleSeqLit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>KAOS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>KAOS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKAOS(KAOS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Nodes</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Nodes</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNodes(Nodes object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Refinable Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Refinable Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRefinableNode(RefinableNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Goal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Goal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGoal(Goal object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Object</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Object</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseObject(KAOSModel.Object object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Agent</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Agent</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAgent(Agent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Software Agent</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Software Agent</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSoftwareAgent(SoftwareAgent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Operation Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Operation Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOperationNode(OperationNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOperation(Operation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLink(Link object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Refinement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Refinement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRefinement(Refinement object) {
 		return null;
 	}
 

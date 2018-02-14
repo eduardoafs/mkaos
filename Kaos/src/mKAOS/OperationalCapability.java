@@ -2,6 +2,8 @@
  */
 package mKAOS;
 
+import KAOSModel.Operation;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Operational Capability</b></em>'.
@@ -18,8 +20,7 @@ package mKAOS;
  * @model
  * @generated
  */
-public interface OperationalCapability extends mKAOS.Operation {
-
+public interface OperationalCapability extends Operation {
 	/**
 	 * Returns the value of the '<em><b>Desc</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -45,4 +46,5 @@ public interface OperationalCapability extends mKAOS.Operation {
 	 * @generated
 	 */
 	void setDesc(String value);
+
 } // OperationalCapability

@@ -2,6 +2,10 @@
  */
 package mKAOS.impl;
 
+import KAOSModel.Entity;
+
+import KAOSModel.impl.LinkImpl;
+
 import mKAOS.CompositionLink;
 import mKAOS.MKAOSPackage;
 
@@ -26,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class CompositionLinkImpl extends mKAOS.impl.LinkImpl implements CompositionLink {
+public class CompositionLinkImpl extends LinkImpl implements CompositionLink {
 	/**
 	 * The cached value of the '{@link #getEntity() <em>Entity</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -35,7 +39,7 @@ public class CompositionLinkImpl extends mKAOS.impl.LinkImpl implements Composit
 	 * @generated
 	 * @ordered
 	 */
-	protected mKAOS.Entity entity;
+	protected Entity entity;
 
 	/**
 	 * The cached value of the '{@link #getComposedBy() <em>Composed By</em>}' reference.
@@ -45,7 +49,7 @@ public class CompositionLinkImpl extends mKAOS.impl.LinkImpl implements Composit
 	 * @generated
 	 * @ordered
 	 */
-	protected mKAOS.Entity composedBy;
+	protected Entity composedBy;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -71,10 +75,10 @@ public class CompositionLinkImpl extends mKAOS.impl.LinkImpl implements Composit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public mKAOS.Entity getEntity() {
+	public Entity getEntity() {
 		if (entity != null && entity.eIsProxy()) {
 			InternalEObject oldEntity = (InternalEObject)entity;
-			entity = (mKAOS.Entity)eResolveProxy(oldEntity);
+			entity = (Entity)eResolveProxy(oldEntity);
 			if (entity != oldEntity) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MKAOSPackage.COMPOSITION_LINK__ENTITY, oldEntity, entity));
@@ -88,7 +92,7 @@ public class CompositionLinkImpl extends mKAOS.impl.LinkImpl implements Composit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public mKAOS.Entity basicGetEntity() {
+	public Entity basicGetEntity() {
 		return entity;
 	}
 
@@ -97,8 +101,8 @@ public class CompositionLinkImpl extends mKAOS.impl.LinkImpl implements Composit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEntity(mKAOS.Entity newEntity) {
-		mKAOS.Entity oldEntity = entity;
+	public void setEntity(Entity newEntity) {
+		Entity oldEntity = entity;
 		entity = newEntity;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.COMPOSITION_LINK__ENTITY, oldEntity, entity));
@@ -109,10 +113,10 @@ public class CompositionLinkImpl extends mKAOS.impl.LinkImpl implements Composit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public mKAOS.Entity getComposedBy() {
+	public Entity getComposedBy() {
 		if (composedBy != null && composedBy.eIsProxy()) {
 			InternalEObject oldComposedBy = (InternalEObject)composedBy;
-			composedBy = (mKAOS.Entity)eResolveProxy(oldComposedBy);
+			composedBy = (Entity)eResolveProxy(oldComposedBy);
 			if (composedBy != oldComposedBy) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MKAOSPackage.COMPOSITION_LINK__COMPOSED_BY, oldComposedBy, composedBy));
@@ -126,7 +130,7 @@ public class CompositionLinkImpl extends mKAOS.impl.LinkImpl implements Composit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public mKAOS.Entity basicGetComposedBy() {
+	public Entity basicGetComposedBy() {
 		return composedBy;
 	}
 
@@ -135,8 +139,8 @@ public class CompositionLinkImpl extends mKAOS.impl.LinkImpl implements Composit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setComposedBy(mKAOS.Entity newComposedBy) {
-		mKAOS.Entity oldComposedBy = composedBy;
+	public void setComposedBy(Entity newComposedBy) {
+		Entity oldComposedBy = composedBy;
 		composedBy = newComposedBy;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.COMPOSITION_LINK__COMPOSED_BY, oldComposedBy, composedBy));
@@ -169,10 +173,10 @@ public class CompositionLinkImpl extends mKAOS.impl.LinkImpl implements Composit
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case MKAOSPackage.COMPOSITION_LINK__ENTITY:
-				setEntity((mKAOS.Entity)newValue);
+				setEntity((Entity)newValue);
 				return;
 			case MKAOSPackage.COMPOSITION_LINK__COMPOSED_BY:
-				setComposedBy((mKAOS.Entity)newValue);
+				setComposedBy((Entity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,10 +191,10 @@ public class CompositionLinkImpl extends mKAOS.impl.LinkImpl implements Composit
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case MKAOSPackage.COMPOSITION_LINK__ENTITY:
-				setEntity((mKAOS.Entity)null);
+				setEntity((Entity)null);
 				return;
 			case MKAOSPackage.COMPOSITION_LINK__COMPOSED_BY:
-				setComposedBy((mKAOS.Entity)null);
+				setComposedBy((Entity)null);
 				return;
 		}
 		super.eUnset(featureID);

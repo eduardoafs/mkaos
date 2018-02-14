@@ -2,12 +2,14 @@
  */
 package mKAOS;
 
+import KAOSModel.KAOSModelPackage;
+import mKAOS.impl.MKAOSPackageImpl;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import mKAOS.impl.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -56,1640 +58,7 @@ public interface MKAOSPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	MKAOSPackage eINSTANCE = mKAOS.impl.MKAOSPackageImpl.init();
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.NodesImpl <em>Nodes</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.NodesImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getNodes()
-	 * @generated
-	 */
-	int NODES = 3;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODES__NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>Nodes</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODES_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Nodes</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODES_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.OperationNodeImpl <em>Operation Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.OperationNodeImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getOperationNode()
-	 * @generated
-	 */
-	int OPERATION_NODE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION_NODE__NAME = NODES__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Operation Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION_NODE_FEATURE_COUNT = NODES_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Operation Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION_NODE_OPERATION_COUNT = NODES_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.OperationImpl <em>Operation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.OperationImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getOperation()
-	 * @generated
-	 */
-	int OPERATION = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION__NAME = OPERATION_NODE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Produces</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION__PRODUCES = OPERATION_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Output</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION__OUTPUT = OPERATION_NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Operationalize</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION__OPERATIONALIZE = OPERATION_NODE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Input</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION__INPUT = OPERATION_NODE_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>Operation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION_FEATURE_COUNT = OPERATION_NODE_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of operations of the '<em>Operation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION_OPERATION_COUNT = OPERATION_NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.KAOSImpl <em>KAOS</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.KAOSImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getKAOS()
-	 * @generated
-	 */
-	int KAOS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KAOS__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Linked By</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KAOS__LINKED_BY = 1;
-
-	/**
-	 * The feature id for the '<em><b>Consists Of</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KAOS__CONSISTS_OF = 2;
-
-	/**
-	 * The number of structural features of the '<em>KAOS</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KAOS_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>KAOS</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KAOS_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.LinkImpl <em>Link</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.LinkImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getLink()
-	 * @generated
-	 */
-	int LINK = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK__NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.EventImpl <em>Event</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.EventImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getEvent()
-	 * @generated
-	 */
-	int EVENT = 5;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVENT__NAME = OPERATION_NODE__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Event</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVENT_FEATURE_COUNT = OPERATION_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Event</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVENT_OPERATION_COUNT = OPERATION_NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.ObjectImpl <em>Object</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.ObjectImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getObject()
-	 * @generated
-	 */
-	int OBJECT = 7;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJECT__NAME = NODES__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Object</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJECT_FEATURE_COUNT = NODES_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Object</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJECT_OPERATION_COUNT = NODES_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.EntityImpl <em>Entity</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.EntityImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getEntity()
-	 * @generated
-	 */
-	int ENTITY = 6;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__NAME = OBJECT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Composition</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__COMPOSITION = OBJECT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Entity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Entity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OPERATION_COUNT = OBJECT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.AssociationsImpl <em>Associations</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.AssociationsImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getAssociations()
-	 * @generated
-	 */
-	int ASSOCIATIONS = 8;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATIONS__NAME = OBJECT__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Associations</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATIONS_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Associations</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATIONS_OPERATION_COUNT = OBJECT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.AgentImpl <em>Agent</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.AgentImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getAgent()
-	 * @generated
-	 */
-	int AGENT = 9;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AGENT__NAME = OBJECT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Performs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AGENT__PERFORMS = OBJECT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Composition</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AGENT__COMPOSITION = OBJECT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Agent</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AGENT_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Agent</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AGENT_OPERATION_COUNT = OBJECT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.SoftwareAgentImpl <em>Software Agent</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.SoftwareAgentImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getSoftwareAgent()
-	 * @generated
-	 */
-	int SOFTWARE_AGENT = 10;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE_AGENT__NAME = AGENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Performs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE_AGENT__PERFORMS = AGENT__PERFORMS;
-
-	/**
-	 * The feature id for the '<em><b>Composition</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE_AGENT__COMPOSITION = AGENT__COMPOSITION;
-
-	/**
-	 * The feature id for the '<em><b>Responsible For</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE_AGENT__RESPONSIBLE_FOR = AGENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Software Agent</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE_AGENT_FEATURE_COUNT = AGENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Software Agent</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE_AGENT_OPERATION_COUNT = AGENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.EnvironmentAgentImpl <em>Environment Agent</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.EnvironmentAgentImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getEnvironmentAgent()
-	 * @generated
-	 */
-	int ENVIRONMENT_AGENT = 11;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENVIRONMENT_AGENT__NAME = AGENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Performs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENVIRONMENT_AGENT__PERFORMS = AGENT__PERFORMS;
-
-	/**
-	 * The feature id for the '<em><b>Composition</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENVIRONMENT_AGENT__COMPOSITION = AGENT__COMPOSITION;
-
-	/**
-	 * The number of structural features of the '<em>Environment Agent</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENVIRONMENT_AGENT_FEATURE_COUNT = AGENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Environment Agent</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENVIRONMENT_AGENT_OPERATION_COUNT = AGENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.RefinableNodeImpl <em>Refinable Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.RefinableNodeImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getRefinableNode()
-	 * @generated
-	 */
-	int REFINABLE_NODE = 12;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFINABLE_NODE__NAME = NODES__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Refined By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFINABLE_NODE__REFINED_BY = NODES_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Refinable Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFINABLE_NODE_FEATURE_COUNT = NODES_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Refinable Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFINABLE_NODE_OPERATION_COUNT = NODES_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.ObstacleImpl <em>Obstacle</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.ObstacleImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getObstacle()
-	 * @generated
-	 */
-	int OBSTACLE = 13;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBSTACLE__NAME = REFINABLE_NODE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Refined By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBSTACLE__REFINED_BY = REFINABLE_NODE__REFINED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Obstruct</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBSTACLE__OBSTRUCT = REFINABLE_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Obstacle</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBSTACLE_FEATURE_COUNT = REFINABLE_NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Obstacle</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBSTACLE_OPERATION_COUNT = REFINABLE_NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.GoalImpl <em>Goal</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.GoalImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getGoal()
-	 * @generated
-	 */
-	int GOAL = 14;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__NAME = REFINABLE_NODE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Refined By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__REFINED_BY = REFINABLE_NODE__REFINED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Resolve</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__RESOLVE = REFINABLE_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Conflicts</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__CONFLICTS = REFINABLE_NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Concerns</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__CONCERNS = REFINABLE_NODE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Goal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL_FEATURE_COUNT = REFINABLE_NODE_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Goal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL_OPERATION_COUNT = REFINABLE_NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.AssignmentLinkImpl <em>Assignment Link</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.AssignmentLinkImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getAssignmentLink()
-	 * @generated
-	 */
-	int ASSIGNMENT_LINK = 15;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSIGNMENT_LINK__NAME = LINK__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Assigns Goal To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSIGNMENT_LINK__ASSIGNS_GOAL_TO = LINK_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Assignment Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSIGNMENT_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Assignment Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSIGNMENT_LINK_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.ConflictLinkImpl <em>Conflict Link</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.ConflictLinkImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getConflictLink()
-	 * @generated
-	 */
-	int CONFLICT_LINK = 16;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFLICT_LINK__NAME = LINK__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Conflict Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFLICT_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Conflict Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFLICT_LINK_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.ObstructionLinkImpl <em>Obstruction Link</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.ObstructionLinkImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getObstructionLink()
-	 * @generated
-	 */
-	int OBSTRUCTION_LINK = 17;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBSTRUCTION_LINK__NAME = LINK__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Relate KGoal To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBSTRUCTION_LINK__RELATE_KGOAL_TO = LINK_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Obstruction Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBSTRUCTION_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Obstruction Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBSTRUCTION_LINK_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.OutputLinkImpl <em>Output Link</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.OutputLinkImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getOutputLink()
-	 * @generated
-	 */
-	int OUTPUT_LINK = 18;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_LINK__NAME = LINK__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Output Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Output Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_LINK_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.ExpectationImpl <em>Expectation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.ExpectationImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getExpectation()
-	 * @generated
-	 */
-	int EXPECTATION = 19;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPECTATION__NAME = GOAL__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Refined By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPECTATION__REFINED_BY = GOAL__REFINED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Resolve</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPECTATION__RESOLVE = GOAL__RESOLVE;
-
-	/**
-	 * The feature id for the '<em><b>Conflicts</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPECTATION__CONFLICTS = GOAL__CONFLICTS;
-
-	/**
-	 * The feature id for the '<em><b>Concerns</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPECTATION__CONCERNS = GOAL__CONCERNS;
-
-	/**
-	 * The feature id for the '<em><b>Assigned To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPECTATION__ASSIGNED_TO = GOAL_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Expectation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPECTATION_FEATURE_COUNT = GOAL_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Expectation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPECTATION_OPERATION_COUNT = GOAL_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.InputLinkImpl <em>Input Link</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.InputLinkImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getInputLink()
-	 * @generated
-	 */
-	int INPUT_LINK = 20;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_LINK__NAME = LINK__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Object Input On</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_LINK__OBJECT_INPUT_ON = LINK_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Input Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Input Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_LINK_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.RefinementImpl <em>Refinement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.RefinementImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getRefinement()
-	 * @generated
-	 */
-	int REFINEMENT = 21;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFINEMENT__NAME = LINK__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Refines</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFINEMENT__REFINES = LINK_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Refinement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFINEMENT_FEATURE_COUNT = LINK_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Refinement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFINEMENT_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.AndRefinementImpl <em>And Refinement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.AndRefinementImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getAndRefinement()
-	 * @generated
-	 */
-	int AND_REFINEMENT = 22;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AND_REFINEMENT__NAME = REFINEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Refines</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AND_REFINEMENT__REFINES = REFINEMENT__REFINES;
-
-	/**
-	 * The number of structural features of the '<em>And Refinement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AND_REFINEMENT_FEATURE_COUNT = REFINEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>And Refinement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AND_REFINEMENT_OPERATION_COUNT = REFINEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.OrRefinementImpl <em>Or Refinement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.OrRefinementImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getOrRefinement()
-	 * @generated
-	 */
-	int OR_REFINEMENT = 23;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR_REFINEMENT__NAME = REFINEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Refines</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR_REFINEMENT__REFINES = REFINEMENT__REFINES;
-
-	/**
-	 * The number of structural features of the '<em>Or Refinement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR_REFINEMENT_FEATURE_COUNT = REFINEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Or Refinement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR_REFINEMENT_OPERATION_COUNT = REFINEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.DomainPropertyImpl <em>Domain Property</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.DomainPropertyImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getDomainProperty()
-	 * @generated
-	 */
-	int DOMAIN_PROPERTY = 24;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_PROPERTY__NAME = GOAL__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Refined By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_PROPERTY__REFINED_BY = GOAL__REFINED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Resolve</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_PROPERTY__RESOLVE = GOAL__RESOLVE;
-
-	/**
-	 * The feature id for the '<em><b>Conflicts</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_PROPERTY__CONFLICTS = GOAL__CONFLICTS;
-
-	/**
-	 * The feature id for the '<em><b>Concerns</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_PROPERTY__CONCERNS = GOAL__CONCERNS;
-
-	/**
-	 * The feature id for the '<em><b>Used In</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_PROPERTY__USED_IN = GOAL_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Domain Property</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_PROPERTY_FEATURE_COUNT = GOAL_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Domain Property</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_PROPERTY_OPERATION_COUNT = GOAL_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.RequirementImpl <em>Requirement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.RequirementImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getRequirement()
-	 * @generated
-	 */
-	int REQUIREMENT = 25;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__NAME = GOAL__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Refined By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__REFINED_BY = GOAL__REFINED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Resolve</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__RESOLVE = GOAL__RESOLVE;
-
-	/**
-	 * The feature id for the '<em><b>Conflicts</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__CONFLICTS = GOAL__CONFLICTS;
-
-	/**
-	 * The feature id for the '<em><b>Concerns</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__CONCERNS = GOAL__CONCERNS;
-
-	/**
-	 * The number of structural features of the '<em>Requirement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT_FEATURE_COUNT = GOAL_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Requirement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT_OPERATION_COUNT = GOAL_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.OperacionalizationLinkImpl <em>Operacionalization Link</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.OperacionalizationLinkImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getOperacionalizationLink()
-	 * @generated
-	 */
-	int OPERACIONALIZATION_LINK = 26;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERACIONALIZATION_LINK__NAME = LINK__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Relate Operation To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERACIONALIZATION_LINK__RELATE_OPERATION_TO = LINK_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Operacionalization Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERACIONALIZATION_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Operacionalization Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERACIONALIZATION_LINK_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.DomainHypothesisImpl <em>Domain Hypothesis</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.DomainHypothesisImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getDomainHypothesis()
-	 * @generated
-	 */
-	int DOMAIN_HYPOTHESIS = 27;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_HYPOTHESIS__NAME = DOMAIN_PROPERTY__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Refined By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_HYPOTHESIS__REFINED_BY = DOMAIN_PROPERTY__REFINED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Resolve</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_HYPOTHESIS__RESOLVE = DOMAIN_PROPERTY__RESOLVE;
-
-	/**
-	 * The feature id for the '<em><b>Conflicts</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_HYPOTHESIS__CONFLICTS = DOMAIN_PROPERTY__CONFLICTS;
-
-	/**
-	 * The feature id for the '<em><b>Concerns</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_HYPOTHESIS__CONCERNS = DOMAIN_PROPERTY__CONCERNS;
-
-	/**
-	 * The feature id for the '<em><b>Used In</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_HYPOTHESIS__USED_IN = DOMAIN_PROPERTY__USED_IN;
-
-	/**
-	 * The number of structural features of the '<em>Domain Hypothesis</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_HYPOTHESIS_FEATURE_COUNT = DOMAIN_PROPERTY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Domain Hypothesis</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_HYPOTHESIS_OPERATION_COUNT = DOMAIN_PROPERTY_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.DomainInvariantImpl <em>Domain Invariant</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.DomainInvariantImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getDomainInvariant()
-	 * @generated
-	 */
-	int DOMAIN_INVARIANT = 28;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_INVARIANT__NAME = DOMAIN_PROPERTY__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Refined By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_INVARIANT__REFINED_BY = DOMAIN_PROPERTY__REFINED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Resolve</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_INVARIANT__RESOLVE = DOMAIN_PROPERTY__RESOLVE;
-
-	/**
-	 * The feature id for the '<em><b>Conflicts</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_INVARIANT__CONFLICTS = DOMAIN_PROPERTY__CONFLICTS;
-
-	/**
-	 * The feature id for the '<em><b>Concerns</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_INVARIANT__CONCERNS = DOMAIN_PROPERTY__CONCERNS;
-
-	/**
-	 * The feature id for the '<em><b>Used In</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_INVARIANT__USED_IN = DOMAIN_PROPERTY__USED_IN;
-
-	/**
-	 * The number of structural features of the '<em>Domain Invariant</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_INVARIANT_FEATURE_COUNT = DOMAIN_PROPERTY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Domain Invariant</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_INVARIANT_OPERATION_COUNT = DOMAIN_PROPERTY_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.ResolutionLinkImpl <em>Resolution Link</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.ResolutionLinkImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getResolutionLink()
-	 * @generated
-	 */
-	int RESOLUTION_LINK = 29;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOLUTION_LINK__NAME = LINK__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Assign Obstacle To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOLUTION_LINK__ASSIGN_OBSTACLE_TO = LINK_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Resolution Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOLUTION_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Resolution Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOLUTION_LINK_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mKAOS.impl.ResponsabilityLinkImpl <em>Responsability Link</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mKAOS.impl.ResponsabilityLinkImpl
-	 * @see mKAOS.impl.MKAOSPackageImpl#getResponsabilityLink()
-	 * @generated
-	 */
-	int RESPONSABILITY_LINK = 30;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESPONSABILITY_LINK__NAME = LINK__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Assign Agent To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESPONSABILITY_LINK__ASSIGN_AGENT_TO = LINK_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Responsability Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESPONSABILITY_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Responsability Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESPONSABILITY_LINK_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
+	MKAOSPackage eINSTANCE = MKAOSPackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.mKAOSImpl <em>mKAOS</em>}' class.
@@ -1699,7 +68,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getmKAOS()
 	 * @generated
 	 */
-	int MKAOS = 31;
+	int MKAOS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1708,7 +77,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKAOS__NAME = KAOS__NAME;
+	int MKAOS__NAME = KAOSModelPackage.KAOS__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Linked By</b></em>' containment reference list.
@@ -1717,7 +86,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKAOS__LINKED_BY = KAOS__LINKED_BY;
+	int MKAOS__LINKED_BY = KAOSModelPackage.KAOS__LINKED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Consists Of</b></em>' containment reference list.
@@ -1726,7 +95,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKAOS__CONSISTS_OF = KAOS__CONSISTS_OF;
+	int MKAOS__CONSISTS_OF = KAOSModelPackage.KAOS__CONSISTS_OF;
 
 	/**
 	 * The number of structural features of the '<em>mKAOS</em>' class.
@@ -1735,7 +104,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKAOS_FEATURE_COUNT = KAOS_FEATURE_COUNT + 0;
+	int MKAOS_FEATURE_COUNT = KAOSModelPackage.KAOS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>mKAOS</em>' class.
@@ -1744,7 +113,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKAOS_OPERATION_COUNT = KAOS_OPERATION_COUNT + 0;
+	int MKAOS_OPERATION_COUNT = KAOSModelPackage.KAOS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.MissionImpl <em>Mission</em>}' class.
@@ -1754,7 +123,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getMission()
 	 * @generated
 	 */
-	int MISSION = 32;
+	int MISSION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1763,7 +132,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION__NAME = GOAL__NAME;
+	int MISSION__NAME = KAOSModelPackage.GOAL__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Refined By</b></em>' reference list.
@@ -1772,7 +141,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION__REFINED_BY = GOAL__REFINED_BY;
+	int MISSION__REFINED_BY = KAOSModelPackage.GOAL__REFINED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Resolve</b></em>' reference list.
@@ -1781,7 +150,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION__RESOLVE = GOAL__RESOLVE;
+	int MISSION__RESOLVE = KAOSModelPackage.GOAL__RESOLVE;
 
 	/**
 	 * The feature id for the '<em><b>Conflicts</b></em>' reference list.
@@ -1790,7 +159,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION__CONFLICTS = GOAL__CONFLICTS;
+	int MISSION__CONFLICTS = KAOSModelPackage.GOAL__CONFLICTS;
 
 	/**
 	 * The feature id for the '<em><b>Concerns</b></em>' reference list.
@@ -1799,7 +168,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION__CONCERNS = GOAL__CONCERNS;
+	int MISSION__CONCERNS = KAOSModelPackage.GOAL__CONCERNS;
 
 	/**
 	 * The feature id for the '<em><b>Rule</b></em>' containment reference.
@@ -1808,7 +177,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION__RULE = GOAL_FEATURE_COUNT + 0;
+	int MISSION__RULE = KAOSModelPackage.GOAL_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Priority</b></em>' attribute.
@@ -1817,7 +186,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION__PRIORITY = GOAL_FEATURE_COUNT + 1;
+	int MISSION__PRIORITY = KAOSModelPackage.GOAL_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Assigned To</b></em>' reference.
@@ -1826,7 +195,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION__ASSIGNED_TO = GOAL_FEATURE_COUNT + 2;
+	int MISSION__ASSIGNED_TO = KAOSModelPackage.GOAL_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Links</b></em>' containment reference list.
@@ -1835,7 +204,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION__LINKS = GOAL_FEATURE_COUNT + 3;
+	int MISSION__LINKS = KAOSModelPackage.GOAL_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1844,7 +213,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION__DESCRIPTION = GOAL_FEATURE_COUNT + 4;
+	int MISSION__DESCRIPTION = KAOSModelPackage.GOAL_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Trigger</b></em>' containment reference.
@@ -1853,7 +222,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION__TRIGGER = GOAL_FEATURE_COUNT + 5;
+	int MISSION__TRIGGER = KAOSModelPackage.GOAL_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Refinement</b></em>' containment reference.
@@ -1862,7 +231,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION__REFINEMENT = GOAL_FEATURE_COUNT + 6;
+	int MISSION__REFINEMENT = KAOSModelPackage.GOAL_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Mission</em>' class.
@@ -1871,7 +240,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_FEATURE_COUNT = GOAL_FEATURE_COUNT + 7;
+	int MISSION_FEATURE_COUNT = KAOSModelPackage.GOAL_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Mission</em>' class.
@@ -1880,7 +249,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_OPERATION_COUNT = GOAL_OPERATION_COUNT + 0;
+	int MISSION_OPERATION_COUNT = KAOSModelPackage.GOAL_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.EmergentBehaviorImpl <em>Emergent Behavior</em>}' class.
@@ -1890,7 +259,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getEmergentBehavior()
 	 * @generated
 	 */
-	int EMERGENT_BEHAVIOR = 33;
+	int EMERGENT_BEHAVIOR = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1899,7 +268,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMERGENT_BEHAVIOR__NAME = NODES__NAME;
+	int EMERGENT_BEHAVIOR__NAME = KAOSModelPackage.NODES__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Related To</b></em>' reference list.
@@ -1908,7 +277,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMERGENT_BEHAVIOR__RELATED_TO = NODES_FEATURE_COUNT + 0;
+	int EMERGENT_BEHAVIOR__RELATED_TO = KAOSModelPackage.NODES_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Emergent Behavior</em>' class.
@@ -1917,7 +286,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMERGENT_BEHAVIOR_FEATURE_COUNT = NODES_FEATURE_COUNT + 1;
+	int EMERGENT_BEHAVIOR_FEATURE_COUNT = KAOSModelPackage.NODES_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Emergent Behavior</em>' class.
@@ -1926,7 +295,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMERGENT_BEHAVIOR_OPERATION_COUNT = NODES_OPERATION_COUNT + 0;
+	int EMERGENT_BEHAVIOR_OPERATION_COUNT = KAOSModelPackage.NODES_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.ConstituentSystemImpl <em>Constituent System</em>}' class.
@@ -1936,7 +305,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getConstituentSystem()
 	 * @generated
 	 */
-	int CONSTITUENT_SYSTEM = 34;
+	int CONSTITUENT_SYSTEM = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1945,7 +314,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTITUENT_SYSTEM__NAME = SOFTWARE_AGENT__NAME;
+	int CONSTITUENT_SYSTEM__NAME = KAOSModelPackage.SOFTWARE_AGENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Performs</b></em>' reference list.
@@ -1954,7 +323,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTITUENT_SYSTEM__PERFORMS = SOFTWARE_AGENT__PERFORMS;
+	int CONSTITUENT_SYSTEM__PERFORMS = KAOSModelPackage.SOFTWARE_AGENT__PERFORMS;
 
 	/**
 	 * The feature id for the '<em><b>Composition</b></em>' reference list.
@@ -1963,7 +332,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTITUENT_SYSTEM__COMPOSITION = SOFTWARE_AGENT__COMPOSITION;
+	int CONSTITUENT_SYSTEM__COMPOSITION = KAOSModelPackage.SOFTWARE_AGENT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Responsible For</b></em>' reference list.
@@ -1972,7 +341,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTITUENT_SYSTEM__RESPONSIBLE_FOR = SOFTWARE_AGENT__RESPONSIBLE_FOR;
+	int CONSTITUENT_SYSTEM__RESPONSIBLE_FOR = KAOSModelPackage.SOFTWARE_AGENT__RESPONSIBLE_FOR;
 
 	/**
 	 * The feature id for the '<em><b>Capable Of</b></em>' reference list.
@@ -1981,7 +350,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTITUENT_SYSTEM__CAPABLE_OF = SOFTWARE_AGENT_FEATURE_COUNT + 0;
+	int CONSTITUENT_SYSTEM__CAPABLE_OF = KAOSModelPackage.SOFTWARE_AGENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Constituent System</em>' class.
@@ -1990,7 +359,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTITUENT_SYSTEM_FEATURE_COUNT = SOFTWARE_AGENT_FEATURE_COUNT + 1;
+	int CONSTITUENT_SYSTEM_FEATURE_COUNT = KAOSModelPackage.SOFTWARE_AGENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Constituent System</em>' class.
@@ -1999,7 +368,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTITUENT_SYSTEM_OPERATION_COUNT = SOFTWARE_AGENT_OPERATION_COUNT + 0;
+	int CONSTITUENT_SYSTEM_OPERATION_COUNT = KAOSModelPackage.SOFTWARE_AGENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.MediatorImpl <em>Mediator</em>}' class.
@@ -2009,7 +378,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getMediator()
 	 * @generated
 	 */
-	int MEDIATOR = 35;
+	int MEDIATOR = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2018,7 +387,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIATOR__NAME = SOFTWARE_AGENT__NAME;
+	int MEDIATOR__NAME = KAOSModelPackage.SOFTWARE_AGENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Performs</b></em>' reference list.
@@ -2027,7 +396,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIATOR__PERFORMS = SOFTWARE_AGENT__PERFORMS;
+	int MEDIATOR__PERFORMS = KAOSModelPackage.SOFTWARE_AGENT__PERFORMS;
 
 	/**
 	 * The feature id for the '<em><b>Composition</b></em>' reference list.
@@ -2036,7 +405,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIATOR__COMPOSITION = SOFTWARE_AGENT__COMPOSITION;
+	int MEDIATOR__COMPOSITION = KAOSModelPackage.SOFTWARE_AGENT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Responsible For</b></em>' reference list.
@@ -2045,7 +414,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIATOR__RESPONSIBLE_FOR = SOFTWARE_AGENT__RESPONSIBLE_FOR;
+	int MEDIATOR__RESPONSIBLE_FOR = KAOSModelPackage.SOFTWARE_AGENT__RESPONSIBLE_FOR;
 
 	/**
 	 * The feature id for the '<em><b>Capable Of</b></em>' reference list.
@@ -2054,7 +423,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIATOR__CAPABLE_OF = SOFTWARE_AGENT_FEATURE_COUNT + 0;
+	int MEDIATOR__CAPABLE_OF = KAOSModelPackage.SOFTWARE_AGENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Mediator</em>' class.
@@ -2063,7 +432,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIATOR_FEATURE_COUNT = SOFTWARE_AGENT_FEATURE_COUNT + 1;
+	int MEDIATOR_FEATURE_COUNT = KAOSModelPackage.SOFTWARE_AGENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Mediator</em>' class.
@@ -2072,7 +441,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIATOR_OPERATION_COUNT = SOFTWARE_AGENT_OPERATION_COUNT + 0;
+	int MEDIATOR_OPERATION_COUNT = KAOSModelPackage.SOFTWARE_AGENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.OperationalCapabilityImpl <em>Operational Capability</em>}' class.
@@ -2082,7 +451,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getOperationalCapability()
 	 * @generated
 	 */
-	int OPERATIONAL_CAPABILITY = 36;
+	int OPERATIONAL_CAPABILITY = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2091,7 +460,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATIONAL_CAPABILITY__NAME = OPERATION__NAME;
+	int OPERATIONAL_CAPABILITY__NAME = KAOSModelPackage.OPERATION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Produces</b></em>' reference list.
@@ -2100,7 +469,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATIONAL_CAPABILITY__PRODUCES = OPERATION__PRODUCES;
+	int OPERATIONAL_CAPABILITY__PRODUCES = KAOSModelPackage.OPERATION__PRODUCES;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' reference list.
@@ -2109,7 +478,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATIONAL_CAPABILITY__OUTPUT = OPERATION__OUTPUT;
+	int OPERATIONAL_CAPABILITY__OUTPUT = KAOSModelPackage.OPERATION__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Operationalize</b></em>' reference list.
@@ -2118,7 +487,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATIONAL_CAPABILITY__OPERATIONALIZE = OPERATION__OPERATIONALIZE;
+	int OPERATIONAL_CAPABILITY__OPERATIONALIZE = KAOSModelPackage.OPERATION__OPERATIONALIZE;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference list.
@@ -2127,7 +496,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATIONAL_CAPABILITY__INPUT = OPERATION__INPUT;
+	int OPERATIONAL_CAPABILITY__INPUT = KAOSModelPackage.OPERATION__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Desc</b></em>' attribute.
@@ -2136,7 +505,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATIONAL_CAPABILITY__DESC = OPERATION_FEATURE_COUNT + 0;
+	int OPERATIONAL_CAPABILITY__DESC = KAOSModelPackage.OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Operational Capability</em>' class.
@@ -2145,7 +514,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATIONAL_CAPABILITY_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 1;
+	int OPERATIONAL_CAPABILITY_FEATURE_COUNT = KAOSModelPackage.OPERATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Operational Capability</em>' class.
@@ -2154,7 +523,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATIONAL_CAPABILITY_OPERATION_COUNT = OPERATION_OPERATION_COUNT + 0;
+	int OPERATIONAL_CAPABILITY_OPERATION_COUNT = KAOSModelPackage.OPERATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.CommunicationalCapabilityImpl <em>Communicational Capability</em>}' class.
@@ -2164,7 +533,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getCommunicationalCapability()
 	 * @generated
 	 */
-	int COMMUNICATIONAL_CAPABILITY = 37;
+	int COMMUNICATIONAL_CAPABILITY = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2173,7 +542,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMUNICATIONAL_CAPABILITY__NAME = OPERATION__NAME;
+	int COMMUNICATIONAL_CAPABILITY__NAME = KAOSModelPackage.OPERATION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Produces</b></em>' reference list.
@@ -2182,7 +551,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMUNICATIONAL_CAPABILITY__PRODUCES = OPERATION__PRODUCES;
+	int COMMUNICATIONAL_CAPABILITY__PRODUCES = KAOSModelPackage.OPERATION__PRODUCES;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' reference list.
@@ -2191,7 +560,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMUNICATIONAL_CAPABILITY__OUTPUT = OPERATION__OUTPUT;
+	int COMMUNICATIONAL_CAPABILITY__OUTPUT = KAOSModelPackage.OPERATION__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Operationalize</b></em>' reference list.
@@ -2200,7 +569,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMUNICATIONAL_CAPABILITY__OPERATIONALIZE = OPERATION__OPERATIONALIZE;
+	int COMMUNICATIONAL_CAPABILITY__OPERATIONALIZE = KAOSModelPackage.OPERATION__OPERATIONALIZE;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference list.
@@ -2209,7 +578,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMUNICATIONAL_CAPABILITY__INPUT = OPERATION__INPUT;
+	int COMMUNICATIONAL_CAPABILITY__INPUT = KAOSModelPackage.OPERATION__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Desc</b></em>' attribute.
@@ -2218,7 +587,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMUNICATIONAL_CAPABILITY__DESC = OPERATION_FEATURE_COUNT + 0;
+	int COMMUNICATIONAL_CAPABILITY__DESC = KAOSModelPackage.OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Communicational Capability</em>' class.
@@ -2227,7 +596,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMUNICATIONAL_CAPABILITY_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 1;
+	int COMMUNICATIONAL_CAPABILITY_FEATURE_COUNT = KAOSModelPackage.OPERATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Communicational Capability</em>' class.
@@ -2236,7 +605,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMUNICATIONAL_CAPABILITY_OPERATION_COUNT = OPERATION_OPERATION_COUNT + 0;
+	int COMMUNICATIONAL_CAPABILITY_OPERATION_COUNT = KAOSModelPackage.OPERATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.EmergeLinkImpl <em>Emerge Link</em>}' class.
@@ -2246,7 +615,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getEmergeLink()
 	 * @generated
 	 */
-	int EMERGE_LINK = 38;
+	int EMERGE_LINK = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2255,16 +624,16 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMERGE_LINK__NAME = LINK__NAME;
+	int EMERGE_LINK__NAME = KAOSModelPackage.LINK__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Behavior</b></em>' reference.
+	 * The feature id for the '<em><b>Behavior</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMERGE_LINK__BEHAVIOR = LINK_FEATURE_COUNT + 0;
+	int EMERGE_LINK__BEHAVIOR = KAOSModelPackage.LINK_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
@@ -2273,7 +642,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMERGE_LINK__CAPABILITY = LINK_FEATURE_COUNT + 1;
+	int EMERGE_LINK__CAPABILITY = KAOSModelPackage.LINK_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
@@ -2282,7 +651,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMERGE_LINK__CARDINALITY = LINK_FEATURE_COUNT + 2;
+	int EMERGE_LINK__CARDINALITY = KAOSModelPackage.LINK_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Emerge Link</em>' class.
@@ -2291,7 +660,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMERGE_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 3;
+	int EMERGE_LINK_FEATURE_COUNT = KAOSModelPackage.LINK_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Emerge Link</em>' class.
@@ -2300,7 +669,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMERGE_LINK_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
+	int EMERGE_LINK_OPERATION_COUNT = KAOSModelPackage.LINK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.CommunicationLinkImpl <em>Communication Link</em>}' class.
@@ -2310,7 +679,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getCommunicationLink()
 	 * @generated
 	 */
-	int COMMUNICATION_LINK = 39;
+	int COMMUNICATION_LINK = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2319,7 +688,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMUNICATION_LINK__NAME = LINK__NAME;
+	int COMMUNICATION_LINK__NAME = KAOSModelPackage.LINK__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
@@ -2328,7 +697,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMUNICATION_LINK__CAPABILITY = LINK_FEATURE_COUNT + 0;
+	int COMMUNICATION_LINK__CAPABILITY = KAOSModelPackage.LINK_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Entity</b></em>' reference.
@@ -2337,7 +706,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMUNICATION_LINK__ENTITY = LINK_FEATURE_COUNT + 1;
+	int COMMUNICATION_LINK__ENTITY = KAOSModelPackage.LINK_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
@@ -2346,7 +715,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMUNICATION_LINK__CARDINALITY = LINK_FEATURE_COUNT + 2;
+	int COMMUNICATION_LINK__CARDINALITY = KAOSModelPackage.LINK_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Communication Link</em>' class.
@@ -2355,7 +724,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMUNICATION_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 3;
+	int COMMUNICATION_LINK_FEATURE_COUNT = KAOSModelPackage.LINK_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Communication Link</em>' class.
@@ -2364,7 +733,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMUNICATION_LINK_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
+	int COMMUNICATION_LINK_OPERATION_COUNT = KAOSModelPackage.LINK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.CommunicationInputLinkImpl <em>Communication Input Link</em>}' class.
@@ -2374,7 +743,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getCommunicationInputLink()
 	 * @generated
 	 */
-	int COMMUNICATION_INPUT_LINK = 40;
+	int COMMUNICATION_INPUT_LINK = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2438,7 +807,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getCommunicationOutputLink()
 	 * @generated
 	 */
-	int COMMUNICATION_OUTPUT_LINK = 41;
+	int COMMUNICATION_OUTPUT_LINK = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2502,7 +871,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getMissionLink()
 	 * @generated
 	 */
-	int MISSION_LINK = 42;
+	int MISSION_LINK = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2511,7 +880,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_LINK__NAME = LINK__NAME;
+	int MISSION_LINK__NAME = KAOSModelPackage.LINK__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' container reference.
@@ -2520,7 +889,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_LINK__SOURCE = LINK_FEATURE_COUNT + 0;
+	int MISSION_LINK__SOURCE = KAOSModelPackage.LINK_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -2529,7 +898,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_LINK__TARGET = LINK_FEATURE_COUNT + 1;
+	int MISSION_LINK__TARGET = KAOSModelPackage.LINK_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Mission Link</em>' class.
@@ -2538,7 +907,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 2;
+	int MISSION_LINK_FEATURE_COUNT = KAOSModelPackage.LINK_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Mission Link</em>' class.
@@ -2547,7 +916,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_LINK_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
+	int MISSION_LINK_OPERATION_COUNT = KAOSModelPackage.LINK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.DisruptLinkImpl <em>Disrupt Link</em>}' class.
@@ -2557,7 +926,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getDisruptLink()
 	 * @generated
 	 */
-	int DISRUPT_LINK = 43;
+	int DISRUPT_LINK = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2612,7 +981,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getSuportLink()
 	 * @generated
 	 */
-	int SUPORT_LINK = 44;
+	int SUPORT_LINK = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2667,7 +1036,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getBlockLink()
 	 * @generated
 	 */
-	int BLOCK_LINK = 45;
+	int BLOCK_LINK = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2722,7 +1091,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getDependencyLink()
 	 * @generated
 	 */
-	int DEPENDENCY_LINK = 46;
+	int DEPENDENCY_LINK = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2777,7 +1146,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getInfluenceLink()
 	 * @generated
 	 */
-	int INFLUENCE_LINK = 47;
+	int INFLUENCE_LINK = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2786,7 +1155,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFLUENCE_LINK__NAME = LINK__NAME;
+	int INFLUENCE_LINK__NAME = KAOSModelPackage.LINK__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Expectation</b></em>' reference.
@@ -2795,7 +1164,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFLUENCE_LINK__EXPECTATION = LINK_FEATURE_COUNT + 0;
+	int INFLUENCE_LINK__EXPECTATION = KAOSModelPackage.LINK_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Influenced</b></em>' reference.
@@ -2804,7 +1173,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFLUENCE_LINK__INFLUENCED = LINK_FEATURE_COUNT + 1;
+	int INFLUENCE_LINK__INFLUENCED = KAOSModelPackage.LINK_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Influence Link</em>' class.
@@ -2813,7 +1182,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFLUENCE_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 2;
+	int INFLUENCE_LINK_FEATURE_COUNT = KAOSModelPackage.LINK_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Influence Link</em>' class.
@@ -2822,7 +1191,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFLUENCE_LINK_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
+	int INFLUENCE_LINK_OPERATION_COUNT = KAOSModelPackage.LINK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.GeneralizationLinkImpl <em>Generalization Link</em>}' class.
@@ -2832,7 +1201,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getGeneralizationLink()
 	 * @generated
 	 */
-	int GENERALIZATION_LINK = 48;
+	int GENERALIZATION_LINK = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2841,7 +1210,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERALIZATION_LINK__NAME = LINK__NAME;
+	int GENERALIZATION_LINK__NAME = KAOSModelPackage.LINK__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Entity</b></em>' reference.
@@ -2850,7 +1219,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERALIZATION_LINK__ENTITY = LINK_FEATURE_COUNT + 0;
+	int GENERALIZATION_LINK__ENTITY = KAOSModelPackage.LINK_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Generalizes</b></em>' reference.
@@ -2859,7 +1228,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERALIZATION_LINK__GENERALIZES = LINK_FEATURE_COUNT + 1;
+	int GENERALIZATION_LINK__GENERALIZES = KAOSModelPackage.LINK_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Generalization Link</em>' class.
@@ -2868,7 +1237,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERALIZATION_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 2;
+	int GENERALIZATION_LINK_FEATURE_COUNT = KAOSModelPackage.LINK_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Generalization Link</em>' class.
@@ -2877,7 +1246,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERALIZATION_LINK_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
+	int GENERALIZATION_LINK_OPERATION_COUNT = KAOSModelPackage.LINK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.CompositionLinkImpl <em>Composition Link</em>}' class.
@@ -2887,7 +1256,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getCompositionLink()
 	 * @generated
 	 */
-	int COMPOSITION_LINK = 49;
+	int COMPOSITION_LINK = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2896,7 +1265,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITION_LINK__NAME = LINK__NAME;
+	int COMPOSITION_LINK__NAME = KAOSModelPackage.LINK__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Entity</b></em>' reference.
@@ -2905,7 +1274,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITION_LINK__ENTITY = LINK_FEATURE_COUNT + 0;
+	int COMPOSITION_LINK__ENTITY = KAOSModelPackage.LINK_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Composed By</b></em>' reference.
@@ -2914,7 +1283,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITION_LINK__COMPOSED_BY = LINK_FEATURE_COUNT + 1;
+	int COMPOSITION_LINK__COMPOSED_BY = KAOSModelPackage.LINK_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Composition Link</em>' class.
@@ -2923,7 +1292,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITION_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 2;
+	int COMPOSITION_LINK_FEATURE_COUNT = KAOSModelPackage.LINK_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Composition Link</em>' class.
@@ -2932,7 +1301,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITION_LINK_OPERATION_COUNT = LINK_OPERATION_COUNT + 0;
+	int COMPOSITION_LINK_OPERATION_COUNT = KAOSModelPackage.LINK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.FormalElementImpl <em>Formal Element</em>}' class.
@@ -2942,7 +1311,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getFormalElement()
 	 * @generated
 	 */
-	int FORMAL_ELEMENT = 50;
+	int FORMAL_ELEMENT = 19;
 
 	/**
 	 * The feature id for the '<em><b>Rule</b></em>' containment reference.
@@ -2979,7 +1348,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getMissionRefinement()
 	 * @generated
 	 */
-	int MISSION_REFINEMENT = 51;
+	int MISSION_REFINEMENT = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2988,7 +1357,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_REFINEMENT__NAME = REFINEMENT__NAME;
+	int MISSION_REFINEMENT__NAME = KAOSModelPackage.REFINEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Refines</b></em>' reference.
@@ -2997,7 +1366,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_REFINEMENT__REFINES = REFINEMENT__REFINES;
+	int MISSION_REFINEMENT__REFINES = KAOSModelPackage.REFINEMENT__REFINES;
 
 	/**
 	 * The feature id for the '<em><b>Kind</b></em>' attribute.
@@ -3006,7 +1375,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_REFINEMENT__KIND = REFINEMENT_FEATURE_COUNT + 0;
+	int MISSION_REFINEMENT__KIND = KAOSModelPackage.REFINEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Custom</b></em>' containment reference.
@@ -3015,7 +1384,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_REFINEMENT__CUSTOM = REFINEMENT_FEATURE_COUNT + 1;
+	int MISSION_REFINEMENT__CUSTOM = KAOSModelPackage.REFINEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Submissions</b></em>' containment reference list.
@@ -3024,7 +1393,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_REFINEMENT__SUBMISSIONS = REFINEMENT_FEATURE_COUNT + 2;
+	int MISSION_REFINEMENT__SUBMISSIONS = KAOSModelPackage.REFINEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Mission Refinement</em>' class.
@@ -3033,7 +1402,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_REFINEMENT_FEATURE_COUNT = REFINEMENT_FEATURE_COUNT + 3;
+	int MISSION_REFINEMENT_FEATURE_COUNT = KAOSModelPackage.REFINEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Mission Refinement</em>' class.
@@ -3042,7 +1411,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_REFINEMENT_OPERATION_COUNT = REFINEMENT_OPERATION_COUNT + 0;
+	int MISSION_REFINEMENT_OPERATION_COUNT = KAOSModelPackage.REFINEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.impl.DynBLTLImpl <em>Dyn BLTL</em>}' class.
@@ -3052,7 +1421,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getDynBLTL()
 	 * @generated
 	 */
-	int DYN_BLTL = 52;
+	int DYN_BLTL = 21;
 
 	/**
 	 * The feature id for the '<em><b>Q</b></em>' attribute.
@@ -3116,7 +1485,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleTemporal()
 	 * @generated
 	 */
-	int RULE_TEMPORAL = 53;
+	int RULE_TEMPORAL = 22;
 
 	/**
 	 * The feature id for the '<em><b>Q</b></em>' attribute.
@@ -3225,7 +1594,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleBound()
 	 * @generated
 	 */
-	int RULE_BOUND = 54;
+	int RULE_BOUND = 23;
 
 	/**
 	 * The feature id for the '<em><b>Floatlit</b></em>' attribute.
@@ -3280,7 +1649,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleImplication()
 	 * @generated
 	 */
-	int RULE_IMPLICATION = 55;
+	int RULE_IMPLICATION = 24;
 
 	/**
 	 * The feature id for the '<em><b>R</b></em>' containment reference list.
@@ -3326,7 +1695,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleDisjunction()
 	 * @generated
 	 */
-	int RULE_DISJUNCTION = 56;
+	int RULE_DISJUNCTION = 25;
 
 	/**
 	 * The feature id for the '<em><b>L</b></em>' containment reference.
@@ -3372,7 +1741,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleConjunction()
 	 * @generated
 	 */
-	int RULE_CONJUNCTION = 57;
+	int RULE_CONJUNCTION = 26;
 
 	/**
 	 * The feature id for the '<em><b>L</b></em>' containment reference.
@@ -3418,7 +1787,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleEquality()
 	 * @generated
 	 */
-	int RULE_EQUALITY = 58;
+	int RULE_EQUALITY = 27;
 
 	/**
 	 * The feature id for the '<em><b>Neg</b></em>' attribute.
@@ -3473,7 +1842,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleRelExp()
 	 * @generated
 	 */
-	int RULE_REL_EXP = 59;
+	int RULE_REL_EXP = 28;
 
 	/**
 	 * The feature id for the '<em><b>L</b></em>' containment reference.
@@ -3519,7 +1888,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleNumExp()
 	 * @generated
 	 */
-	int RULE_NUM_EXP = 60;
+	int RULE_NUM_EXP = 29;
 
 	/**
 	 * The feature id for the '<em><b>L</b></em>' containment reference.
@@ -3565,7 +1934,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleTerm()
 	 * @generated
 	 */
-	int RULE_TERM = 61;
+	int RULE_TERM = 30;
 
 	/**
 	 * The feature id for the '<em><b>R</b></em>' containment reference list.
@@ -3611,7 +1980,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleFactor()
 	 * @generated
 	 */
-	int RULE_FACTOR = 62;
+	int RULE_FACTOR = 31;
 
 	/**
 	 * The feature id for the '<em><b>Vallit</b></em>' containment reference.
@@ -3684,7 +2053,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleVar()
 	 * @generated
 	 */
-	int RULE_VAR = 63;
+	int RULE_VAR = 32;
 
 	/**
 	 * The feature id for the '<em><b>Val</b></em>' attribute list.
@@ -3730,7 +2099,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleFunction()
 	 * @generated
 	 */
-	int RULE_FUNCTION = 64;
+	int RULE_FUNCTION = 33;
 
 	/**
 	 * The feature id for the '<em><b>L</b></em>' containment reference.
@@ -3767,7 +2136,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleParams()
 	 * @generated
 	 */
-	int RULE_PARAMS = 65;
+	int RULE_PARAMS = 34;
 
 	/**
 	 * The feature id for the '<em><b>L</b></em>' containment reference list.
@@ -3804,7 +2173,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleLiteral()
 	 * @generated
 	 */
-	int RULE_LITERAL = 66;
+	int RULE_LITERAL = 35;
 
 	/**
 	 * The number of structural features of the '<em>Rule Literal</em>' class.
@@ -3832,7 +2201,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleIntegerLit()
 	 * @generated
 	 */
-	int RULE_INTEGER_LIT = 67;
+	int RULE_INTEGER_LIT = 36;
 
 	/**
 	 * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -3869,7 +2238,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleFloatLit()
 	 * @generated
 	 */
-	int RULE_FLOAT_LIT = 68;
+	int RULE_FLOAT_LIT = 37;
 
 	/**
 	 * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -3906,7 +2275,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleTupleLit()
 	 * @generated
 	 */
-	int RULE_TUPLE_LIT = 69;
+	int RULE_TUPLE_LIT = 38;
 
 	/**
 	 * The feature id for the '<em><b>Vals</b></em>' containment reference list.
@@ -3943,7 +2312,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleSeqLit()
 	 * @generated
 	 */
-	int RULE_SEQ_LIT = 70;
+	int RULE_SEQ_LIT = 39;
 
 	/**
 	 * The feature id for the '<em><b>Vals</b></em>' containment reference list.
@@ -3980,7 +2349,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getMissionRefinementKind()
 	 * @generated
 	 */
-	int MISSION_REFINEMENT_KIND = 71;
+	int MISSION_REFINEMENT_KIND = 40;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.RuleQuantifier <em>Rule Quantifier</em>}' enum.
@@ -3990,7 +2359,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleQuantifier()
 	 * @generated
 	 */
-	int RULE_QUANTIFIER = 72;
+	int RULE_QUANTIFIER = 41;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.RuleTempBinOp <em>Rule Temp Bin Op</em>}' enum.
@@ -4000,7 +2369,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleTempBinOp()
 	 * @generated
 	 */
-	int RULE_TEMP_BIN_OP = 73;
+	int RULE_TEMP_BIN_OP = 42;
 
 	/**
 	 * The meta object id for the '{@link mKAOS.RuleTempUnOp <em>Rule Temp Un Op</em>}' enum.
@@ -4010,615 +2379,8 @@ public interface MKAOSPackage extends EPackage {
 	 * @see mKAOS.impl.MKAOSPackageImpl#getRuleTempUnOp()
 	 * @generated
 	 */
-	int RULE_TEMP_UN_OP = 74;
+	int RULE_TEMP_UN_OP = 43;
 
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.Operation <em>Operation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Operation</em>'.
-	 * @see mKAOS.Operation
-	 * @generated
-	 */
-	EClass getOperation();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.Operation#getProduces <em>Produces</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Produces</em>'.
-	 * @see mKAOS.Operation#getProduces()
-	 * @see #getOperation()
-	 * @generated
-	 */
-	EReference getOperation_Produces();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.Operation#getOutput <em>Output</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Output</em>'.
-	 * @see mKAOS.Operation#getOutput()
-	 * @see #getOperation()
-	 * @generated
-	 */
-	EReference getOperation_Output();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.Operation#getOperationalize <em>Operationalize</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Operationalize</em>'.
-	 * @see mKAOS.Operation#getOperationalize()
-	 * @see #getOperation()
-	 * @generated
-	 */
-	EReference getOperation_Operationalize();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.Operation#getInput <em>Input</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Input</em>'.
-	 * @see mKAOS.Operation#getInput()
-	 * @see #getOperation()
-	 * @generated
-	 */
-	EReference getOperation_Input();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.KAOS <em>KAOS</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>KAOS</em>'.
-	 * @see mKAOS.KAOS
-	 * @generated
-	 */
-	EClass getKAOS();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mKAOS.KAOS#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see mKAOS.KAOS#getName()
-	 * @see #getKAOS()
-	 * @generated
-	 */
-	EAttribute getKAOS_Name();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mKAOS.KAOS#getLinkedBy <em>Linked By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Linked By</em>'.
-	 * @see mKAOS.KAOS#getLinkedBy()
-	 * @see #getKAOS()
-	 * @generated
-	 */
-	EReference getKAOS_LinkedBy();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mKAOS.KAOS#getConsistsOf <em>Consists Of</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Consists Of</em>'.
-	 * @see mKAOS.KAOS#getConsistsOf()
-	 * @see #getKAOS()
-	 * @generated
-	 */
-	EReference getKAOS_ConsistsOf();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.Link <em>Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Link</em>'.
-	 * @see mKAOS.Link
-	 * @generated
-	 */
-	EClass getLink();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mKAOS.Link#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see mKAOS.Link#getName()
-	 * @see #getLink()
-	 * @generated
-	 */
-	EAttribute getLink_Name();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.Nodes <em>Nodes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Nodes</em>'.
-	 * @see mKAOS.Nodes
-	 * @generated
-	 */
-	EClass getNodes();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mKAOS.Nodes#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see mKAOS.Nodes#getName()
-	 * @see #getNodes()
-	 * @generated
-	 */
-	EAttribute getNodes_Name();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.OperationNode <em>Operation Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Operation Node</em>'.
-	 * @see mKAOS.OperationNode
-	 * @generated
-	 */
-	EClass getOperationNode();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.Event <em>Event</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Event</em>'.
-	 * @see mKAOS.Event
-	 * @generated
-	 */
-	EClass getEvent();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.Entity <em>Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Entity</em>'.
-	 * @see mKAOS.Entity
-	 * @generated
-	 */
-	EClass getEntity();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.Entity#getComposition <em>Composition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Composition</em>'.
-	 * @see mKAOS.Entity#getComposition()
-	 * @see #getEntity()
-	 * @generated
-	 */
-	EReference getEntity_Composition();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.Object <em>Object</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Object</em>'.
-	 * @see mKAOS.Object
-	 * @generated
-	 */
-	EClass getObject();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.Associations <em>Associations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Associations</em>'.
-	 * @see mKAOS.Associations
-	 * @generated
-	 */
-	EClass getAssociations();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.Agent <em>Agent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Agent</em>'.
-	 * @see mKAOS.Agent
-	 * @generated
-	 */
-	EClass getAgent();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.Agent#getPerforms <em>Performs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Performs</em>'.
-	 * @see mKAOS.Agent#getPerforms()
-	 * @see #getAgent()
-	 * @generated
-	 */
-	EReference getAgent_Performs();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.Agent#getComposition <em>Composition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Composition</em>'.
-	 * @see mKAOS.Agent#getComposition()
-	 * @see #getAgent()
-	 * @generated
-	 */
-	EReference getAgent_Composition();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.SoftwareAgent <em>Software Agent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Software Agent</em>'.
-	 * @see mKAOS.SoftwareAgent
-	 * @generated
-	 */
-	EClass getSoftwareAgent();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.SoftwareAgent#getResponsibleFor <em>Responsible For</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Responsible For</em>'.
-	 * @see mKAOS.SoftwareAgent#getResponsibleFor()
-	 * @see #getSoftwareAgent()
-	 * @generated
-	 */
-	EReference getSoftwareAgent_ResponsibleFor();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.EnvironmentAgent <em>Environment Agent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Environment Agent</em>'.
-	 * @see mKAOS.EnvironmentAgent
-	 * @generated
-	 */
-	EClass getEnvironmentAgent();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.RefinableNode <em>Refinable Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Refinable Node</em>'.
-	 * @see mKAOS.RefinableNode
-	 * @generated
-	 */
-	EClass getRefinableNode();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.RefinableNode#getRefinedBy <em>Refined By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Refined By</em>'.
-	 * @see mKAOS.RefinableNode#getRefinedBy()
-	 * @see #getRefinableNode()
-	 * @generated
-	 */
-	EReference getRefinableNode_RefinedBy();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.Obstacle <em>Obstacle</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Obstacle</em>'.
-	 * @see mKAOS.Obstacle
-	 * @generated
-	 */
-	EClass getObstacle();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.Obstacle#getObstruct <em>Obstruct</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Obstruct</em>'.
-	 * @see mKAOS.Obstacle#getObstruct()
-	 * @see #getObstacle()
-	 * @generated
-	 */
-	EReference getObstacle_Obstruct();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.Goal <em>Goal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Goal</em>'.
-	 * @see mKAOS.Goal
-	 * @generated
-	 */
-	EClass getGoal();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.Goal#getResolve <em>Resolve</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Resolve</em>'.
-	 * @see mKAOS.Goal#getResolve()
-	 * @see #getGoal()
-	 * @generated
-	 */
-	EReference getGoal_Resolve();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.Goal#getConflicts <em>Conflicts</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Conflicts</em>'.
-	 * @see mKAOS.Goal#getConflicts()
-	 * @see #getGoal()
-	 * @generated
-	 */
-	EReference getGoal_Conflicts();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.Goal#getConcerns <em>Concerns</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Concerns</em>'.
-	 * @see mKAOS.Goal#getConcerns()
-	 * @see #getGoal()
-	 * @generated
-	 */
-	EReference getGoal_Concerns();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.AssignmentLink <em>Assignment Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Assignment Link</em>'.
-	 * @see mKAOS.AssignmentLink
-	 * @generated
-	 */
-	EClass getAssignmentLink();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.AssignmentLink#getAssignsGoalTo <em>Assigns Goal To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Assigns Goal To</em>'.
-	 * @see mKAOS.AssignmentLink#getAssignsGoalTo()
-	 * @see #getAssignmentLink()
-	 * @generated
-	 */
-	EReference getAssignmentLink_AssignsGoalTo();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.ConflictLink <em>Conflict Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Conflict Link</em>'.
-	 * @see mKAOS.ConflictLink
-	 * @generated
-	 */
-	EClass getConflictLink();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.ObstructionLink <em>Obstruction Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Obstruction Link</em>'.
-	 * @see mKAOS.ObstructionLink
-	 * @generated
-	 */
-	EClass getObstructionLink();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.ObstructionLink#getRelateKGoalTo <em>Relate KGoal To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Relate KGoal To</em>'.
-	 * @see mKAOS.ObstructionLink#getRelateKGoalTo()
-	 * @see #getObstructionLink()
-	 * @generated
-	 */
-	EReference getObstructionLink_RelateKGoalTo();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.OutputLink <em>Output Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Output Link</em>'.
-	 * @see mKAOS.OutputLink
-	 * @generated
-	 */
-	EClass getOutputLink();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.Expectation <em>Expectation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Expectation</em>'.
-	 * @see mKAOS.Expectation
-	 * @generated
-	 */
-	EClass getExpectation();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.Expectation#getAssignedTo <em>Assigned To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Assigned To</em>'.
-	 * @see mKAOS.Expectation#getAssignedTo()
-	 * @see #getExpectation()
-	 * @generated
-	 */
-	EReference getExpectation_AssignedTo();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.InputLink <em>Input Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Input Link</em>'.
-	 * @see mKAOS.InputLink
-	 * @generated
-	 */
-	EClass getInputLink();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.InputLink#getObjectInputOn <em>Object Input On</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Object Input On</em>'.
-	 * @see mKAOS.InputLink#getObjectInputOn()
-	 * @see #getInputLink()
-	 * @generated
-	 */
-	EReference getInputLink_ObjectInputOn();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.Refinement <em>Refinement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Refinement</em>'.
-	 * @see mKAOS.Refinement
-	 * @generated
-	 */
-	EClass getRefinement();
-
-	/**
-	 * Returns the meta object for the reference '{@link mKAOS.Refinement#getRefines <em>Refines</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Refines</em>'.
-	 * @see mKAOS.Refinement#getRefines()
-	 * @see #getRefinement()
-	 * @generated
-	 */
-	EReference getRefinement_Refines();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.AndRefinement <em>And Refinement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>And Refinement</em>'.
-	 * @see mKAOS.AndRefinement
-	 * @generated
-	 */
-	EClass getAndRefinement();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.OrRefinement <em>Or Refinement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Or Refinement</em>'.
-	 * @see mKAOS.OrRefinement
-	 * @generated
-	 */
-	EClass getOrRefinement();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.DomainProperty <em>Domain Property</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Domain Property</em>'.
-	 * @see mKAOS.DomainProperty
-	 * @generated
-	 */
-	EClass getDomainProperty();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.DomainProperty#getUsedIn <em>Used In</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Used In</em>'.
-	 * @see mKAOS.DomainProperty#getUsedIn()
-	 * @see #getDomainProperty()
-	 * @generated
-	 */
-	EReference getDomainProperty_UsedIn();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.Requirement <em>Requirement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Requirement</em>'.
-	 * @see mKAOS.Requirement
-	 * @generated
-	 */
-	EClass getRequirement();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.OperacionalizationLink <em>Operacionalization Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Operacionalization Link</em>'.
-	 * @see mKAOS.OperacionalizationLink
-	 * @generated
-	 */
-	EClass getOperacionalizationLink();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.OperacionalizationLink#getRelateOperationTo <em>Relate Operation To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Relate Operation To</em>'.
-	 * @see mKAOS.OperacionalizationLink#getRelateOperationTo()
-	 * @see #getOperacionalizationLink()
-	 * @generated
-	 */
-	EReference getOperacionalizationLink_RelateOperationTo();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.DomainHypothesis <em>Domain Hypothesis</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Domain Hypothesis</em>'.
-	 * @see mKAOS.DomainHypothesis
-	 * @generated
-	 */
-	EClass getDomainHypothesis();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.DomainInvariant <em>Domain Invariant</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Domain Invariant</em>'.
-	 * @see mKAOS.DomainInvariant
-	 * @generated
-	 */
-	EClass getDomainInvariant();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.ResolutionLink <em>Resolution Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Resolution Link</em>'.
-	 * @see mKAOS.ResolutionLink
-	 * @generated
-	 */
-	EClass getResolutionLink();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.ResolutionLink#getAssignObstacleTo <em>Assign Obstacle To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Assign Obstacle To</em>'.
-	 * @see mKAOS.ResolutionLink#getAssignObstacleTo()
-	 * @see #getResolutionLink()
-	 * @generated
-	 */
-	EReference getResolutionLink_AssignObstacleTo();
-
-	/**
-	 * Returns the meta object for class '{@link mKAOS.ResponsabilityLink <em>Responsability Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Responsability Link</em>'.
-	 * @see mKAOS.ResponsabilityLink
-	 * @generated
-	 */
-	EClass getResponsabilityLink();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mKAOS.ResponsabilityLink#getAssignAgentTo <em>Assign Agent To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Assign Agent To</em>'.
-	 * @see mKAOS.ResponsabilityLink#getAssignAgentTo()
-	 * @see #getResponsabilityLink()
-	 * @generated
-	 */
-	EReference getResponsabilityLink_AssignAgentTo();
 
 	/**
 	 * Returns the meta object for class '{@link mKAOS.mKAOS <em>mKAOS</em>}'.
@@ -4822,10 +2584,10 @@ public interface MKAOSPackage extends EPackage {
 	EClass getEmergeLink();
 
 	/**
-	 * Returns the meta object for the reference '{@link mKAOS.EmergeLink#getBehavior <em>Behavior</em>}'.
+	 * Returns the meta object for the reference list '{@link mKAOS.EmergeLink#getBehavior <em>Behavior</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Behavior</em>'.
+	 * @return the meta object for the reference list '<em>Behavior</em>'.
 	 * @see mKAOS.EmergeLink#getBehavior()
 	 * @see #getEmergeLink()
 	 * @generated
@@ -5843,532 +3605,6 @@ public interface MKAOSPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link mKAOS.impl.OperationImpl <em>Operation</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.OperationImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getOperation()
-		 * @generated
-		 */
-		EClass OPERATION = eINSTANCE.getOperation();
-
-		/**
-		 * The meta object literal for the '<em><b>Produces</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OPERATION__PRODUCES = eINSTANCE.getOperation_Produces();
-
-		/**
-		 * The meta object literal for the '<em><b>Output</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OPERATION__OUTPUT = eINSTANCE.getOperation_Output();
-
-		/**
-		 * The meta object literal for the '<em><b>Operationalize</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OPERATION__OPERATIONALIZE = eINSTANCE.getOperation_Operationalize();
-
-		/**
-		 * The meta object literal for the '<em><b>Input</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OPERATION__INPUT = eINSTANCE.getOperation_Input();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.KAOSImpl <em>KAOS</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.KAOSImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getKAOS()
-		 * @generated
-		 */
-		EClass KAOS = eINSTANCE.getKAOS();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute KAOS__NAME = eINSTANCE.getKAOS_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Linked By</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KAOS__LINKED_BY = eINSTANCE.getKAOS_LinkedBy();
-
-		/**
-		 * The meta object literal for the '<em><b>Consists Of</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KAOS__CONSISTS_OF = eINSTANCE.getKAOS_ConsistsOf();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.LinkImpl <em>Link</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.LinkImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getLink()
-		 * @generated
-		 */
-		EClass LINK = eINSTANCE.getLink();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LINK__NAME = eINSTANCE.getLink_Name();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.NodesImpl <em>Nodes</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.NodesImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getNodes()
-		 * @generated
-		 */
-		EClass NODES = eINSTANCE.getNodes();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NODES__NAME = eINSTANCE.getNodes_Name();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.OperationNodeImpl <em>Operation Node</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.OperationNodeImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getOperationNode()
-		 * @generated
-		 */
-		EClass OPERATION_NODE = eINSTANCE.getOperationNode();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.EventImpl <em>Event</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.EventImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getEvent()
-		 * @generated
-		 */
-		EClass EVENT = eINSTANCE.getEvent();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.EntityImpl <em>Entity</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.EntityImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getEntity()
-		 * @generated
-		 */
-		EClass ENTITY = eINSTANCE.getEntity();
-
-		/**
-		 * The meta object literal for the '<em><b>Composition</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY__COMPOSITION = eINSTANCE.getEntity_Composition();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.ObjectImpl <em>Object</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.ObjectImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getObject()
-		 * @generated
-		 */
-		EClass OBJECT = eINSTANCE.getObject();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.AssociationsImpl <em>Associations</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.AssociationsImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getAssociations()
-		 * @generated
-		 */
-		EClass ASSOCIATIONS = eINSTANCE.getAssociations();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.AgentImpl <em>Agent</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.AgentImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getAgent()
-		 * @generated
-		 */
-		EClass AGENT = eINSTANCE.getAgent();
-
-		/**
-		 * The meta object literal for the '<em><b>Performs</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference AGENT__PERFORMS = eINSTANCE.getAgent_Performs();
-
-		/**
-		 * The meta object literal for the '<em><b>Composition</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference AGENT__COMPOSITION = eINSTANCE.getAgent_Composition();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.SoftwareAgentImpl <em>Software Agent</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.SoftwareAgentImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getSoftwareAgent()
-		 * @generated
-		 */
-		EClass SOFTWARE_AGENT = eINSTANCE.getSoftwareAgent();
-
-		/**
-		 * The meta object literal for the '<em><b>Responsible For</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SOFTWARE_AGENT__RESPONSIBLE_FOR = eINSTANCE.getSoftwareAgent_ResponsibleFor();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.EnvironmentAgentImpl <em>Environment Agent</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.EnvironmentAgentImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getEnvironmentAgent()
-		 * @generated
-		 */
-		EClass ENVIRONMENT_AGENT = eINSTANCE.getEnvironmentAgent();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.RefinableNodeImpl <em>Refinable Node</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.RefinableNodeImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getRefinableNode()
-		 * @generated
-		 */
-		EClass REFINABLE_NODE = eINSTANCE.getRefinableNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Refined By</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REFINABLE_NODE__REFINED_BY = eINSTANCE.getRefinableNode_RefinedBy();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.ObstacleImpl <em>Obstacle</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.ObstacleImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getObstacle()
-		 * @generated
-		 */
-		EClass OBSTACLE = eINSTANCE.getObstacle();
-
-		/**
-		 * The meta object literal for the '<em><b>Obstruct</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OBSTACLE__OBSTRUCT = eINSTANCE.getObstacle_Obstruct();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.GoalImpl <em>Goal</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.GoalImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getGoal()
-		 * @generated
-		 */
-		EClass GOAL = eINSTANCE.getGoal();
-
-		/**
-		 * The meta object literal for the '<em><b>Resolve</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GOAL__RESOLVE = eINSTANCE.getGoal_Resolve();
-
-		/**
-		 * The meta object literal for the '<em><b>Conflicts</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GOAL__CONFLICTS = eINSTANCE.getGoal_Conflicts();
-
-		/**
-		 * The meta object literal for the '<em><b>Concerns</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GOAL__CONCERNS = eINSTANCE.getGoal_Concerns();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.AssignmentLinkImpl <em>Assignment Link</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.AssignmentLinkImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getAssignmentLink()
-		 * @generated
-		 */
-		EClass ASSIGNMENT_LINK = eINSTANCE.getAssignmentLink();
-
-		/**
-		 * The meta object literal for the '<em><b>Assigns Goal To</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASSIGNMENT_LINK__ASSIGNS_GOAL_TO = eINSTANCE.getAssignmentLink_AssignsGoalTo();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.ConflictLinkImpl <em>Conflict Link</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.ConflictLinkImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getConflictLink()
-		 * @generated
-		 */
-		EClass CONFLICT_LINK = eINSTANCE.getConflictLink();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.ObstructionLinkImpl <em>Obstruction Link</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.ObstructionLinkImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getObstructionLink()
-		 * @generated
-		 */
-		EClass OBSTRUCTION_LINK = eINSTANCE.getObstructionLink();
-
-		/**
-		 * The meta object literal for the '<em><b>Relate KGoal To</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OBSTRUCTION_LINK__RELATE_KGOAL_TO = eINSTANCE.getObstructionLink_RelateKGoalTo();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.OutputLinkImpl <em>Output Link</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.OutputLinkImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getOutputLink()
-		 * @generated
-		 */
-		EClass OUTPUT_LINK = eINSTANCE.getOutputLink();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.ExpectationImpl <em>Expectation</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.ExpectationImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getExpectation()
-		 * @generated
-		 */
-		EClass EXPECTATION = eINSTANCE.getExpectation();
-
-		/**
-		 * The meta object literal for the '<em><b>Assigned To</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXPECTATION__ASSIGNED_TO = eINSTANCE.getExpectation_AssignedTo();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.InputLinkImpl <em>Input Link</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.InputLinkImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getInputLink()
-		 * @generated
-		 */
-		EClass INPUT_LINK = eINSTANCE.getInputLink();
-
-		/**
-		 * The meta object literal for the '<em><b>Object Input On</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_LINK__OBJECT_INPUT_ON = eINSTANCE.getInputLink_ObjectInputOn();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.RefinementImpl <em>Refinement</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.RefinementImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getRefinement()
-		 * @generated
-		 */
-		EClass REFINEMENT = eINSTANCE.getRefinement();
-
-		/**
-		 * The meta object literal for the '<em><b>Refines</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REFINEMENT__REFINES = eINSTANCE.getRefinement_Refines();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.AndRefinementImpl <em>And Refinement</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.AndRefinementImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getAndRefinement()
-		 * @generated
-		 */
-		EClass AND_REFINEMENT = eINSTANCE.getAndRefinement();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.OrRefinementImpl <em>Or Refinement</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.OrRefinementImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getOrRefinement()
-		 * @generated
-		 */
-		EClass OR_REFINEMENT = eINSTANCE.getOrRefinement();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.DomainPropertyImpl <em>Domain Property</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.DomainPropertyImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getDomainProperty()
-		 * @generated
-		 */
-		EClass DOMAIN_PROPERTY = eINSTANCE.getDomainProperty();
-
-		/**
-		 * The meta object literal for the '<em><b>Used In</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOMAIN_PROPERTY__USED_IN = eINSTANCE.getDomainProperty_UsedIn();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.RequirementImpl <em>Requirement</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.RequirementImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getRequirement()
-		 * @generated
-		 */
-		EClass REQUIREMENT = eINSTANCE.getRequirement();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.OperacionalizationLinkImpl <em>Operacionalization Link</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.OperacionalizationLinkImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getOperacionalizationLink()
-		 * @generated
-		 */
-		EClass OPERACIONALIZATION_LINK = eINSTANCE.getOperacionalizationLink();
-
-		/**
-		 * The meta object literal for the '<em><b>Relate Operation To</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OPERACIONALIZATION_LINK__RELATE_OPERATION_TO = eINSTANCE.getOperacionalizationLink_RelateOperationTo();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.DomainHypothesisImpl <em>Domain Hypothesis</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.DomainHypothesisImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getDomainHypothesis()
-		 * @generated
-		 */
-		EClass DOMAIN_HYPOTHESIS = eINSTANCE.getDomainHypothesis();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.DomainInvariantImpl <em>Domain Invariant</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.DomainInvariantImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getDomainInvariant()
-		 * @generated
-		 */
-		EClass DOMAIN_INVARIANT = eINSTANCE.getDomainInvariant();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.ResolutionLinkImpl <em>Resolution Link</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.ResolutionLinkImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getResolutionLink()
-		 * @generated
-		 */
-		EClass RESOLUTION_LINK = eINSTANCE.getResolutionLink();
-
-		/**
-		 * The meta object literal for the '<em><b>Assign Obstacle To</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RESOLUTION_LINK__ASSIGN_OBSTACLE_TO = eINSTANCE.getResolutionLink_AssignObstacleTo();
-
-		/**
-		 * The meta object literal for the '{@link mKAOS.impl.ResponsabilityLinkImpl <em>Responsability Link</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mKAOS.impl.ResponsabilityLinkImpl
-		 * @see mKAOS.impl.MKAOSPackageImpl#getResponsabilityLink()
-		 * @generated
-		 */
-		EClass RESPONSABILITY_LINK = eINSTANCE.getResponsabilityLink();
-
-		/**
-		 * The meta object literal for the '<em><b>Assign Agent To</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RESPONSABILITY_LINK__ASSIGN_AGENT_TO = eINSTANCE.getResponsabilityLink_AssignAgentTo();
-
-		/**
 		 * The meta object literal for the '{@link mKAOS.impl.mKAOSImpl <em>mKAOS</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6537,7 +3773,7 @@ public interface MKAOSPackage extends EPackage {
 		EClass EMERGE_LINK = eINSTANCE.getEmergeLink();
 
 		/**
-		 * The meta object literal for the '<em><b>Behavior</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Behavior</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

@@ -10,6 +10,10 @@ import KAOSModel.KAOSModelPackage;
 import java.util.Collection;
 import java.util.List;
 
+import mKAOS.MKAOSFactory;
+
+import mKAOS.provider.MkaosEditPlugin;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -238,6 +242,61 @@ public class KAOSItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__LINKED_BY,
+				 MKAOSFactory.eINSTANCE.createEmergeLink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__LINKED_BY,
+				 MKAOSFactory.eINSTANCE.createCommunicationInputLink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__LINKED_BY,
+				 MKAOSFactory.eINSTANCE.createCommunicationOutputLink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__LINKED_BY,
+				 MKAOSFactory.eINSTANCE.createDisruptLink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__LINKED_BY,
+				 MKAOSFactory.eINSTANCE.createSuportLink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__LINKED_BY,
+				 MKAOSFactory.eINSTANCE.createBlockLink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__LINKED_BY,
+				 MKAOSFactory.eINSTANCE.createDependencyLink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__LINKED_BY,
+				 MKAOSFactory.eINSTANCE.createInfluenceLink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__LINKED_BY,
+				 MKAOSFactory.eINSTANCE.createGeneralizationLink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__LINKED_BY,
+				 MKAOSFactory.eINSTANCE.createCompositionLink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__LINKED_BY,
+				 MKAOSFactory.eINSTANCE.createMissionRefinement()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(KAOSModelPackage.Literals.KAOS__CONSISTS_OF,
 				 KAOSModelFactory.eINSTANCE.createOperationNode()));
 
@@ -305,6 +364,36 @@ public class KAOSItemProvider
 			(createChildParameter
 				(KAOSModelPackage.Literals.KAOS__CONSISTS_OF,
 				 KAOSModelFactory.eINSTANCE.createDomainInvariant()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__CONSISTS_OF,
+				 MKAOSFactory.eINSTANCE.createMission()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__CONSISTS_OF,
+				 MKAOSFactory.eINSTANCE.createEmergentBehavior()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__CONSISTS_OF,
+				 MKAOSFactory.eINSTANCE.createConstituentSystem()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__CONSISTS_OF,
+				 MKAOSFactory.eINSTANCE.createMediator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__CONSISTS_OF,
+				 MKAOSFactory.eINSTANCE.createOperationalCapability()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KAOSModelPackage.Literals.KAOS__CONSISTS_OF,
+				 MKAOSFactory.eINSTANCE.createCommunicationalCapability()));
 	}
 
 	/**
@@ -315,7 +404,7 @@ public class KAOSItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return KaosEditPlugin.INSTANCE;
+		return MkaosEditPlugin.INSTANCE;
 	}
 
 }

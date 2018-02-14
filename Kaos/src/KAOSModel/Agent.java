@@ -33,7 +33,7 @@ public interface Agent extends KAOSModel.Object {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Performs</em>' reference list.
 	 * @see KAOSModel.KAOSModelPackage#getAgent_Performs()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Operation> getPerforms();

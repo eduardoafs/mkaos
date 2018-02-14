@@ -9,6 +9,8 @@ import KAOSModel.Link;
 import java.util.Collection;
 import java.util.List;
 
+import mKAOS.provider.MkaosEditPlugin;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -141,7 +143,7 @@ public class LinkItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return KaosEditPlugin.INSTANCE;
+		return MkaosEditPlugin.INSTANCE;
 	}
 
 }

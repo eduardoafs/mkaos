@@ -2,6 +2,8 @@
  */
 package mKAOS.impl;
 
+import KAOSModel.impl.SoftwareAgentImpl;
+
 import java.util.Collection;
 
 import mKAOS.ConstituentSystem;
@@ -27,7 +29,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class ConstituentSystemImpl extends mKAOS.impl.SoftwareAgentImpl implements ConstituentSystem {
+public class ConstituentSystemImpl extends SoftwareAgentImpl implements ConstituentSystem {
 	/**
 	 * The cached value of the '{@link #getCapableOf() <em>Capable Of</em>}' reference list.
 	 * <!-- begin-user-doc -->

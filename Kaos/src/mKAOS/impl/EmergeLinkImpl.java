@@ -2,6 +2,9 @@
  */
 package mKAOS.impl;
 
+import KAOSModel.impl.LinkImpl;
+
+import java.util.Collection;
 import mKAOS.CommunicationalCapability;
 import mKAOS.EmergeLink;
 import mKAOS.EmergentBehavior;
@@ -9,10 +12,12 @@ import mKAOS.MKAOSPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,16 +34,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class EmergeLinkImpl extends mKAOS.impl.LinkImpl implements EmergeLink {
+public class EmergeLinkImpl extends LinkImpl implements EmergeLink {
 	/**
-	 * The cached value of the '{@link #getBehavior() <em>Behavior</em>}' reference.
+	 * The cached value of the '{@link #getBehavior() <em>Behavior</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBehavior()
 	 * @generated
 	 * @ordered
 	 */
-	protected EmergentBehavior behavior;
+	protected EList<EmergentBehavior> behavior;
 
 	/**
 	 * The cached value of the '{@link #getCapability() <em>Capability</em>}' reference.
@@ -94,37 +99,11 @@ public class EmergeLinkImpl extends mKAOS.impl.LinkImpl implements EmergeLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EmergentBehavior getBehavior() {
-		if (behavior != null && behavior.eIsProxy()) {
-			InternalEObject oldBehavior = (InternalEObject)behavior;
-			behavior = (EmergentBehavior)eResolveProxy(oldBehavior);
-			if (behavior != oldBehavior) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MKAOSPackage.EMERGE_LINK__BEHAVIOR, oldBehavior, behavior));
-			}
+	public EList<EmergentBehavior> getBehavior() {
+		if (behavior == null) {
+			behavior = new EObjectResolvingEList<EmergentBehavior>(EmergentBehavior.class, this, MKAOSPackage.EMERGE_LINK__BEHAVIOR);
 		}
 		return behavior;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EmergentBehavior basicGetBehavior() {
-		return behavior;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBehavior(EmergentBehavior newBehavior) {
-		EmergentBehavior oldBehavior = behavior;
-		behavior = newBehavior;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.EMERGE_LINK__BEHAVIOR, oldBehavior, behavior));
 	}
 
 	/**
@@ -195,8 +174,7 @@ public class EmergeLinkImpl extends mKAOS.impl.LinkImpl implements EmergeLink {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case MKAOSPackage.EMERGE_LINK__BEHAVIOR:
-				if (resolve) return getBehavior();
-				return basicGetBehavior();
+				return getBehavior();
 			case MKAOSPackage.EMERGE_LINK__CAPABILITY:
 				if (resolve) return getCapability();
 				return basicGetCapability();
@@ -211,11 +189,13 @@ public class EmergeLinkImpl extends mKAOS.impl.LinkImpl implements EmergeLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case MKAOSPackage.EMERGE_LINK__BEHAVIOR:
-				setBehavior((EmergentBehavior)newValue);
+				getBehavior().clear();
+				getBehavior().addAll((Collection<? extends EmergentBehavior>)newValue);
 				return;
 			case MKAOSPackage.EMERGE_LINK__CAPABILITY:
 				setCapability((CommunicationalCapability)newValue);
@@ -236,7 +216,7 @@ public class EmergeLinkImpl extends mKAOS.impl.LinkImpl implements EmergeLink {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case MKAOSPackage.EMERGE_LINK__BEHAVIOR:
-				setBehavior((EmergentBehavior)null);
+				getBehavior().clear();
 				return;
 			case MKAOSPackage.EMERGE_LINK__CAPABILITY:
 				setCapability((CommunicationalCapability)null);
@@ -257,7 +237,7 @@ public class EmergeLinkImpl extends mKAOS.impl.LinkImpl implements EmergeLink {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case MKAOSPackage.EMERGE_LINK__BEHAVIOR:
-				return behavior != null;
+				return behavior != null && !behavior.isEmpty();
 			case MKAOSPackage.EMERGE_LINK__CAPABILITY:
 				return capability != null;
 			case MKAOSPackage.EMERGE_LINK__CARDINALITY:

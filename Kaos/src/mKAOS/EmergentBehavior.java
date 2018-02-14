@@ -2,6 +2,8 @@
  */
 package mKAOS;
 
+import KAOSModel.Nodes;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -20,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface EmergentBehavior extends mKAOS.Nodes {
+public interface EmergentBehavior extends Nodes {
 	/**
 	 * Returns the value of the '<em><b>Related To</b></em>' reference list.
 	 * The list contents are of type {@link mKAOS.Mission}.
@@ -32,7 +34,7 @@ public interface EmergentBehavior extends mKAOS.Nodes {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Related To</em>' reference list.
 	 * @see mKAOS.MKAOSPackage#getEmergentBehavior_RelatedTo()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Mission> getRelatedTo();

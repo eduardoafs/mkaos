@@ -2,11 +2,15 @@
  */
 package mKAOS.impl;
 
+import KAOSModel.impl.OperationImpl;
+
 import mKAOS.MKAOSPackage;
 import mKAOS.OperationalCapability;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -22,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class OperationalCapabilityImpl extends mKAOS.impl.OperationImpl implements OperationalCapability {
+public class OperationalCapabilityImpl extends OperationImpl implements OperationalCapability {
 	/**
 	 * The default value of the '{@link #getDesc() <em>Desc</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -32,6 +36,7 @@ public class OperationalCapabilityImpl extends mKAOS.impl.OperationImpl implemen
 	 * @ordered
 	 */
 	protected static final String DESC_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getDesc() <em>Desc</em>}' attribute.
 	 * <!-- begin-user-doc -->

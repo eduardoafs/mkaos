@@ -2,17 +2,20 @@
  */
 package mKAOS.impl;
 
+import KAOSModel.impl.LinkImpl;
+
 import mKAOS.MKAOSPackage;
 import mKAOS.Mission;
 import mKAOS.MissionLink;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -29,7 +32,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *
  * @generated
  */
-public abstract class MissionLinkImpl extends mKAOS.impl.LinkImpl implements MissionLink {
+public abstract class MissionLinkImpl extends LinkImpl implements MissionLink {
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->

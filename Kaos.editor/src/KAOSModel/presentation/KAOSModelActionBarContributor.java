@@ -5,6 +5,7 @@ package KAOSModel.presentation;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import mKAOS.presentation.MkaosEditorPlugin;
 import org.eclipse.emf.common.ui.viewer.IViewerProvider;
 
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -71,14 +72,14 @@ public class KAOSModelActionBarContributor
 	 * @generated
 	 */
 	protected IAction showPropertiesViewAction =
-		new Action(KaosEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+		new Action(MkaosEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
 			@Override
 			public void run() {
 				try {
 					getPage().showView("org.eclipse.ui.views.PropertySheet");
 				}
 				catch (PartInitException exception) {
-					KaosEditorPlugin.INSTANCE.log(exception);
+					MkaosEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -91,7 +92,7 @@ public class KAOSModelActionBarContributor
 	 * @generated
 	 */
 	protected IAction refreshViewerAction =
-		new Action(KaosEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+		new Action(MkaosEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
 			@Override
 			public boolean isEnabled() {
 				return activeEditorPart instanceof IViewerProvider;
@@ -178,7 +179,7 @@ public class KAOSModelActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(KaosEditorPlugin.INSTANCE.getString("_UI_KAOSModelEditor_menu"), "KAOSModelMenuID");
+		IMenuManager submenuManager = new MenuManager(MkaosEditorPlugin.INSTANCE.getString("_UI_KAOSModelEditor_menu"), "KAOSModelMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));
@@ -187,12 +188,12 @@ public class KAOSModelActionBarContributor
 
 		// Prepare for CreateChild item addition or removal.
 		//
-		createChildMenuManager = new MenuManager(KaosEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+		createChildMenuManager = new MenuManager(MkaosEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
 		submenuManager.insertBefore("additions", createChildMenuManager);
 
 		// Prepare for CreateSibling item addition or removal.
 		//
-		createSiblingMenuManager = new MenuManager(KaosEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		createSiblingMenuManager = new MenuManager(MkaosEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		submenuManager.insertBefore("additions", createSiblingMenuManager);
 
 		// Force an update because Eclipse hides empty menus now.
@@ -383,11 +384,11 @@ public class KAOSModelActionBarContributor
 		super.menuAboutToShow(menuManager);
 		MenuManager submenuManager = null;
 
-		submenuManager = new MenuManager(KaosEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+		submenuManager = new MenuManager(MkaosEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
 		populateManager(submenuManager, createChildActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 
-		submenuManager = new MenuManager(KaosEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		submenuManager = new MenuManager(MkaosEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 	}

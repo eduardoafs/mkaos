@@ -34,7 +34,7 @@ public interface Goal extends RefinableNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Resolve</em>' reference list.
 	 * @see KAOSModel.KAOSModelPackage#getGoal_Resolve()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Obstacle> getResolve();
@@ -50,7 +50,7 @@ public interface Goal extends RefinableNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Conflicts</em>' reference list.
 	 * @see KAOSModel.KAOSModelPackage#getGoal_Conflicts()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Goal> getConflicts();
@@ -66,7 +66,7 @@ public interface Goal extends RefinableNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Concerns</em>' reference list.
 	 * @see KAOSModel.KAOSModelPackage#getGoal_Concerns()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<KAOSModel.Object> getConcerns();

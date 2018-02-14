@@ -2,6 +2,8 @@
  */
 package mKAOS;
 
+import KAOSModel.Refinement;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -22,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface MissionRefinement extends mKAOS.Refinement {
+public interface MissionRefinement extends Refinement {
 	/**
 	 * Returns the value of the '<em><b>Kind</b></em>' attribute.
 	 * The default value is <code>"custom"</code>.

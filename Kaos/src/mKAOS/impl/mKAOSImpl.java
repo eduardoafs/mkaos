@@ -2,6 +2,8 @@
  */
 package mKAOS.impl;
 
+import KAOSModel.impl.KAOSImpl;
+
 import mKAOS.MKAOSPackage;
 import mKAOS.mKAOS;
 
@@ -14,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class mKAOSImpl extends mKAOS.impl.KAOSImpl implements mKAOS {
+public class mKAOSImpl extends KAOSImpl implements mKAOS {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

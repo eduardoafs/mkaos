@@ -15,7 +15,6 @@ import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IChangeNotifier;
-import org.eclipse.emf.edit.provider.IDisposable;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
@@ -32,7 +31,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class KAOSModelItemProviderAdapterFactory extends KAOSModelAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+public class KAOSModelItemProviderAdapterFactory extends KAOSModelAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -759,41 +758,6 @@ public class KAOSModelItemProviderAdapterFactory extends KAOSModelAdapterFactory
 		if (parentAdapterFactory != null) {
 			parentAdapterFactory.fireNotifyChanged(notification);
 		}
-	}
-
-	/**
-	 * This disposes all of the item providers created by this factory. 
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void dispose() {
-		if (operationItemProvider != null) operationItemProvider.dispose();
-		if (kaosItemProvider != null) kaosItemProvider.dispose();
-		if (operationNodeItemProvider != null) operationNodeItemProvider.dispose();
-		if (eventItemProvider != null) eventItemProvider.dispose();
-		if (entityItemProvider != null) entityItemProvider.dispose();
-		if (associationsItemProvider != null) associationsItemProvider.dispose();
-		if (softwareAgentItemProvider != null) softwareAgentItemProvider.dispose();
-		if (environmentAgentItemProvider != null) environmentAgentItemProvider.dispose();
-		if (obstacleItemProvider != null) obstacleItemProvider.dispose();
-		if (goalItemProvider != null) goalItemProvider.dispose();
-		if (assignmentLinkItemProvider != null) assignmentLinkItemProvider.dispose();
-		if (conflictLinkItemProvider != null) conflictLinkItemProvider.dispose();
-		if (obstructionLinkItemProvider != null) obstructionLinkItemProvider.dispose();
-		if (outputLinkItemProvider != null) outputLinkItemProvider.dispose();
-		if (expectationItemProvider != null) expectationItemProvider.dispose();
-		if (inputLinkItemProvider != null) inputLinkItemProvider.dispose();
-		if (refinementItemProvider != null) refinementItemProvider.dispose();
-		if (andRefinementItemProvider != null) andRefinementItemProvider.dispose();
-		if (orRefinementItemProvider != null) orRefinementItemProvider.dispose();
-		if (domainPropertyItemProvider != null) domainPropertyItemProvider.dispose();
-		if (requirementItemProvider != null) requirementItemProvider.dispose();
-		if (operacionalizationLinkItemProvider != null) operacionalizationLinkItemProvider.dispose();
-		if (domainHypothesisItemProvider != null) domainHypothesisItemProvider.dispose();
-		if (domainInvariantItemProvider != null) domainInvariantItemProvider.dispose();
-		if (resolutionLinkItemProvider != null) resolutionLinkItemProvider.dispose();
-		if (responsabilityLinkItemProvider != null) responsabilityLinkItemProvider.dispose();
 	}
 
 }

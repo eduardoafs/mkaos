@@ -15,16 +15,16 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EmergentBehavior" eSuperTypes="kaos.ecore#//Nodes">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedTo" lowerBound="1"
-        upperBound="-1" eType="#//Mission"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedTo" upperBound="-1"
+        eType="#//Mission"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConstituentSystem" eSuperTypes="kaos.ecore#//SoftwareAgent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="capableOf" lowerBound="1"
-        upperBound="-1" eType="#//OperationalCapability"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capableOf" upperBound="-1"
+        eType="#//OperationalCapability"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Mediator" eSuperTypes="kaos.ecore#//SoftwareAgent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="capableOf" lowerBound="1"
-        upperBound="-1" eType="#//CommunicationalCapability"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capableOf" upperBound="-1"
+        eType="#//CommunicationalCapability"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperationalCapability" eSuperTypes="kaos.ecore#//Operation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="desc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -33,28 +33,24 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="desc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EmergeLink" eSuperTypes="kaos.ecore#//Link">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="behavior" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behavior" upperBound="-1"
         eType="#//EmergentBehavior"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
-        eType="#//CommunicationalCapability"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="[1..*]"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capability" eType="#//CommunicationalCapability"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="[1..*]"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CommunicationLink" abstract="true" eSuperTypes="kaos.ecore#//Link">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
-        eType="#//CommunicationalCapability"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
-        eType="ecore:EClass kaos.ecore#//Entity"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="[1..1]"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capability" eType="#//CommunicationalCapability"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" eType="ecore:EClass kaos.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="[1..1]"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CommunicationInputLink" eSuperTypes="#//CommunicationLink"/>
   <eClassifiers xsi:type="ecore:EClass" name="CommunicationOutputLink" eSuperTypes="#//CommunicationLink"/>
   <eClassifiers xsi:type="ecore:EClass" name="MissionLink" abstract="true" eSuperTypes="kaos.ecore#//Link">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//Mission" eOpposite="#//Mission/links"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-        eType="#//Mission"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Mission"
+        eOpposite="#//Mission/links"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Mission"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DisruptLink" eSuperTypes="#//MissionLink"/>
   <eClassifiers xsi:type="ecore:EClass" name="SuportLink" eSuperTypes="#//MissionLink"/>

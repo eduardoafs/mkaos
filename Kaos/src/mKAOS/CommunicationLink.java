@@ -2,6 +2,9 @@
  */
 package mKAOS;
 
+import KAOSModel.Entity;
+import KAOSModel.Link;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Communication Link</b></em>'.
@@ -20,7 +23,7 @@ package mKAOS;
  * @model abstract="true"
  * @generated
  */
-public interface CommunicationLink extends mKAOS.Link {
+public interface CommunicationLink extends Link {
 	/**
 	 * Returns the value of the '<em><b>Capability</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -32,7 +35,7 @@ public interface CommunicationLink extends mKAOS.Link {
 	 * @return the value of the '<em>Capability</em>' reference.
 	 * @see #setCapability(CommunicationalCapability)
 	 * @see mKAOS.MKAOSPackage#getCommunicationLink_Capability()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	CommunicationalCapability getCapability();
@@ -56,12 +59,12 @@ public interface CommunicationLink extends mKAOS.Link {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entity</em>' reference.
-	 * @see #setEntity(mKAOS.Entity)
+	 * @see #setEntity(Entity)
 	 * @see mKAOS.MKAOSPackage#getCommunicationLink_Entity()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
-	mKAOS.Entity getEntity();
+	Entity getEntity();
 
 	/**
 	 * Sets the value of the '{@link mKAOS.CommunicationLink#getEntity <em>Entity</em>}' reference.
@@ -71,7 +74,7 @@ public interface CommunicationLink extends mKAOS.Link {
 	 * @see #getEntity()
 	 * @generated
 	 */
-	void setEntity(mKAOS.Entity value);
+	void setEntity(Entity value);
 
 	/**
 	 * Returns the value of the '<em><b>Cardinality</b></em>' attribute.
@@ -85,7 +88,7 @@ public interface CommunicationLink extends mKAOS.Link {
 	 * @return the value of the '<em>Cardinality</em>' attribute.
 	 * @see #setCardinality(String)
 	 * @see mKAOS.MKAOSPackage#getCommunicationLink_Cardinality()
-	 * @model default="[1..1]" required="true"
+	 * @model default="[1..1]"
 	 * @generated
 	 */
 	String getCardinality();

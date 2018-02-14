@@ -2,6 +2,8 @@
  */
 package mKAOS.impl;
 
+import KAOSModel.impl.NodesImpl;
+
 import java.util.Collection;
 
 import mKAOS.EmergentBehavior;
@@ -27,7 +29,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class EmergentBehaviorImpl extends mKAOS.impl.NodesImpl implements EmergentBehavior {
+public class EmergentBehaviorImpl extends NodesImpl implements EmergentBehavior {
 	/**
 	 * The cached value of the '{@link #getRelatedTo() <em>Related To</em>}' reference list.
 	 * <!-- begin-user-doc -->

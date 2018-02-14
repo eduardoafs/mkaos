@@ -3,6 +3,8 @@
 package mKAOS.provider;
 
 
+import KAOSModel.provider.RefinementItemProvider;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -12,6 +14,9 @@ import mKAOS.MissionRefinement;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -25,7 +30,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MissionRefinementItemProvider extends mKAOS.provider.RefinementItemProvider {
+public class MissionRefinementItemProvider extends RefinementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -179,6 +184,17 @@ public class MissionRefinementItemProvider extends mKAOS.provider.RefinementItem
 			(createChildParameter
 				(MKAOSPackage.Literals.MISSION_REFINEMENT__SUBMISSIONS,
 				 MKAOSFactory.eINSTANCE.createMission()));
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return MkaosEditPlugin.INSTANCE;
 	}
 
 }

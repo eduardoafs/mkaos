@@ -2,6 +2,10 @@
  */
 package mKAOS.impl;
 
+import KAOSModel.Entity;
+
+import KAOSModel.impl.LinkImpl;
+
 import mKAOS.GeneralizationLink;
 import mKAOS.MKAOSPackage;
 
@@ -26,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class GeneralizationLinkImpl extends mKAOS.impl.LinkImpl implements GeneralizationLink {
+public class GeneralizationLinkImpl extends LinkImpl implements GeneralizationLink {
 	/**
 	 * The cached value of the '{@link #getEntity() <em>Entity</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -35,7 +39,7 @@ public class GeneralizationLinkImpl extends mKAOS.impl.LinkImpl implements Gener
 	 * @generated
 	 * @ordered
 	 */
-	protected mKAOS.Entity entity;
+	protected Entity entity;
 
 	/**
 	 * The cached value of the '{@link #getGeneralizes() <em>Generalizes</em>}' reference.
@@ -45,7 +49,7 @@ public class GeneralizationLinkImpl extends mKAOS.impl.LinkImpl implements Gener
 	 * @generated
 	 * @ordered
 	 */
-	protected mKAOS.Entity generalizes;
+	protected Entity generalizes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -71,10 +75,10 @@ public class GeneralizationLinkImpl extends mKAOS.impl.LinkImpl implements Gener
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public mKAOS.Entity getEntity() {
+	public Entity getEntity() {
 		if (entity != null && entity.eIsProxy()) {
 			InternalEObject oldEntity = (InternalEObject)entity;
-			entity = (mKAOS.Entity)eResolveProxy(oldEntity);
+			entity = (Entity)eResolveProxy(oldEntity);
 			if (entity != oldEntity) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MKAOSPackage.GENERALIZATION_LINK__ENTITY, oldEntity, entity));
@@ -88,7 +92,7 @@ public class GeneralizationLinkImpl extends mKAOS.impl.LinkImpl implements Gener
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public mKAOS.Entity basicGetEntity() {
+	public Entity basicGetEntity() {
 		return entity;
 	}
 
@@ -97,8 +101,8 @@ public class GeneralizationLinkImpl extends mKAOS.impl.LinkImpl implements Gener
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEntity(mKAOS.Entity newEntity) {
-		mKAOS.Entity oldEntity = entity;
+	public void setEntity(Entity newEntity) {
+		Entity oldEntity = entity;
 		entity = newEntity;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.GENERALIZATION_LINK__ENTITY, oldEntity, entity));
@@ -109,10 +113,10 @@ public class GeneralizationLinkImpl extends mKAOS.impl.LinkImpl implements Gener
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public mKAOS.Entity getGeneralizes() {
+	public Entity getGeneralizes() {
 		if (generalizes != null && generalizes.eIsProxy()) {
 			InternalEObject oldGeneralizes = (InternalEObject)generalizes;
-			generalizes = (mKAOS.Entity)eResolveProxy(oldGeneralizes);
+			generalizes = (Entity)eResolveProxy(oldGeneralizes);
 			if (generalizes != oldGeneralizes) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MKAOSPackage.GENERALIZATION_LINK__GENERALIZES, oldGeneralizes, generalizes));
@@ -126,7 +130,7 @@ public class GeneralizationLinkImpl extends mKAOS.impl.LinkImpl implements Gener
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public mKAOS.Entity basicGetGeneralizes() {
+	public Entity basicGetGeneralizes() {
 		return generalizes;
 	}
 
@@ -135,8 +139,8 @@ public class GeneralizationLinkImpl extends mKAOS.impl.LinkImpl implements Gener
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGeneralizes(mKAOS.Entity newGeneralizes) {
-		mKAOS.Entity oldGeneralizes = generalizes;
+	public void setGeneralizes(Entity newGeneralizes) {
+		Entity oldGeneralizes = generalizes;
 		generalizes = newGeneralizes;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.GENERALIZATION_LINK__GENERALIZES, oldGeneralizes, generalizes));
@@ -169,10 +173,10 @@ public class GeneralizationLinkImpl extends mKAOS.impl.LinkImpl implements Gener
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case MKAOSPackage.GENERALIZATION_LINK__ENTITY:
-				setEntity((mKAOS.Entity)newValue);
+				setEntity((Entity)newValue);
 				return;
 			case MKAOSPackage.GENERALIZATION_LINK__GENERALIZES:
-				setGeneralizes((mKAOS.Entity)newValue);
+				setGeneralizes((Entity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,10 +191,10 @@ public class GeneralizationLinkImpl extends mKAOS.impl.LinkImpl implements Gener
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case MKAOSPackage.GENERALIZATION_LINK__ENTITY:
-				setEntity((mKAOS.Entity)null);
+				setEntity((Entity)null);
 				return;
 			case MKAOSPackage.GENERALIZATION_LINK__GENERALIZES:
-				setGeneralizes((mKAOS.Entity)null);
+				setGeneralizes((Entity)null);
 				return;
 		}
 		super.eUnset(featureID);

@@ -15,5 +15,6 @@ Export-Package: mKAOS,
  KAOSModel.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- Kaos;visibility:=reexport
+ Kaos;visibility:=reexport,
+ Kaos
 Bundle-ActivationPolicy: lazy

@@ -156,6 +156,8 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import KAOSModel.provider.KAOSModelItemProviderAdapterFactory;
 
+import mKAOS.presentation.MkaosEditorPlugin;
+import mKAOS.provider.MKAOSItemProviderAdapterFactory;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 
@@ -404,6 +406,8 @@ public class KAOSModelEditor
 	 */
 	protected EContentAdapter problemIndicationAdapter =
 		new EContentAdapter() {
+			protected boolean dispatching;
+
 			@Override
 			public void notifyChanged(Notification notification) {
 				if (notification.getNotifier() instanceof Resource) {
@@ -419,21 +423,26 @@ public class KAOSModelEditor
 							else {
 								resourceToDiagnosticMap.remove(resource);
 							}
-
-							if (updateProblemIndication) {
-								getSite().getShell().getDisplay().asyncExec
-									(new Runnable() {
-										 public void run() {
-											 updateProblemIndication();
-										 }
-									 });
-							}
+							dispatchUpdateProblemIndication();
 							break;
 						}
 					}
 				}
 				else {
 					super.notifyChanged(notification);
+				}
+			}
+
+			protected void dispatchUpdateProblemIndication() {
+				if (updateProblemIndication && !dispatching) {
+					dispatching = true;
+					getSite().getShell().getDisplay().asyncExec
+						(new Runnable() {
+							 public void run() {
+								 dispatching = false;
+								 updateProblemIndication();
+							 }
+						 });
 				}
 			}
 
@@ -446,14 +455,7 @@ public class KAOSModelEditor
 			protected void unsetTarget(Resource target) {
 				basicUnsetTarget(target);
 				resourceToDiagnosticMap.remove(target);
-				if (updateProblemIndication) {
-					getSite().getShell().getDisplay().asyncExec
-						(new Runnable() {
-							 public void run() {
-								 updateProblemIndication();
-							 }
-						 });
-				}
+				dispatchUpdateProblemIndication();
 			}
 		};
 
@@ -530,7 +532,7 @@ public class KAOSModelEditor
 					}
 				}
 				catch (CoreException exception) {
-					KaosEditorPlugin.INSTANCE.log(exception);
+					MkaosEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -646,19 +648,16 @@ public class KAOSModelEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					KaosEditorPlugin.INSTANCE.log(exception);
+					MkaosEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
 			if (markerHelper.hasMarkers(editingDomain.getResourceSet())) {
-				markerHelper.deleteMarkers(editingDomain.getResourceSet());
-				if (diagnostic.getSeverity() != Diagnostic.OK) {
-					try {
-						markerHelper.createMarkers(diagnostic);
-					}
-					catch (CoreException exception) {
-						KaosEditorPlugin.INSTANCE.log(exception);
-					}
+				try {
+					markerHelper.updateMarkers(diagnostic);
+				}
+				catch (CoreException exception) {
+					MkaosEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		}
@@ -701,6 +700,7 @@ public class KAOSModelEditor
 		adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new MKAOSItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new KAOSModelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
@@ -1039,6 +1039,7 @@ public class KAOSModelEditor
 
 				selectionViewer = (TreeViewer)viewerPane.getViewer();
 				selectionViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
+				selectionViewer.setUseHashlookup(true);
 
 				selectionViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 				selectionViewer.setInput(editingDomain.getResourceSet());
@@ -1344,6 +1345,7 @@ public class KAOSModelEditor
 
 					// Set up the tree viewer.
 					//
+					contentOutlineViewer.setUseHashlookup(true);
 					contentOutlineViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 					contentOutlineViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 					contentOutlineViewer.setInput(editingDomain.getResourceSet());
@@ -1491,7 +1493,9 @@ public class KAOSModelEditor
 					// Save the resources to the file system.
 					//
 					boolean first = true;
-					for (Resource resource : editingDomain.getResourceSet().getResources()) {
+					List<Resource> resources = editingDomain.getResourceSet().getResources();
+					for (int i = 0; i < resources.size(); ++i) {
+						Resource resource = resources.get(i);
 						if ((first || !resource.getContents().isEmpty() || isPersisted(resource)) && !editingDomain.isReadOnly(resource)) {
 							try {
 								long timeStamp = resource.getTimeStamp();
@@ -1523,7 +1527,7 @@ public class KAOSModelEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			KaosEditorPlugin.INSTANCE.log(exception);
+			MkaosEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1727,7 +1731,7 @@ public class KAOSModelEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return KaosEditorPlugin.INSTANCE.getString(key);
+		return MkaosEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1737,7 +1741,7 @@ public class KAOSModelEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return KaosEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return MkaosEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**

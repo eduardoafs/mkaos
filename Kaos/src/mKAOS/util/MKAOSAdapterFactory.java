@@ -2,67 +2,17 @@
  */
 package mKAOS.util;
 
-import mKAOS.AndRefinement;
-import mKAOS.AssignmentLink;
-import mKAOS.Associations;
-import mKAOS.BlockLink;
-import mKAOS.CommunicationInputLink;
-import mKAOS.CommunicationLink;
-import mKAOS.CommunicationOutputLink;
-import mKAOS.CommunicationalCapability;
-import mKAOS.CompositionLink;
-import mKAOS.ConflictLink;
-import mKAOS.ConstituentSystem;
-import mKAOS.DependencyLink;
-import mKAOS.DisruptLink;
-import mKAOS.DomainHypothesis;
-import mKAOS.DomainInvariant;
-import mKAOS.DomainProperty;
-import mKAOS.DynBLTL;
-import mKAOS.EmergeLink;
-import mKAOS.EmergentBehavior;
-import mKAOS.Entity;
-import mKAOS.EnvironmentAgent;
-import mKAOS.Event;
-import mKAOS.Expectation;
-import mKAOS.FormalElement;
-import mKAOS.GeneralizationLink;
-import mKAOS.InfluenceLink;
-import mKAOS.InputLink;
-import mKAOS.MKAOSPackage;
-import mKAOS.Mediator;
-import mKAOS.Mission;
-import mKAOS.MissionLink;
-import mKAOS.MissionRefinement;
-import mKAOS.Obstacle;
-import mKAOS.ObstructionLink;
-import mKAOS.OperacionalizationLink;
-import mKAOS.OperationalCapability;
-import mKAOS.OrRefinement;
-import mKAOS.OutputLink;
-import mKAOS.Requirement;
-import mKAOS.ResolutionLink;
-import mKAOS.ResponsabilityLink;
-import mKAOS.RuleBound;
-import mKAOS.RuleConjunction;
-import mKAOS.RuleDisjunction;
-import mKAOS.RuleEquality;
-import mKAOS.RuleFactor;
-import mKAOS.RuleFloatLit;
-import mKAOS.RuleFunction;
-import mKAOS.RuleImplication;
-import mKAOS.RuleIntegerLit;
-import mKAOS.RuleLiteral;
-import mKAOS.RuleNumExp;
-import mKAOS.RuleParams;
-import mKAOS.RuleRelExp;
-import mKAOS.RuleSeqLit;
-import mKAOS.RuleTemporal;
-import mKAOS.RuleTerm;
-import mKAOS.RuleTupleLit;
-import mKAOS.RuleVar;
-import mKAOS.SuportLink;
-import mKAOS.mKAOS;
+import KAOSModel.Agent;
+import KAOSModel.Goal;
+import KAOSModel.KAOS;
+import KAOSModel.Link;
+import KAOSModel.Nodes;
+import KAOSModel.Operation;
+import KAOSModel.OperationNode;
+import KAOSModel.RefinableNode;
+import KAOSModel.Refinement;
+import KAOSModel.SoftwareAgent;
+
 import mKAOS.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -128,130 +78,6 @@ public class MKAOSAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected MKAOSSwitch<Adapter> modelSwitch =
 		new MKAOSSwitch<Adapter>() {
-			@Override
-			public Adapter caseOperation(mKAOS.Operation object) {
-				return createOperationAdapter();
-			}
-			@Override
-			public Adapter caseKAOS(mKAOS.KAOS object) {
-				return createKAOSAdapter();
-			}
-			@Override
-			public Adapter caseLink(mKAOS.Link object) {
-				return createLinkAdapter();
-			}
-			@Override
-			public Adapter caseNodes(mKAOS.Nodes object) {
-				return createNodesAdapter();
-			}
-			@Override
-			public Adapter caseOperationNode(mKAOS.OperationNode object) {
-				return createOperationNodeAdapter();
-			}
-			@Override
-			public Adapter caseEvent(Event object) {
-				return createEventAdapter();
-			}
-			@Override
-			public Adapter caseEntity(Entity object) {
-				return createEntityAdapter();
-			}
-			@Override
-			public Adapter caseObject(mKAOS.Object object) {
-				return createObjectAdapter();
-			}
-			@Override
-			public Adapter caseAssociations(Associations object) {
-				return createAssociationsAdapter();
-			}
-			@Override
-			public Adapter caseAgent(mKAOS.Agent object) {
-				return createAgentAdapter();
-			}
-			@Override
-			public Adapter caseSoftwareAgent(mKAOS.SoftwareAgent object) {
-				return createSoftwareAgentAdapter();
-			}
-			@Override
-			public Adapter caseEnvironmentAgent(EnvironmentAgent object) {
-				return createEnvironmentAgentAdapter();
-			}
-			@Override
-			public Adapter caseRefinableNode(mKAOS.RefinableNode object) {
-				return createRefinableNodeAdapter();
-			}
-			@Override
-			public Adapter caseObstacle(Obstacle object) {
-				return createObstacleAdapter();
-			}
-			@Override
-			public Adapter caseGoal(mKAOS.Goal object) {
-				return createGoalAdapter();
-			}
-			@Override
-			public Adapter caseAssignmentLink(AssignmentLink object) {
-				return createAssignmentLinkAdapter();
-			}
-			@Override
-			public Adapter caseConflictLink(ConflictLink object) {
-				return createConflictLinkAdapter();
-			}
-			@Override
-			public Adapter caseObstructionLink(ObstructionLink object) {
-				return createObstructionLinkAdapter();
-			}
-			@Override
-			public Adapter caseOutputLink(OutputLink object) {
-				return createOutputLinkAdapter();
-			}
-			@Override
-			public Adapter caseExpectation(Expectation object) {
-				return createExpectationAdapter();
-			}
-			@Override
-			public Adapter caseInputLink(InputLink object) {
-				return createInputLinkAdapter();
-			}
-			@Override
-			public Adapter caseRefinement(mKAOS.Refinement object) {
-				return createRefinementAdapter();
-			}
-			@Override
-			public Adapter caseAndRefinement(AndRefinement object) {
-				return createAndRefinementAdapter();
-			}
-			@Override
-			public Adapter caseOrRefinement(OrRefinement object) {
-				return createOrRefinementAdapter();
-			}
-			@Override
-			public Adapter caseDomainProperty(DomainProperty object) {
-				return createDomainPropertyAdapter();
-			}
-			@Override
-			public Adapter caseRequirement(Requirement object) {
-				return createRequirementAdapter();
-			}
-			@Override
-			public Adapter caseOperacionalizationLink(OperacionalizationLink object) {
-				return createOperacionalizationLinkAdapter();
-			}
-			@Override
-			public Adapter caseDomainHypothesis(DomainHypothesis object) {
-				return createDomainHypothesisAdapter();
-			}
-			@Override
-			public Adapter caseDomainInvariant(DomainInvariant object) {
-				return createDomainInvariantAdapter();
-			}
-			@Override
-			public Adapter caseResolutionLink(ResolutionLink object) {
-				return createResolutionLinkAdapter();
-			}
-			@Override
-			public Adapter caseResponsabilityLink(ResponsabilityLink object) {
-				return createResponsabilityLinkAdapter();
-			}
 			@Override
 			public Adapter casemKAOS(mKAOS object) {
 				return createmKAOSAdapter();
@@ -411,6 +237,50 @@ public class MKAOSAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRuleSeqLit(RuleSeqLit object) {
 				return createRuleSeqLitAdapter();
+			}
+			@Override
+			public Adapter caseKAOS(KAOS object) {
+				return createKAOSAdapter();
+			}
+			@Override
+			public Adapter caseNodes(Nodes object) {
+				return createNodesAdapter();
+			}
+			@Override
+			public Adapter caseRefinableNode(RefinableNode object) {
+				return createRefinableNodeAdapter();
+			}
+			@Override
+			public Adapter caseGoal(Goal object) {
+				return createGoalAdapter();
+			}
+			@Override
+			public Adapter caseObject(KAOSModel.Object object) {
+				return createObjectAdapter();
+			}
+			@Override
+			public Adapter caseAgent(Agent object) {
+				return createAgentAdapter();
+			}
+			@Override
+			public Adapter caseSoftwareAgent(SoftwareAgent object) {
+				return createSoftwareAgentAdapter();
+			}
+			@Override
+			public Adapter caseOperationNode(OperationNode object) {
+				return createOperationNodeAdapter();
+			}
+			@Override
+			public Adapter caseOperation(Operation object) {
+				return createOperationAdapter();
+			}
+			@Override
+			public Adapter caseLink(Link object) {
+				return createLinkAdapter();
+			}
+			@Override
+			public Adapter caseRefinement(Refinement object) {
+				return createRefinementAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -993,13 +863,13 @@ public class MKAOSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.KAOS <em>KAOS</em>}'.
+	 * Creates a new adapter for an object of class '{@link KAOSModel.KAOS <em>KAOS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mKAOS.KAOS
+	 * @see KAOSModel.KAOS
 	 * @generated
 	 */
 	public Adapter createKAOSAdapter() {
@@ -1007,13 +877,13 @@ public class MKAOSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.Nodes <em>Nodes</em>}'.
+	 * Creates a new adapter for an object of class '{@link KAOSModel.Nodes <em>Nodes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mKAOS.Nodes
+	 * @see KAOSModel.Nodes
 	 * @generated
 	 */
 	public Adapter createNodesAdapter() {
@@ -1021,13 +891,13 @@ public class MKAOSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.RefinableNode <em>Refinable Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link KAOSModel.RefinableNode <em>Refinable Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mKAOS.RefinableNode
+	 * @see KAOSModel.RefinableNode
 	 * @generated
 	 */
 	public Adapter createRefinableNodeAdapter() {
@@ -1035,27 +905,13 @@ public class MKAOSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.Obstacle <em>Obstacle</em>}'.
+	 * Creates a new adapter for an object of class '{@link KAOSModel.Goal <em>Goal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mKAOS.Obstacle
-	 * @generated
-	 */
-	public Adapter createObstacleAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.Goal <em>Goal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.Goal
+	 * @see KAOSModel.Goal
 	 * @generated
 	 */
 	public Adapter createGoalAdapter() {
@@ -1063,97 +919,13 @@ public class MKAOSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.AssignmentLink <em>Assignment Link</em>}'.
+	 * Creates a new adapter for an object of class '{@link KAOSModel.Object <em>Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mKAOS.AssignmentLink
-	 * @generated
-	 */
-	public Adapter createAssignmentLinkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.ConflictLink <em>Conflict Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.ConflictLink
-	 * @generated
-	 */
-	public Adapter createConflictLinkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.ObstructionLink <em>Obstruction Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.ObstructionLink
-	 * @generated
-	 */
-	public Adapter createObstructionLinkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.OutputLink <em>Output Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.OutputLink
-	 * @generated
-	 */
-	public Adapter createOutputLinkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.Expectation <em>Expectation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.Expectation
-	 * @generated
-	 */
-	public Adapter createExpectationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.InputLink <em>Input Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.InputLink
-	 * @generated
-	 */
-	public Adapter createInputLinkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.Object <em>Object</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.Object
+	 * @see KAOSModel.Object
 	 * @generated
 	 */
 	public Adapter createObjectAdapter() {
@@ -1161,27 +933,13 @@ public class MKAOSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.Associations <em>Associations</em>}'.
+	 * Creates a new adapter for an object of class '{@link KAOSModel.Agent <em>Agent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mKAOS.Associations
-	 * @generated
-	 */
-	public Adapter createAssociationsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.Agent <em>Agent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.Agent
+	 * @see KAOSModel.Agent
 	 * @generated
 	 */
 	public Adapter createAgentAdapter() {
@@ -1189,13 +947,13 @@ public class MKAOSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.SoftwareAgent <em>Software Agent</em>}'.
+	 * Creates a new adapter for an object of class '{@link KAOSModel.SoftwareAgent <em>Software Agent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mKAOS.SoftwareAgent
+	 * @see KAOSModel.SoftwareAgent
 	 * @generated
 	 */
 	public Adapter createSoftwareAgentAdapter() {
@@ -1203,27 +961,13 @@ public class MKAOSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.EnvironmentAgent <em>Environment Agent</em>}'.
+	 * Creates a new adapter for an object of class '{@link KAOSModel.OperationNode <em>Operation Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mKAOS.EnvironmentAgent
-	 * @generated
-	 */
-	public Adapter createEnvironmentAgentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.OperationNode <em>Operation Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.OperationNode
+	 * @see KAOSModel.OperationNode
 	 * @generated
 	 */
 	public Adapter createOperationNodeAdapter() {
@@ -1231,41 +975,13 @@ public class MKAOSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.Event <em>Event</em>}'.
+	 * Creates a new adapter for an object of class '{@link KAOSModel.Operation <em>Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mKAOS.Event
-	 * @generated
-	 */
-	public Adapter createEventAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.Entity <em>Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.Entity
-	 * @generated
-	 */
-	public Adapter createEntityAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.Operation <em>Operation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.Operation
+	 * @see KAOSModel.Operation
 	 * @generated
 	 */
 	public Adapter createOperationAdapter() {
@@ -1273,13 +989,13 @@ public class MKAOSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.Link <em>Link</em>}'.
+	 * Creates a new adapter for an object of class '{@link KAOSModel.Link <em>Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mKAOS.Link
+	 * @see KAOSModel.Link
 	 * @generated
 	 */
 	public Adapter createLinkAdapter() {
@@ -1287,142 +1003,16 @@ public class MKAOSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.Refinement <em>Refinement</em>}'.
+	 * Creates a new adapter for an object of class '{@link KAOSModel.Refinement <em>Refinement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mKAOS.Refinement
+	 * @see KAOSModel.Refinement
 	 * @generated
 	 */
 	public Adapter createRefinementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.AndRefinement <em>And Refinement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.AndRefinement
-	 * @generated
-	 */
-	public Adapter createAndRefinementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.OrRefinement <em>Or Refinement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.OrRefinement
-	 * @generated
-	 */
-	public Adapter createOrRefinementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.DomainProperty <em>Domain Property</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.DomainProperty
-	 * @generated
-	 */
-	public Adapter createDomainPropertyAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.Requirement <em>Requirement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.Requirement
-	 * @generated
-	 */
-	public Adapter createRequirementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.OperacionalizationLink <em>Operacionalization Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.OperacionalizationLink
-	 * @generated
-	 */
-	public Adapter createOperacionalizationLinkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.DomainHypothesis <em>Domain Hypothesis</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.DomainHypothesis
-	 * @generated
-	 */
-	public Adapter createDomainHypothesisAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.DomainInvariant <em>Domain Invariant</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.DomainInvariant
-	 * @generated
-	 */
-	public Adapter createDomainInvariantAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.ResolutionLink <em>Resolution Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.ResolutionLink
-	 * @generated
-	 */
-	public Adapter createResolutionLinkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mKAOS.ResponsabilityLink <em>Responsability Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mKAOS.ResponsabilityLink
-	 * @generated
-	 */
-	public Adapter createResponsabilityLinkAdapter() {
 		return null;
 	}
 

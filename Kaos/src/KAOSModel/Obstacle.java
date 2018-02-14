@@ -32,7 +32,7 @@ public interface Obstacle extends RefinableNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Obstruct</em>' reference list.
 	 * @see KAOSModel.KAOSModelPackage#getObstacle_Obstruct()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Goal> getObstruct();

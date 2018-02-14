@@ -32,7 +32,7 @@ public interface DomainProperty extends Goal {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Used In</em>' reference list.
 	 * @see KAOSModel.KAOSModelPackage#getDomainProperty_UsedIn()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Refinement> getUsedIn();

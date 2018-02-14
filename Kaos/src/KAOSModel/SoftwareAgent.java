@@ -32,7 +32,7 @@ public interface SoftwareAgent extends Agent {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Responsible For</em>' reference list.
 	 * @see KAOSModel.KAOSModelPackage#getSoftwareAgent_ResponsibleFor()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Requirement> getResponsibleFor();

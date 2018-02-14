@@ -62,7 +62,7 @@ public interface KAOS extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Linked By</em>' containment reference list.
 	 * @see KAOSModel.KAOSModelPackage#getKAOS_LinkedBy()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Link> getLinkedBy();
@@ -78,7 +78,7 @@ public interface KAOS extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Consists Of</em>' containment reference list.
 	 * @see KAOSModel.KAOSModelPackage#getKAOS_ConsistsOf()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Nodes> getConsistsOf();

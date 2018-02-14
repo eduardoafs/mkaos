@@ -2,6 +2,8 @@
  */
 package mKAOS.impl;
 
+import KAOSModel.impl.RefinementImpl;
+
 import java.util.Collection;
 
 import mKAOS.DynBLTL;
@@ -38,7 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class MissionRefinementImpl extends mKAOS.impl.RefinementImpl implements MissionRefinement {
+public class MissionRefinementImpl extends RefinementImpl implements MissionRefinement {
 	/**
 	 * The default value of the '{@link #getKind() <em>Kind</em>}' attribute.
 	 * <!-- begin-user-doc -->

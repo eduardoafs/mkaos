@@ -2,6 +2,8 @@
  */
 package mKAOS;
 
+import KAOSModel.SoftwareAgent;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -20,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ConstituentSystem extends mKAOS.SoftwareAgent {
+public interface ConstituentSystem extends SoftwareAgent {
 	/**
 	 * Returns the value of the '<em><b>Capable Of</b></em>' reference list.
 	 * The list contents are of type {@link mKAOS.OperationalCapability}.
@@ -32,7 +34,7 @@ public interface ConstituentSystem extends mKAOS.SoftwareAgent {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Capable Of</em>' reference list.
 	 * @see mKAOS.MKAOSPackage#getConstituentSystem_CapableOf()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<OperationalCapability> getCapableOf();

@@ -2,6 +2,11 @@
  */
 package mKAOS.impl;
 
+import KAOSModel.Entity;
+import KAOSModel.Expectation;
+
+import KAOSModel.impl.LinkImpl;
+
 import mKAOS.InfluenceLink;
 import mKAOS.MKAOSPackage;
 
@@ -26,7 +31,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class InfluenceLinkImpl extends mKAOS.impl.LinkImpl implements InfluenceLink {
+public class InfluenceLinkImpl extends LinkImpl implements InfluenceLink {
 	/**
 	 * The cached value of the '{@link #getExpectation() <em>Expectation</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -35,7 +40,7 @@ public class InfluenceLinkImpl extends mKAOS.impl.LinkImpl implements InfluenceL
 	 * @generated
 	 * @ordered
 	 */
-	protected mKAOS.Expectation expectation;
+	protected Expectation expectation;
 
 	/**
 	 * The cached value of the '{@link #getInfluenced() <em>Influenced</em>}' reference.
@@ -45,7 +50,7 @@ public class InfluenceLinkImpl extends mKAOS.impl.LinkImpl implements InfluenceL
 	 * @generated
 	 * @ordered
 	 */
-	protected mKAOS.Entity influenced;
+	protected Entity influenced;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -71,10 +76,10 @@ public class InfluenceLinkImpl extends mKAOS.impl.LinkImpl implements InfluenceL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public mKAOS.Expectation getExpectation() {
+	public Expectation getExpectation() {
 		if (expectation != null && expectation.eIsProxy()) {
 			InternalEObject oldExpectation = (InternalEObject)expectation;
-			expectation = (mKAOS.Expectation)eResolveProxy(oldExpectation);
+			expectation = (Expectation)eResolveProxy(oldExpectation);
 			if (expectation != oldExpectation) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MKAOSPackage.INFLUENCE_LINK__EXPECTATION, oldExpectation, expectation));
@@ -88,7 +93,7 @@ public class InfluenceLinkImpl extends mKAOS.impl.LinkImpl implements InfluenceL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public mKAOS.Expectation basicGetExpectation() {
+	public Expectation basicGetExpectation() {
 		return expectation;
 	}
 
@@ -97,8 +102,8 @@ public class InfluenceLinkImpl extends mKAOS.impl.LinkImpl implements InfluenceL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExpectation(mKAOS.Expectation newExpectation) {
-		mKAOS.Expectation oldExpectation = expectation;
+	public void setExpectation(Expectation newExpectation) {
+		Expectation oldExpectation = expectation;
 		expectation = newExpectation;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.INFLUENCE_LINK__EXPECTATION, oldExpectation, expectation));
@@ -109,10 +114,10 @@ public class InfluenceLinkImpl extends mKAOS.impl.LinkImpl implements InfluenceL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public mKAOS.Entity getInfluenced() {
+	public Entity getInfluenced() {
 		if (influenced != null && influenced.eIsProxy()) {
 			InternalEObject oldInfluenced = (InternalEObject)influenced;
-			influenced = (mKAOS.Entity)eResolveProxy(oldInfluenced);
+			influenced = (Entity)eResolveProxy(oldInfluenced);
 			if (influenced != oldInfluenced) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MKAOSPackage.INFLUENCE_LINK__INFLUENCED, oldInfluenced, influenced));
@@ -126,7 +131,7 @@ public class InfluenceLinkImpl extends mKAOS.impl.LinkImpl implements InfluenceL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public mKAOS.Entity basicGetInfluenced() {
+	public Entity basicGetInfluenced() {
 		return influenced;
 	}
 
@@ -135,8 +140,8 @@ public class InfluenceLinkImpl extends mKAOS.impl.LinkImpl implements InfluenceL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInfluenced(mKAOS.Entity newInfluenced) {
-		mKAOS.Entity oldInfluenced = influenced;
+	public void setInfluenced(Entity newInfluenced) {
+		Entity oldInfluenced = influenced;
 		influenced = newInfluenced;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.INFLUENCE_LINK__INFLUENCED, oldInfluenced, influenced));
@@ -169,10 +174,10 @@ public class InfluenceLinkImpl extends mKAOS.impl.LinkImpl implements InfluenceL
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case MKAOSPackage.INFLUENCE_LINK__EXPECTATION:
-				setExpectation((mKAOS.Expectation)newValue);
+				setExpectation((Expectation)newValue);
 				return;
 			case MKAOSPackage.INFLUENCE_LINK__INFLUENCED:
-				setInfluenced((mKAOS.Entity)newValue);
+				setInfluenced((Entity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,10 +192,10 @@ public class InfluenceLinkImpl extends mKAOS.impl.LinkImpl implements InfluenceL
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case MKAOSPackage.INFLUENCE_LINK__EXPECTATION:
-				setExpectation((mKAOS.Expectation)null);
+				setExpectation((Expectation)null);
 				return;
 			case MKAOSPackage.INFLUENCE_LINK__INFLUENCED:
-				setInfluenced((mKAOS.Entity)null);
+				setInfluenced((Entity)null);
 				return;
 		}
 		super.eUnset(featureID);

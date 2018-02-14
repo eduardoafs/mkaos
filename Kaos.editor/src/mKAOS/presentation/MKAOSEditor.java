@@ -155,6 +155,7 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import mKAOS.provider.MKAOSItemProviderAdapterFactory;
+import KAOSModel.provider.KAOSModelItemProviderAdapterFactory;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 
@@ -698,6 +699,7 @@ public class MKAOSEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new MKAOSItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new KAOSModelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

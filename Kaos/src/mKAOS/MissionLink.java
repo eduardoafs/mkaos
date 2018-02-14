@@ -2,6 +2,8 @@
  */
 package mKAOS;
 
+import KAOSModel.Link;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Mission Link</b></em>'.
@@ -19,13 +21,13 @@ package mKAOS;
  * @model abstract="true"
  * @generated
  */
-public interface MissionLink extends mKAOS.Link {
+public interface MissionLink extends Link {
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link mKAOS.Mission#getLinks <em>Links</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Source</em>' reference isn't clear,
+	 * If the meaning of the '<em>Source</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -33,7 +35,7 @@ public interface MissionLink extends mKAOS.Link {
 	 * @see #setSource(Mission)
 	 * @see mKAOS.MKAOSPackage#getMissionLink_Source()
 	 * @see mKAOS.Mission#getLinks
-	 * @model opposite="links" required="true" transient="false"
+	 * @model opposite="links" transient="false"
 	 * @generated
 	 */
 	Mission getSource();
@@ -59,7 +61,7 @@ public interface MissionLink extends mKAOS.Link {
 	 * @return the value of the '<em>Target</em>' reference.
 	 * @see #setTarget(Mission)
 	 * @see mKAOS.MKAOSPackage#getMissionLink_Target()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	Mission getTarget();

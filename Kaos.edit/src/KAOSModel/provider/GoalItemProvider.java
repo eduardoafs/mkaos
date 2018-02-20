@@ -14,6 +14,8 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link KAOSModel.Goal} object.
@@ -43,75 +45,29 @@ public class GoalItemProvider extends RefinableNodeItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addResolvePropertyDescriptor(object);
-			addConflictsPropertyDescriptor(object);
-			addConcernsPropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Resolve feature.
+	 * This adds a property descriptor for the Description feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addResolvePropertyDescriptor(Object object) {
+	protected void addDescriptionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Goal_resolve_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Goal_resolve_feature", "_UI_Goal_type"),
-				 KAOSModelPackage.Literals.GOAL__RESOLVE,
+				 getString("_UI_Goal_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Goal_description_feature", "_UI_Goal_type"),
+				 KAOSModelPackage.Literals.GOAL__DESCRIPTION,
 				 true,
 				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Conflicts feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addConflictsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Goal_conflicts_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Goal_conflicts_feature", "_UI_Goal_type"),
-				 KAOSModelPackage.Literals.GOAL__CONFLICTS,
-				 true,
 				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Concerns feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addConcernsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Goal_concerns_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Goal_concerns_feature", "_UI_Goal_type"),
-				 KAOSModelPackage.Literals.GOAL__CONCERNS,
-				 true,
-				 false,
-				 true,
-				 null,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -152,6 +108,12 @@ public class GoalItemProvider extends RefinableNodeItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Goal.class)) {
+			case KAOSModelPackage.GOAL__DESCRIPTION:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

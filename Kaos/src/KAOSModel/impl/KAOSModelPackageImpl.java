@@ -637,6 +637,15 @@ public class KAOSModelPackageImpl extends EPackageImpl implements KAOSModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getGoal_Description() {
+		return (EAttribute)goalEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAssignmentLink() {
 		return assignmentLinkEClass;
 	}
@@ -932,6 +941,7 @@ public class KAOSModelPackageImpl extends EPackageImpl implements KAOSModelPacka
 		createEReference(goalEClass, GOAL__RESOLVE);
 		createEReference(goalEClass, GOAL__CONFLICTS);
 		createEReference(goalEClass, GOAL__CONCERNS);
+		createEAttribute(goalEClass, GOAL__DESCRIPTION);
 
 		assignmentLinkEClass = createEClass(ASSIGNMENT_LINK);
 		createEReference(assignmentLinkEClass, ASSIGNMENT_LINK__ASSIGNS_GOAL_TO);
@@ -1080,6 +1090,7 @@ public class KAOSModelPackageImpl extends EPackageImpl implements KAOSModelPacka
 		initEReference(getGoal_Resolve(), this.getObstacle(), null, "resolve", null, 0, -1, Goal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGoal_Conflicts(), this.getGoal(), null, "conflicts", null, 0, -1, Goal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGoal_Concerns(), this.getObject(), null, "concerns", null, 0, -1, Goal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGoal_Description(), ecorePackage.getEString(), "description", null, 0, 1, Goal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(assignmentLinkEClass, AssignmentLink.class, "AssignmentLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssignmentLink_AssignsGoalTo(), this.getAgent(), null, "assignsGoalTo", null, 1, -1, AssignmentLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

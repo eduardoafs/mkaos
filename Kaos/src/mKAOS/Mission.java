@@ -18,7 +18,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link mKAOS.Mission#getPriority <em>Priority</em>}</li>
  *   <li>{@link mKAOS.Mission#getAssignedTo <em>Assigned To</em>}</li>
  *   <li>{@link mKAOS.Mission#getLinks <em>Links</em>}</li>
- *   <li>{@link mKAOS.Mission#getDescription <em>Description</em>}</li>
  *   <li>{@link mKAOS.Mission#getTrigger <em>Trigger</em>}</li>
  *   <li>{@link mKAOS.Mission#getRefinement <em>Refinement</em>}</li>
  * </ul>
@@ -97,32 +96,6 @@ public interface Mission extends Goal, FormalElement {
 	 * @generated
 	 */
 	EList<MissionLink> getLinks();
-
-	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see mKAOS.MKAOSPackage#getMission_Description()
-	 * @model
-	 * @generated
-	 */
-	String getDescription();
-
-	/**
-	 * Sets the value of the '{@link mKAOS.Mission#getDescription <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
-	 * @generated
-	 */
-	void setDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Trigger</b></em>' containment reference.

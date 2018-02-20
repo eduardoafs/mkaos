@@ -8,7 +8,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="assignedTo" eType="#//ConstituentSystem"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
         eType="#//MissionLink" containment="true" eOpposite="#//MissionLink/source"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="trigger" lowerBound="1"
         eType="#//DynBLTL" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="refinement" eType="#//MissionRefinement"
@@ -79,7 +78,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MissionRefinement" eSuperTypes="kaos.ecore#//Refinement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" lowerBound="1" eType="#//MissionRefinementKind"
-        defaultValueLiteral="custom"/>
+        defaultValueLiteral="all"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="custom" eType="#//DynBLTL"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="submissions" upperBound="-1"

@@ -783,13 +783,22 @@ public interface KAOSModelPackage extends EPackage {
 	int GOAL__CONCERNS = REFINABLE_NODE_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__DESCRIPTION = REFINABLE_NODE_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Goal</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOAL_FEATURE_COUNT = REFINABLE_NODE_FEATURE_COUNT + 3;
+	int GOAL_FEATURE_COUNT = REFINABLE_NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Goal</em>' class.
@@ -1020,6 +1029,15 @@ public interface KAOSModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXPECTATION__CONCERNS = GOAL__CONCERNS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPECTATION__DESCRIPTION = GOAL__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Assigned To</b></em>' reference list.
@@ -1288,6 +1306,15 @@ public interface KAOSModelPackage extends EPackage {
 	int DOMAIN_PROPERTY__CONCERNS = GOAL__CONCERNS;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_PROPERTY__DESCRIPTION = GOAL__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Used In</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1368,6 +1395,15 @@ public interface KAOSModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int REQUIREMENT__CONCERNS = GOAL__CONCERNS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__DESCRIPTION = GOAL__DESCRIPTION;
 
 	/**
 	 * The number of structural features of the '<em>Requirement</em>' class.
@@ -1489,6 +1525,15 @@ public interface KAOSModelPackage extends EPackage {
 	int DOMAIN_HYPOTHESIS__CONCERNS = DOMAIN_PROPERTY__CONCERNS;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_HYPOTHESIS__DESCRIPTION = DOMAIN_PROPERTY__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Used In</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1569,6 +1614,15 @@ public interface KAOSModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int DOMAIN_INVARIANT__CONCERNS = DOMAIN_PROPERTY__CONCERNS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_INVARIANT__DESCRIPTION = DOMAIN_PROPERTY__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Used In</b></em>' reference list.
@@ -2037,6 +2091,17 @@ public interface KAOSModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGoal_Concerns();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KAOSModel.Goal#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see KAOSModel.Goal#getDescription()
+	 * @see #getGoal()
+	 * @generated
+	 */
+	EAttribute getGoal_Description();
 
 	/**
 	 * Returns the meta object for class '{@link KAOSModel.AssignmentLink <em>Assignment Link</em>}'.
@@ -2613,6 +2678,14 @@ public interface KAOSModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GOAL__CONCERNS = eINSTANCE.getGoal_Concerns();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GOAL__DESCRIPTION = eINSTANCE.getGoal_Description();
 
 		/**
 		 * The meta object literal for the '{@link KAOSModel.impl.AssignmentLinkImpl <em>Assignment Link</em>}' class.

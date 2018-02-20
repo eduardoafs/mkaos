@@ -171,6 +171,15 @@ public interface MKAOSPackage extends EPackage {
 	int MISSION__CONCERNS = KAOSModelPackage.GOAL__CONCERNS;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MISSION__DESCRIPTION = KAOSModelPackage.GOAL__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Rule</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -207,22 +216,13 @@ public interface MKAOSPackage extends EPackage {
 	int MISSION__LINKS = KAOSModelPackage.GOAL_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MISSION__DESCRIPTION = KAOSModelPackage.GOAL_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Trigger</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION__TRIGGER = KAOSModelPackage.GOAL_FEATURE_COUNT + 5;
+	int MISSION__TRIGGER = KAOSModelPackage.GOAL_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Refinement</b></em>' containment reference.
@@ -231,7 +231,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION__REFINEMENT = KAOSModelPackage.GOAL_FEATURE_COUNT + 6;
+	int MISSION__REFINEMENT = KAOSModelPackage.GOAL_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Mission</em>' class.
@@ -240,7 +240,7 @@ public interface MKAOSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MISSION_FEATURE_COUNT = KAOSModelPackage.GOAL_FEATURE_COUNT + 7;
+	int MISSION_FEATURE_COUNT = KAOSModelPackage.GOAL_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Mission</em>' class.
@@ -2436,17 +2436,6 @@ public interface MKAOSPackage extends EPackage {
 	EReference getMission_Links();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mKAOS.Mission#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see mKAOS.Mission#getDescription()
-	 * @see #getMission()
-	 * @generated
-	 */
-	EAttribute getMission_Description();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link mKAOS.Mission#getTrigger <em>Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3647,14 +3636,6 @@ public interface MKAOSPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MISSION__LINKS = eINSTANCE.getMission_Links();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MISSION__DESCRIPTION = eINSTANCE.getMission_Description();
 
 		/**
 		 * The meta object literal for the '<em><b>Trigger</b></em>' containment reference feature.

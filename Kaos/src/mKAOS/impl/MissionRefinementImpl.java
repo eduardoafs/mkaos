@@ -49,7 +49,7 @@ public class MissionRefinementImpl extends RefinementImpl implements MissionRefi
 	 * @generated
 	 * @ordered
 	 */
-	protected static final MissionRefinementKind KIND_EDEFAULT = MissionRefinementKind.CUSTOM;
+	protected static final MissionRefinementKind KIND_EDEFAULT = MissionRefinementKind.ALL;
 
 	/**
 	 * The cached value of the '{@link #getKind() <em>Kind</em>}' attribute.

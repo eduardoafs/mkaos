@@ -492,17 +492,8 @@ public class MKAOSPackageImpl extends EPackageImpl implements MKAOSPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMission_Description() {
-		return (EAttribute)missionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getMission_Trigger() {
-		return (EReference)missionEClass.getEStructuralFeatures().get(4);
+		return (EReference)missionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -511,7 +502,7 @@ public class MKAOSPackageImpl extends EPackageImpl implements MKAOSPackage {
 	 * @generated
 	 */
 	public EReference getMission_Refinement() {
-		return (EReference)missionEClass.getEStructuralFeatures().get(5);
+		return (EReference)missionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1493,7 +1484,6 @@ public class MKAOSPackageImpl extends EPackageImpl implements MKAOSPackage {
 		createEAttribute(missionEClass, MISSION__PRIORITY);
 		createEReference(missionEClass, MISSION__ASSIGNED_TO);
 		createEReference(missionEClass, MISSION__LINKS);
-		createEAttribute(missionEClass, MISSION__DESCRIPTION);
 		createEReference(missionEClass, MISSION__TRIGGER);
 		createEReference(missionEClass, MISSION__REFINEMENT);
 
@@ -1708,7 +1698,6 @@ public class MKAOSPackageImpl extends EPackageImpl implements MKAOSPackage {
 		initEAttribute(getMission_Priority(), ecorePackage.getEInt(), "priority", null, 1, 1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMission_AssignedTo(), this.getConstituentSystem(), null, "assignedTo", null, 0, 1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMission_Links(), this.getMissionLink(), this.getMissionLink_Source(), "links", null, 0, -1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMission_Description(), ecorePackage.getEString(), "description", null, 0, 1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMission_Trigger(), this.getDynBLTL(), null, "trigger", null, 1, 1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMission_Refinement(), this.getMissionRefinement(), null, "refinement", null, 0, 1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1774,7 +1763,7 @@ public class MKAOSPackageImpl extends EPackageImpl implements MKAOSPackage {
 		initEReference(getFormalElement_Rule(), this.getDynBLTL(), null, "rule", null, 0, 1, FormalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(missionRefinementEClass, MissionRefinement.class, "MissionRefinement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMissionRefinement_Kind(), this.getMissionRefinementKind(), "kind", "custom", 1, 1, MissionRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMissionRefinement_Kind(), this.getMissionRefinementKind(), "kind", "all", 1, 1, MissionRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMissionRefinement_Custom(), this.getDynBLTL(), null, "custom", null, 0, 1, MissionRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMissionRefinement_Submissions(), this.getMission(), null, "submissions", null, 0, -1, MissionRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

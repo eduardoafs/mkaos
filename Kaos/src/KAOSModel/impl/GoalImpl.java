@@ -8,10 +8,12 @@ import KAOSModel.Obstacle;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -25,6 +27,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link KAOSModel.impl.GoalImpl#getResolve <em>Resolve</em>}</li>
  *   <li>{@link KAOSModel.impl.GoalImpl#getConflicts <em>Conflicts</em>}</li>
  *   <li>{@link KAOSModel.impl.GoalImpl#getConcerns <em>Concerns</em>}</li>
+ *   <li>{@link KAOSModel.impl.GoalImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,6 +62,26 @@ public class GoalImpl extends RefinableNodeImpl implements Goal {
 	 * @ordered
 	 */
 	protected EList<KAOSModel.Object> concerns;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,6 +143,27 @@ public class GoalImpl extends RefinableNodeImpl implements Goal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KAOSModelPackage.GOAL__DESCRIPTION, oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -129,6 +173,8 @@ public class GoalImpl extends RefinableNodeImpl implements Goal {
 				return getConflicts();
 			case KAOSModelPackage.GOAL__CONCERNS:
 				return getConcerns();
+			case KAOSModelPackage.GOAL__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -154,6 +200,9 @@ public class GoalImpl extends RefinableNodeImpl implements Goal {
 				getConcerns().clear();
 				getConcerns().addAll((Collection<? extends KAOSModel.Object>)newValue);
 				return;
+			case KAOSModelPackage.GOAL__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -175,6 +224,9 @@ public class GoalImpl extends RefinableNodeImpl implements Goal {
 			case KAOSModelPackage.GOAL__CONCERNS:
 				getConcerns().clear();
 				return;
+			case KAOSModelPackage.GOAL__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -193,8 +245,26 @@ public class GoalImpl extends RefinableNodeImpl implements Goal {
 				return conflicts != null && !conflicts.isEmpty();
 			case KAOSModelPackage.GOAL__CONCERNS:
 				return concerns != null && !concerns.isEmpty();
+			case KAOSModelPackage.GOAL__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (description: ");
+		result.append(description);
+		result.append(')');
+		return result.toString();
 	}
 
 } //GoalImpl

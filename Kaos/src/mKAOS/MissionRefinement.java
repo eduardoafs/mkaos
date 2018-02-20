@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
 public interface MissionRefinement extends Refinement {
 	/**
 	 * Returns the value of the '<em><b>Kind</b></em>' attribute.
-	 * The default value is <code>"custom"</code>.
+	 * The default value is <code>"all"</code>.
 	 * The literals are from the enumeration {@link mKAOS.MissionRefinementKind}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -39,7 +39,7 @@ public interface MissionRefinement extends Refinement {
 	 * @see mKAOS.MissionRefinementKind
 	 * @see #setKind(MissionRefinementKind)
 	 * @see mKAOS.MKAOSPackage#getMissionRefinement_Kind()
-	 * @model default="custom" required="true"
+	 * @model default="all" required="true"
 	 * @generated
 	 */
 	MissionRefinementKind getKind();

@@ -30,8 +30,8 @@ Mission returns Mission:
 	& ('priority' '=' priority=INT
 	& 'description' '=' description=STRING
 	& 'trigger' '=' trigger=expr
-	& 'rule' '=' rule=expr
-	& refinement=MissionRefinement)
+	& 'rule' '=' rule=expr)
+	(refinement=MissionRefinement)?
 	'}'
 ;
 

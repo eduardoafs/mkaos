@@ -28,9 +28,9 @@
     <genClasses ecoreClass="mkaos.ecore#//mKAOS"/>
     <genClasses ecoreClass="mkaos.ecore#//Mission">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//Mission/priority"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mkaos.ecore#//Mission/assignedTo"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference mkaos.ecore#//Mission/assignedTo"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//Mission/links"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mkaos.ecore#//Mission/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EReference mkaos.ecore#//Mission/trigger"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mkaos.ecore#//Mission/refinement"/>
     </genClasses>
@@ -201,15 +201,20 @@
     </genClasses>
     <genClasses ecoreClass="kaos.ecore#//EnvironmentAgent"/>
     <genClasses image="false" ecoreClass="kaos.ecore#//RefinableNode">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//RefinableNode/refinedBy"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference kaos.ecore#//RefinableNode/refinedBy"/>
     </genClasses>
     <genClasses ecoreClass="kaos.ecore#//Obstacle">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Obstacle/obstruct"/>
     </genClasses>
     <genClasses ecoreClass="kaos.ecore#//Goal">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Goal/resolve"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Goal/conflicts"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//Goal/concerns"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference kaos.ecore#//Goal/resolve"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference kaos.ecore#//Goal/conflicts"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference kaos.ecore#//Goal/concerns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kaos.ecore#//Goal/description"/>
     </genClasses>
     <genClasses ecoreClass="kaos.ecore#//AssignmentLink">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kaos.ecore#//AssignmentLink/assignsGoalTo"/>

@@ -39,7 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link mKAOS.impl.MissionImpl#getPriority <em>Priority</em>}</li>
  *   <li>{@link mKAOS.impl.MissionImpl#getAssignedTo <em>Assigned To</em>}</li>
  *   <li>{@link mKAOS.impl.MissionImpl#getLinks <em>Links</em>}</li>
- *   <li>{@link mKAOS.impl.MissionImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link mKAOS.impl.MissionImpl#getTrigger <em>Trigger</em>}</li>
  *   <li>{@link mKAOS.impl.MissionImpl#getRefinement <em>Refinement</em>}</li>
  * </ul>
@@ -96,26 +95,6 @@ public class MissionImpl extends GoalImpl implements Mission {
 	 * @ordered
 	 */
 	protected EList<MissionLink> links;
-
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getTrigger() <em>Trigger</em>}' containment reference.
@@ -275,27 +254,6 @@ public class MissionImpl extends GoalImpl implements Mission {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		return description;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MKAOSPackage.MISSION__DESCRIPTION, oldDescription, description));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public DynBLTL getTrigger() {
 		return trigger;
 	}
@@ -429,8 +387,6 @@ public class MissionImpl extends GoalImpl implements Mission {
 				return basicGetAssignedTo();
 			case MKAOSPackage.MISSION__LINKS:
 				return getLinks();
-			case MKAOSPackage.MISSION__DESCRIPTION:
-				return getDescription();
 			case MKAOSPackage.MISSION__TRIGGER:
 				return getTrigger();
 			case MKAOSPackage.MISSION__REFINEMENT:
@@ -460,9 +416,6 @@ public class MissionImpl extends GoalImpl implements Mission {
 			case MKAOSPackage.MISSION__LINKS:
 				getLinks().clear();
 				getLinks().addAll((Collection<? extends MissionLink>)newValue);
-				return;
-			case MKAOSPackage.MISSION__DESCRIPTION:
-				setDescription((String)newValue);
 				return;
 			case MKAOSPackage.MISSION__TRIGGER:
 				setTrigger((DynBLTL)newValue);
@@ -494,9 +447,6 @@ public class MissionImpl extends GoalImpl implements Mission {
 			case MKAOSPackage.MISSION__LINKS:
 				getLinks().clear();
 				return;
-			case MKAOSPackage.MISSION__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
-				return;
 			case MKAOSPackage.MISSION__TRIGGER:
 				setTrigger((DynBLTL)null);
 				return;
@@ -523,8 +473,6 @@ public class MissionImpl extends GoalImpl implements Mission {
 				return assignedTo != null;
 			case MKAOSPackage.MISSION__LINKS:
 				return links != null && !links.isEmpty();
-			case MKAOSPackage.MISSION__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case MKAOSPackage.MISSION__TRIGGER:
 				return trigger != null;
 			case MKAOSPackage.MISSION__REFINEMENT:
@@ -577,8 +525,6 @@ public class MissionImpl extends GoalImpl implements Mission {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (priority: ");
 		result.append(priority);
-		result.append(", description: ");
-		result.append(description);
 		result.append(')');
 		return result.toString();
 	}

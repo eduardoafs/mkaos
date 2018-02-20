@@ -53,8 +53,6 @@ public class MissionItemProvider extends GoalItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addPriorityPropertyDescriptor(object);
-			addAssignedToPropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
 			addTriggerPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -78,50 +76,6 @@ public class MissionItemProvider extends GoalItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Assigned To feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAssignedToPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Mission_assignedTo_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Mission_assignedTo_feature", "_UI_Mission_type"),
-				 MKAOSPackage.Literals.MISSION__ASSIGNED_TO,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Description feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Mission_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Mission_description_feature", "_UI_Mission_type"),
-				 MKAOSPackage.Literals.MISSION__DESCRIPTION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -219,7 +173,6 @@ public class MissionItemProvider extends GoalItemProvider {
 
 		switch (notification.getFeatureID(Mission.class)) {
 			case MKAOSPackage.MISSION__PRIORITY:
-			case MKAOSPackage.MISSION__DESCRIPTION:
 			case MKAOSPackage.MISSION__TRIGGER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

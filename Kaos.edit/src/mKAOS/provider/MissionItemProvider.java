@@ -53,6 +53,7 @@ public class MissionItemProvider extends GoalItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addPriorityPropertyDescriptor(object);
+			addLinksPropertyDescriptor(object);
 			addTriggerPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -76,6 +77,28 @@ public class MissionItemProvider extends GoalItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Links feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLinksPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Mission_links_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Mission_links_feature", "_UI_Mission_type"),
+				 MKAOSPackage.Literals.MISSION__LINKS,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -115,7 +138,6 @@ public class MissionItemProvider extends GoalItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(MKAOSPackage.Literals.FORMAL_ELEMENT__RULE);
-			childrenFeatures.add(MKAOSPackage.Literals.MISSION__LINKS);
 			childrenFeatures.add(MKAOSPackage.Literals.MISSION__REFINEMENT);
 		}
 		return childrenFeatures;
@@ -177,7 +199,6 @@ public class MissionItemProvider extends GoalItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case MKAOSPackage.MISSION__RULE:
-			case MKAOSPackage.MISSION__LINKS:
 			case MKAOSPackage.MISSION__REFINEMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -205,26 +226,6 @@ public class MissionItemProvider extends GoalItemProvider {
 			(createChildParameter
 				(MKAOSPackage.Literals.FORMAL_ELEMENT__RULE,
 				 MKAOSFactory.eINSTANCE.createRuleTemporal()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MKAOSPackage.Literals.MISSION__LINKS,
-				 MKAOSFactory.eINSTANCE.createDisruptLink()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MKAOSPackage.Literals.MISSION__LINKS,
-				 MKAOSFactory.eINSTANCE.createSuportLink()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MKAOSPackage.Literals.MISSION__LINKS,
-				 MKAOSFactory.eINSTANCE.createBlockLink()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MKAOSPackage.Literals.MISSION__LINKS,
-				 MKAOSFactory.eINSTANCE.createDependencyLink()));
 
 		newChildDescriptors.add
 			(createChildParameter

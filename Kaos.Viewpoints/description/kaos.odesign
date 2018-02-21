@@ -494,15 +494,15 @@
   <ownedViewpoints name="mKAOS" label="mKAOS" modelFileExtension="mkaos">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="mKAOS.Behavior" label="mKAOS Diagram" initialisation="true" domainClass="mKAOS.mKAOS">
       <defaultLayer name="mKAOS"/>
-      <additionalLayers name="mKAOS.Mission" label="Mission Model" reusedMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Link.Refinement.Refines'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Links.Refinements.RefinedBy'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Expectation'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Goal.Links.ExpectationAssign'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Obstacle']" activeByDefault="true">
-        <nodeMappings name="mKAOS.MissionRefinement" semanticCandidatesExpression="feature:linkedBy" domainClass="mKAOS.MissionRefinement">
+      <additionalLayers name="mKAOS.Mission" label="Mission Model" reusedMappings="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Expectation'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@edgeMappings[name='KAOS.Goal.Links.ExpectationAssign'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Obstacle']" activeByDefault="true">
+        <nodeMappings name="mKAOS.MissionRefinement" semanticCandidatesExpression="service:allRefinements()" domainClass="mKAOS.MissionRefinement">
           <style xsi:type="style:EllipseNodeDescription" showIcon="false" labelExpression="feature:kind" hideLabelByDefault="true" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="mKAOS.DisruptLink" semanticCandidatesExpression="feature:linkedBy" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="mKAOS.DisruptLink" useDomainElement="true">
+        <edgeMappings name="mKAOS.DisruptLink" semanticCandidatesExpression="service:allLinks()" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="mKAOS.DisruptLink" useDomainElement="true">
           <style lineStyle="dash" targetArrow="InputClosedArrow" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="['Disrupts'/]">
@@ -511,7 +511,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="mKAOS.BlockLink" semanticCandidatesExpression="feature:linkedBy" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="mKAOS.BlockLink" useDomainElement="true">
+        <edgeMappings name="mKAOS.BlockLink" semanticCandidatesExpression="service:allLinks()" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="mKAOS.BlockLink" useDomainElement="true">
           <style lineStyle="dash" targetArrow="InputClosedArrow" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="['Blocks'/]">
@@ -520,7 +520,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="mKAOS.DependencyLink" semanticCandidatesExpression="feature:linkedBy" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="DependencyLink" useDomainElement="true">
+        <edgeMappings name="mKAOS.DependencyLink" semanticCandidatesExpression="service:allLinks()" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="DependencyLink" useDomainElement="true">
           <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="['Depends on'/]">
@@ -529,7 +529,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="mKAOS.SuportLink" semanticCandidatesExpression="feature:linkedBy" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="mKAOS.SuportLink" useDomainElement="true">
+        <edgeMappings name="mKAOS.SuportLink" semanticCandidatesExpression="service:allLinks()" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="mKAOS.SuportLink" useDomainElement="true">
           <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="['Supports'/]">
@@ -538,7 +538,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="mKAOS.InfluenceLink" semanticCandidatesExpression="feature:linkedBy" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Expectation']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@nodeMappings[name='KAOS.Object.Entity']" targetFinderExpression="feature:influenced" sourceFinderExpression="feature:expectation" domainClass="mKAOS.InfluenceLink" useDomainElement="true">
+        <edgeMappings name="mKAOS.InfluenceLink" semanticCandidatesExpression="service:allLinks()" sourceMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@nodeMappings[name='KAOS.Expectation']" targetMapping="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Object']/@nodeMappings[name='KAOS.Object.Entity']" targetFinderExpression="feature:influenced" sourceFinderExpression="feature:expectation" domainClass="mKAOS.InfluenceLink" useDomainElement="true">
           <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelExpression="['&lt;&lt;influences>>'/]">
@@ -546,7 +546,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="mKAOS.Mission.Refinement.Link" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.MissionRefinement']" targetFinderExpression="feature:eContainer">
+        <edgeMappings name="mKAOS.Mission.Submissions" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.MissionRefinement']" targetFinderExpression="feature:eContainer">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
             <centerLabelStyleDescription>
@@ -554,7 +554,15 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="mKAOS.Mission" label="Mission" semanticCandidatesExpression="[self.consistsOf->asBag()->union(self.linkedBy.oclAsType(MissionRefinement).submissions->asBag())/]" domainClass="mKAOS.Mission" childrenPresentation="List">
+        <edgeMappings name="mKAOS.Mission.RefinedBy" sourceMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']" targetMapping="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@nodeMappings[name='mKAOS.MissionRefinement']" targetFinderExpression="[self.refinement/]">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="mKAOS.Mission" label="Mission" semanticCandidatesExpression="service:allMissions()" domainClass="mKAOS.Mission" childrenPresentation="List">
           <subNodeMappings name="mKAOS.Mission.Descr" semanticCandidatesExpression="var:self" domainClass="mKAOS.Mission">
             <style xsi:type="style:DotDescription" showIcon="false" labelExpression="feature:description" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -569,7 +577,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </containerMappings>
-        <toolSections name="mKAOS.Tools" label="Mission Tools" reusedTools="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@toolSections.0/@ownedTools[name='KAOS.Tools.Obstacle'] //@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@toolSections.1/@ownedTools[name='KAOS.Tools.RefinedBy']">
+        <toolSections name="mKAOS.Tools" label="Mission Tools" reusedTools="//@ownedViewpoints[name='KAOS']/@ownedRepresentations[name='mKAOS.main']/@additionalLayers[name='KAOS.Goal']/@toolSections.0/@ownedTools[name='KAOS.Tools.Obstacle']">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="mKAOS.Tools.Mission" label="Mission" precondition="[container.oclIsTypeOf(mKAOS)/]" containerMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@containerMappings[name='mKAOS.Mission']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -584,12 +592,27 @@
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="Expectation" referenceName="consistsOf"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="mKAOS.Tools.RefinementLink" label="Refines" edgeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@edgeMappings[name='mKAOS.Mission.Refinement.Link']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="mKAOS.Tools.Submission" label="Refines" edgeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@edgeMappings[name='mKAOS.Mission.Submissions']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
-            <initialOperation/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target/]">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="submissions" valueExpression="var:source"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="mKAOS.Tools.RefinedBy" label="Refined By" edgeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@edgeMappings[name='mKAOS.Mission.RefinedBy']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="refinement" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:EdgeCreationDescription" name="mKAOS.Influence" label="Influence" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='mKAOS']/@ownedRepresentations[name='mKAOS.Behavior']/@additionalLayers[name='mKAOS.Mission']/@edgeMappings[name='mKAOS.InfluenceLink']">
             <sourceVariable name="source"/>
@@ -614,10 +637,12 @@
               <sourceViewVariable name="sourceView"/>
               <targetViewVariable name="targetView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mKAOS.DisruptLink" referenceName="linkedBy">
-                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[getModel(self)/]">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mKAOS.DisruptLink" referenceName="linkedBy">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                    </subModelOperations>
                   </subModelOperations>
                 </firstModelOperations>
               </initialOperation>
@@ -628,10 +653,12 @@
               <sourceViewVariable name="sourceView"/>
               <targetViewVariable name="targetView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mKAOS.BlockLink" referenceName="linkedBy">
-                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[getModel(self)/]">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mKAOS.BlockLink" referenceName="linkedBy">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                    </subModelOperations>
                   </subModelOperations>
                 </firstModelOperations>
               </initialOperation>
@@ -658,7 +685,7 @@
               <sourceViewVariable name="sourceView"/>
               <targetViewVariable name="targetView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.eContainer()/]">
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[getModel(self)/]">
                   <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mKAOS.SuportLink" referenceName="linkedBy">
                     <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
                       <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>

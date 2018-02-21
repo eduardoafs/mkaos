@@ -3,7 +3,6 @@
 package mKAOS;
 
 import KAOSModel.Goal;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -85,7 +84,7 @@ public interface Mission extends Goal, FormalElement {
 	 * It is bidirectional and its opposite is '{@link mKAOS.MissionLink#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Links</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Links</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

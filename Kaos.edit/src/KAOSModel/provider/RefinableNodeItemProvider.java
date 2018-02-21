@@ -3,7 +3,6 @@
 package KAOSModel.provider;
 
 
-import KAOSModel.KAOSModelPackage;
 import KAOSModel.RefinableNode;
 
 import java.util.Collection;
@@ -11,8 +10,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
@@ -43,31 +40,8 @@ public class RefinableNodeItemProvider extends NodesItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addRefinedByPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Refined By feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRefinedByPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_RefinableNode_refinedBy_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_RefinableNode_refinedBy_feature", "_UI_RefinableNode_type"),
-				 KAOSModelPackage.Literals.REFINABLE_NODE__REFINED_BY,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

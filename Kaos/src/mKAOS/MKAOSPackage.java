@@ -56,7 +56,7 @@ public interface MKAOSPackage extends EPackage {
 	 * The singleton instance of the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	MKAOSPackage eINSTANCE = MKAOSPackageImpl.init();
 

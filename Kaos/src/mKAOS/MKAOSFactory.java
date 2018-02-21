@@ -19,7 +19,7 @@ public interface MKAOSFactory extends EFactory {
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	MKAOSFactory eINSTANCE = MKAOSFactoryImpl.init();
 
